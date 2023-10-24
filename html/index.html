@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="path-to/owl.carousel.min.css">
+    <link rel="stylesheet" href="path-to/owl.theme.default.min.css">
+    <script src="path-to/jquery.min.js"></script>
+    <script src="path-to/owl.carousel.min.js"></script>
+
 </head>
 <body>
 <header>
 </header>
 <section class="">
-    <div  class="slider-wrapper">
+    <div class="slider-wrapper">
         <div class="slider">
             <img id="slider1" src="https://savani.vn/images/banners/original/uom_1920x680_1685528233.png">
             <img id="slider2" src="https://savani.vn/images/banners//original/banner-web-min-1_1697100312.jpg" alt="">
-            <img id="slider3" src="https://savani.vn/images/banners/original/bst-moi-nang-reo_1920x680_1681791528.png" alt="">
+            <img id="slider3" src="https://savani.vn/images/banners/original/bst-moi-nang-reo_1920x680_1681791528.png"
+                 alt="">
 
         </div>
         <div class="slider-nav">
@@ -28,17 +35,84 @@
     <div class="top-prodcut">
         <div class="title">Nam</div>
         <div class="menu-item">
-            <div class="menu-item">Xem tất cả </div>
+            <div class="menu-item">Xem tất cả</div>
         </div>
     </div>
     <div class="bottom-product">
-        <div class="left-menu-item"><img src="https://wtco.com.vn/wp-content/uploads/2022/06/top-5-mau-that-lung-nam-dep-nha-wt-leather-duoc-ua-thich-2022-hinh-4.jpg" alt=""></div>
+        <div class="left-menu-item">
+            <img src="https://wtco.com.vn/wp-content/uploads/2022/06/top-5-mau-that-lung-nam-dep-nha-wt-leather-duoc-ua-thich-2022-hinh-4.jpg"
+                 alt="">
+        </div>
         <div class="right-menu-list">
-            <div class="menu-item1"></div>
-            <div class="menu-item2"></div>
-            <div class="menu-item3"></div>
+            <div class="slider-product">
+                <div class="product-item">
+                    <div class="product">
+                        <a href="#"><img class="product-img" src="1.png" alt=""></a>
+                        <p class="product-title">Dây nịt da cá sấu</p>
+                        <p class="product-price">180000</p>
+                        <a href="#" class="product-order">Xem chi tiết</a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <!-- Your product content for the second item -->
+                    <div class="product">
+                        <a href="#"><img class="product-img" src="1.png" alt=""></a>
+                        <p class="product-title">Dây nịt da cá sấu</p>
+                        <p class="product-price">180000</p>
+                        <a href="#" class="product-order">Xem chi tiết</a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product">
+                        <a href="#"><img class="product-img" src="1.png" alt=""></a>
+                        <p class="product-title">Dây nịt da cá sấu</p>
+                        <p class="product-price">180000</p>
+                        <a href="#" class="product-order">Xem chi tiết</a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product">
+                        <a href="#"><img class="product-img" src="1.png" alt=""></a>
+                        <p class="product-title">Dây nịt da cá sấu</p>
+                        <p class="product-price">180000</p>
+                        <a href="#" class="product-order">Xem chi tiết</a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product">
+                        <a href="#"><img class="product-img" src="1.png" alt=""></a>
+                        <p class="product-title">Dây nịt da cá sấu</p>
+                        <p class="product-price">180000</p>
+                        <a href="#" class="product-order">Xem chi tiết</a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product">
+                        <a href="#"><img class="product-img" src="1.png" alt=""></a>
+                        <p class="product-title">Dây nịt da cá sấu</p>
+                        <p class="product-price">180000</p>
+                        <a href="#" class="product-order">Xem chi tiết</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
 </section>
+<script>
+$(document).ready(function() {
+$(".right-menu-list").owlCarousel({
+items: 3,
+itemsDesktop: [1199, 3],
+itemsDesktopSmall: [980, 3],
+itemsTablet: [768, 2],
+itemsMobile: [480, 1],
+navigation: true,
+navigationText: ["<", ">"],
+pagination: false,
+autoPlay: true
+});
+});
+</script>
 </body>
 </html>

@@ -95,7 +95,56 @@
     width: 100%; /* Make the image width 100% of the box */
     height: auto; /* Allow the height to adjust proportionally */
 }
+.right-menu-list{
+    width: 70%;
+    display: inline;
+    white-space: nowrap;
 
-.right-menu-list {
-    /* Add styling for the right menu list as needed */
 }
+.product .product-img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    width: 90%;
+}
+
+.product .product-img:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.product-item {
+    border: solid 1px #eeeeee;
+    padding: 15px;
+    width: 30%;
+    display: inline-block;
+}
+
+.product-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #fd0d00;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-order {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #000;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.product-order:hover {
+    opacity: 0.7;
+}
+
+
+
