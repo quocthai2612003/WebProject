@@ -1,0 +1,36 @@
+.form-login {
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 3px 3px #DDDDDD;
+}
+.left {
+    background: #EEEEEE;
+    width: 400px;
+}
+
+.left img {
+    width: 100%;
+}
+
+.title-login {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #EE4D2D;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+.list {
+    padding: 0 35px;
+    width: 100%;
+}
+
+.list-item {
+    list-style-type: disclosure-closed;
+    margin-bottom: 12px;
+}
+
+.right {
+    width: 400px;
+    padding: 30px;
+}
