@@ -1,0 +1,117 @@
+.form-login {
+    display: flex;
+    justify-content: center;
+}
+.left {
+    background: #EEEEEE;
+    width: 400px;
+    box-shadow: 2px 3px 3px #ccc;
+}
+
+.left img {
+    width: 100%;
+}
+
+.title-login {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #EE4D2D;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+.list {
+    padding: 0 35px;
+    width: 100%;
+}
+
+.list-item {
+    list-style-type: disclosure-closed;
+    margin-bottom: 12px;
+}
+
+.right {
+    width: 400px;
+    padding: 30px;
+    box-shadow: 2px 3px 3px #ccc;
+}
+
+.function {
+    display: flex;
+}
+
+.function a {
+    color: #000;
+    font-size: 1.8rem;
+    padding: 10px;
+    width: 50%;
+    border-bottom: 1px solid #000;
+}
+
+.function a:hover {
+    opacity: 0.8;
+}
+
+.function .function-register {
+    border-bottom: 1px solid #ccc;
+}
+
+.infor {
+    margin-top: 35px;
+}
+
+.infor input {
+    width: 100%;
+    margin-bottom: 10px;
+    color: #000;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 3px #ccc;
+    border: 1px solid #ccc;
+    padding: 10px;
+    outline: none;
+}
+
+.forgot-password {
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 0;
+}
+
+.forgot-password a {
+    font-size: 1.4rem;
+    color: #EE4D2D;
+}
+.forgot-password a:hover {
+    opacity: 0.8;
+}
+
+.btn_login, .btn_createAccount {
+    background-color: #EE4D2D;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    outline:none;
+    border: none;
+    width: 100%;
+}
+
+.btn_createAccount {
+    margin-top: 20px;
+}
+
+.btn_login a, .btn_createAccount a {
+    color: #fff;
+    padding: 10px;
+    display: block;
+    font-size: 1.6rem;
+}
+
+.btn_login:hover,
+.btn_createAccount:hover {
+    opacity: 0.8;
+}
+.commit {
+    margin-top: 30px;
+    text-align: justify;
+}
