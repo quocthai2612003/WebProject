@@ -65,7 +65,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px outset black;
+    background-color: #ececec;
 }
 
 .top-prodcut .title {
@@ -94,12 +95,19 @@
 .left-menu-item img {
     width: 100%; /* Make the image width 100% of the box */
     height: auto; /* Allow the height to adjust proportionally */
+    padding-top: 25px;
 }
 .right-menu-list{
     width: 70%;
     display: inline;
     white-space: nowrap;
-
+    overflow: hidden;
+}
+.slider-product{
+    position: relative;
+    margin: auto;
+    display: flex;
+    
 }
 .product .product-img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -145,6 +153,7 @@
 .product-order:hover {
     opacity: 0.7;
 }
+
 
 
 
