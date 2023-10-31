@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="base.css">
+  <title>Shopping Cart</title>
+</head>
+<body>
+<h1>Shopping Cart</h1>
+<div class="container">
+  <table class="cart">
+    <thead>
+    <tr class="cart-header">
+      <th class="header-cell">Sản phẩm</th>
+      <th class="header-cell">Giá</th>
+      <th class="header-cell">Số lượng</th>
+      <th class="header-cell">Tất cả</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="cart-item">
+      <td>
+        <img src="1.png" alt="Product 1" class="product-image">
+        <div class="item-details">
+          <h2>Product 1</h2>
+          <p>Description of Product 1.</p>
+          <div class="item-remove">
+            <button class="remove-button">Remove</button>
+          </div>
+        </div>
+      </td>
+      <td class="item-price">$20.00</td>
+      <td class="item-quantity">
+        <input type="number" value="1">
+      </td>
+      <td class="item-total">$20.00</td>
+
+    </tr>
+    <tr class="cart-item">
+      <td>
+        <img src="thatlungnu.jpg" alt="Product 2" class="product-image">
+        <div class="item-details">
+          <h2>Product 2</h2>
+          <p>Description of Product 2.</p>
+      <div class="item-remove">
+        <button class="remove-button">Remove</button>
+      </div>
+        </div>
+      </td>
+      <td class="item-price">$30.00</td>
+      <td class="item-quantity">
+        <input type="number" value="1">
+      </td>
+      <td class="item-total">$30.00</td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
