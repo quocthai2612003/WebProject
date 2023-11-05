@@ -108,9 +108,22 @@ img {
     border-radius: 2px; }
 .color:first-of-type {
     margin-left: 20px; }
+.add-to-cart {
+    background: #fff;
+    color: #e2231a;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 13px 16px;
+    width: 100%;
+    min-width: 216px;
+    text-align: center;
+    cursor: pointer;
+    border: solid 1px #e2231a;
+    border-radius: 5px;
+}
 
-.add-to-cart, .like {
-    background: #ff9f1a;
+.buy-now {
+    background: #ee4d2d;
     padding: 1.2em 1.5em;
     border: none;
     text-transform: UPPERCASE;
@@ -118,9 +131,13 @@ img {
     color: #fff;
     -webkit-transition: background .3s ease;
     transition: background .3s ease; }
-.add-to-cart:hover, .like:hover {
+.add-to-cart:hover, .buy-now:hover {
     background: #b36800;
     color: #fff; }
+.like:hover {
+    background: #dc3545;
+    color: #fff;
+}
 
 .not-available {
     text-align: center;
