@@ -34,7 +34,7 @@
 <body>
 <header>
     <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <div class="global-nav d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">PQL</a>
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -47,6 +47,7 @@
 
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
                 <input type="search" class="form-control form-control-light" placeholder="Search..." aria-label="Search">
+
             </form>
 
             <div class="text-end">
@@ -57,120 +58,108 @@
     </div>
 </header>
 <div class="container">
-<!--        <div class='breadcrumbs row-item'>-->
-<!--            <ol class="breadcrumb row-item">-->
-<!--                <li class='breadcrumb-item breadcumbs-first'>-->
-<!--                    <a title='PQL' href="index.html" rel='nofollow'>Trang chủ</a>-->
-<!--                </li>-->
-<!--                <li class="breadcrumb-item ">-->
-<!--                    <a href="#" title="Thắt lưng">Thắt lưng</a>-->
-<!--                </li>-->
-<!--                <li class="breadcrumb-item active">Tên sản phẩm</li>-->
-<!--            </ol>&lt;!&ndash; END: .breadcrumb-content &ndash;&gt;-->
-<!--        </div>&lt;!&ndash; END: .breadcrumb &ndash;&gt;-->
-<!--        <div class="clear"></div>-->
+        <div class='breadcrumbs row-item'>
+            <ol class="breadcrumb row-item">
+                <li class='breadcrumb-item breadcumbs-first'>
+                    <a title='PQL' href="index.html" rel='nofollow'>Trang chủ</a>
+                </li>
+                <li class="breadcrumb-item ">
+                    <a href="#" title="Thắt lưng">Thắt lưng</a>
+                </li>
+                <li class="breadcrumb-item active">Tên sản phẩm</li>
+            </ol><!-- END: .breadcrumb-content -->
+        </div><!-- END: .breadcrumb -->
+        <div class="clear"></div>
     <div class="card">
         <div class="container-fliud">
             <div class="wrapper row">
                 <div class="preview col-md-6">
-
-                    <div class="preview-pic tab-content">
-                        <div class="tab-pane active" id="pic-1"><img src="http://placekitten.com/400/252" /></div>
-                        <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
-                        <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
-                        <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
-                        <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div>
-                    </div>
-                    <ul class="preview-thumbnail nav nav-tabs">
-                        <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-                        <li><a data-target="#pic-2" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-                        <li><a data-target="#pic-3" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-                        <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-                        <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-                    </ul>
-
-<!--                </div>-->
-<!--                <div class="img-show" style="position: relative">-->
-<!--                    <a id="Zoomer"-->
-<!--                       href="images/products/2023/10/21/original/ao-thun-dai-tay-mlt002w3-2-c02_1697863000.jpg"-->
-<!--                       class="MagicZoomPlus"-->
-<!--                       rel="disable-expand: true;selectors-effect: fade; selectors-change: mouseover; "-->
-<!--                       data-options="zoomWidth: 1000; expand: off; hint: false; zoomOn: hover">-->
-<!--                        <img src="images/products/2023/10/21/large/ao-thun-dai-tay-mlt002w3-2-c02_1697863000.jpg"-->
-<!--                             alt="Áo thun dài tay cổ tròn nam MLT002W3">-->
-<!--                    </a>-->
-<!--                    <div class="video"></div>-->
-
-<!--                </div>-->
-                <div class="details col-md-6">
-                    <h3 class="product-title">men's shoes fashion</h3>
-                    <div class="rating">
-                        <div class="stars">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
+                    <div class="image">
+                        <div class="preview-pic tab-content">
+                            <div class="tab-pane active" id="pic-1"><img src="http://placekitten.com/400/252" /></div>
+                            <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
+                            <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
+                            <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
+                            <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div>
                         </div>
-                        <span class="review-no">100 Đánh giá</span>
+                        <ul class="preview-thumbnail nav nav-tabs">
+                            <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+                            <li><a data-target="#pic-2" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+                            <li><a data-target="#pic-3" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+                            <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+                            <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+                        </ul>
                     </div>
-                    <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
-                    <h4 class="price"><span>$180</span></h4>
-                    <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
-                    <h5 class="colors">Màu sắc
-                        <span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
-                        <span class="color green"></span>
-                        <span class="color blue"></span>
-                    </h5>
-                    <h5 class="sizes">Kích cỡ
-                        <span class="size" data-toggle="tooltip" title="small">s</span>
-                        <span class="size" data-toggle="tooltip" title="medium">m</span>
-                        <span class="size" data-toggle="tooltip" title="large">l</span>
-                        <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
-                    </h5>
-                    <div class="section" style="padding-bottom:20px;">
-                        <h6 class="title-attr"><small>Số lượng</small></h6>
-                        <div>
-                            <div class="btn-minus"><span class="glyphicon glyphicon-minus"></span></div>
-                            <input value="1" />
-                            <div class="btn-plus"><span class="glyphicon glyphicon-plus"></span></div>
+
+                    <div class="details col-md-6">
+                        <h3 class="product-title">men's shoes fashion</h3>
+                        <div class="rating">
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                            <span class="review-no">.<strong>100</strong> Đánh giá</span>
+                        <span class="vote"><strong>200</strong> Đã bán</span>
                         </div>
-                    </div>
-                    <div class="action">
-                        <button class="add-to-cart btn btn-default" type="button">Thêm vào giỏ hàng</button>
-                        <button class="buy-now btn btn-default" type="button">Mua ngay</button>
-                        <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+    <!--                    <p class="product-description"></p>-->
+                        <h4 class="price"><span>120.000₫</span></h4>
+                        <h5 class="colors">Màu sắc
+                            <span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
+                            <span class="color green"></span>
+                            <span class="color blue"></span>
+                        </h5>
+                        <h5 class="sizes">Kích cỡ
+                            <span class="size" data-toggle="tooltip" title="small">S</span>
+                            <span class="size" data-toggle="tooltip" title="medium">M</span>
+                            <span class="size" data-toggle="tooltip" title="large">L</span>
+                            <span class="size" data-toggle="tooltip" title="xtra large">XL</span>
+                        </h5>
+                        <div class="section" style="padding-bottom:20px;">
+                            <h5 class="title-attr"><small>Số lượng</small></h5>
+                            <div>
+                                <div class="btn-minus"><span class="glyphicon glyphicon-minus"></span></div>
+                                <input value="1" />
+                                <div class="btn-plus"><span class="glyphicon glyphicon-plus"></span></div>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button class="add-to-cart btn btn-default" type="button">Thêm vào giỏ hàng</button>
+                            <button class="buy-now btn btn-default" type="button">Mua ngay</button>
+                            <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-xs-9">
-            <ul class="menu-items">
-                <li class="active"><h5>Chi tiết sản phẩm</h5></li>
-                <li><h5>Đánh giá sản phẩm</h5></li>
-            </ul>
-            <div style="width:100%;border-top:1px solid silver">
-                <p style="padding:15px;">
+            <div class="col-xs-9">
+                <ul class="menu-items">
+                    <li class="active"><h5>Chi tiết sản phẩm</h5></li>
+                    <li><h5>Đánh giá sản phẩm</h5></li>
+                </ul>
+                <div style="width:100%;border-top:1px solid silver">
+                    <p style="padding:15px;">
+                        <small>
+                            Sản phẩm thắt lưng là một phụ kiện thời trang được sử dụng để giữ cho quần áo vững chắc ở vị trí mong muốn và cũng có thể được sử dụng như một phần của trang phục thể hiện phong cách cá nhân.
+                        </small>
+                    </p>
                     <small>
-                        Sản phẩm thắt lưng là một phụ kiện thời trang được sử dụng để giữ cho quần áo vững chắc ở vị trí mong muốn và cũng có thể được sử dụng như một phần của trang phục thể hiện phong cách cá nhân.
+                        <ul>
+                            <li>Chất liệu: Thắt lưng có thể được làm từ nhiều loại chất liệu khác nhau như da, vải, nhựa, kim loại, và các vật liệu tổng hợp. Chất liệu sẽ ảnh hưởng đến vẻ ngoài, độ bền và cảm giác khi sử dụng.</li>
+                            <li>Kích thước và chiều dài: Thắt lưng thường có một dây dài có thể điều chỉnh để phù hợp với nhiều kích cỡ vòng eo khác nhau. Kích thước thông thường được ghi trên thẻ sản phẩm hoặc trên đính kèm.</li>
+                            <li>Kiểu dáng: Có nhiều kiểu dáng thắt lưng khác nhau như thắt lưng dây, thắt lưng rộng, thắt lưng hẹp, thắt lưng nữ, và nhiều kiểu dáng khác. Mỗi kiểu dáng mang đến vẻ ngoài và phong cách riêng biệt.</li>
+                            <li>Màu sắc và hoa văn: Thắt lưng có thể có nhiều màu sắc và hoa văn khác nhau, từ các màu sắc cơ bản như đen, nâu, xanh đến các màu sắc sặc sỡ hoặc có họa tiết độc đáo.</li>
+                            <li>Khóa và phần đính kèm: Thắt lưng thường đi kèm với một khóa hoặc cài đặt để giữ cho dây thắt lưng ở vị trí cố định. Khóa có thể được làm từ kim loại, nhựa, hoặc các vật liệu khác.</li>
+                            <li>Công dụng và tính năng đặc biệt: Một số thắt lưng có tính năng đặc biệt như thắt lưng co dãn, thắt lưng có túi đựng tiền, hoặc các tính năng khác tùy thuộc vào mục đích sử dụng cụ thể.</li>
+                            <li>Thương hiệu và xuất xứ: Thương hiệu và xuất xứ cũng là yếu tố quan trọng, vì một số thương hiệu có tiếng nổi về chất lượng và thiết kế sáng tạo.</li>
+                        </ul>
                     </small>
-                </p>
-                <small>
-                    <ul>
-                        <li>Chất liệu: Thắt lưng có thể được làm từ nhiều loại chất liệu khác nhau như da, vải, nhựa, kim loại, và các vật liệu tổng hợp. Chất liệu sẽ ảnh hưởng đến vẻ ngoài, độ bền và cảm giác khi sử dụng.</li>
-                        <li>Kích thước và chiều dài: Thắt lưng thường có một dây dài có thể điều chỉnh để phù hợp với nhiều kích cỡ vòng eo khác nhau. Kích thước thông thường được ghi trên thẻ sản phẩm hoặc trên đính kèm.</li>
-                        <li>Kiểu dáng: Có nhiều kiểu dáng thắt lưng khác nhau như thắt lưng dây, thắt lưng rộng, thắt lưng hẹp, thắt lưng nữ, và nhiều kiểu dáng khác. Mỗi kiểu dáng mang đến vẻ ngoài và phong cách riêng biệt.</li>
-                        <li>Màu sắc và hoa văn: Thắt lưng có thể có nhiều màu sắc và hoa văn khác nhau, từ các màu sắc cơ bản như đen, nâu, xanh đến các màu sắc sặc sỡ hoặc có họa tiết độc đáo.</li>
-                        <li>Khóa và phần đính kèm: Thắt lưng thường đi kèm với một khóa hoặc cài đặt để giữ cho dây thắt lưng ở vị trí cố định. Khóa có thể được làm từ kim loại, nhựa, hoặc các vật liệu khác.</li>
-                        <li>Công dụng và tính năng đặc biệt: Một số thắt lưng có tính năng đặc biệt như thắt lưng co dãn, thắt lưng có túi đựng tiền, hoặc các tính năng khác tùy thuộc vào mục đích sử dụng cụ thể.</li>
-                        <li>Thương hiệu và xuất xứ: Thương hiệu và xuất xứ cũng là yếu tố quan trọng, vì một số thương hiệu có tiếng nổi về chất lượng và thiết kế sáng tạo.</li>
-                    </ul>
-                </small>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container">
     <footer class="py-5">
         <div class="row">
             <div class="col-6 col-md-2 mb-3">
@@ -217,16 +206,15 @@
             </div>
         </div>
 
-        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top bg-white">
+        <div class="d-flex flex-sm-row flex-column justify-content-between py-2 my-4 border-top bg-white">
             <p>&copy; 2023 PQL, Inc. All rights reserved.</p>
             <ul class="list-unstyled d-flex">
-                <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-github fa-2xl"></i></a></li>
-                <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
-                <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
-                <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-twitter fa-2xl"></i></a></li>
+                <li class="ms-0"><a class="link-dark" href="#"><i class="fa-brands fa-github fa-2xl"></i></a></li>
+                <li class="ms-0"><a class="link-dark" href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+                <li class="ms-0"><a class="link-dark" href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+                <li class="ms-0"><a class="link-dark" href="#"><i class="fa-brands fa-twitter fa-2xl"></i></a></li>
             </ul>
         </div>
     </footer>
-</div>
 </body>
 </html>
