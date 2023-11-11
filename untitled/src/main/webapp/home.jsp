@@ -1,43 +1,32 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:D="http://www.w3.org/1999/xhtml">
+<%--
+  Created by IntelliJ IDEA.
+  User: Asus
+  Date: 11/10/2023
+  Time: 8:51 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-            integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
-          integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
-          integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <script src="index.js"></script>
 
 </head>
 <body>
-<header>
-</header>
-<section class="">
-    <div class="slider-wrapper">
-        <div class="slider">
-            <img id="slider1" src="https://savani.vn/images/banners/original/uom_1920x680_1685528233.png">
-            <img id="slider2" src="https://savani.vn/images/banners//original/banner-web-min-1_1697100312.jpg" alt="">
-            <img id="slider3" src="https://savani.vn/images/banners/original/bst-moi-nang-reo_1920x680_1681791528.png"
-                 alt="">
-
-        </div>
-        <div class="slider-nav">
-            <a href="#slider1"></a>
-            <a href="#slider2"></a>
-            <a href="#slider3"></a>
-        </div>
+<div class="slider-wrapper">
+    <div class="slider">
+        <img id="slider1" src="https://savani.vn/images/banners/original/uom_1920x680_1685528233.png">
+        <img id="slider2" src="https://savani.vn/images/banners//original/banner-web-min-1_1697100312.jpg" alt="">
+        <img id="slider3" src="https://savani.vn/images/banners/original/bst-moi-nang-reo_1920x680_1681791528.png"
+             alt="">
 
     </div>
+    <div class="slider-nav">
+        <a href="#slider1"></a>
+        <a href="#slider2"></a>
+        <a href="#slider3"></a>
+    </div>
+
+</div>
 </section>
 <div class="container" id="Nam-Container">
     <div class="top-prodcut">
@@ -244,44 +233,42 @@
             </div>
         </div>
     </div>
-</div>
-
-<script>
-    $('.slider-product').slick({
-        dots: true,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
+    <script>
+        $('.slider-product').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
                 }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-        ]
-    });
-</script>
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
 </body>
 </html>

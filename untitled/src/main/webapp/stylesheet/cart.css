@@ -76,18 +76,3 @@ th:last-child{
     color: red;
     cursor: pointer;
 }
-.quantity-control {
-    display: flex;
-    align-items: center;
-}
-
-.quantity-control button {
-    background-color: #eee;
-    border: none;
-    padding: 4px 8px;
-    cursor: pointer;
-}
-
-.quantity-display {
-    margin: 0 10px;
-}
