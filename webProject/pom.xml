@@ -2,6 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example</groupId>
+<<<<<<< HEAD
   <artifactId>untitled</artifactId>
   <packaging>war</packaging>
   <properties>
@@ -10,6 +11,16 @@
   </properties>
   <version>1.0-SNAPSHOT</version>
   <name>untitled Maven Webapp</name>
+=======
+  <artifactId>webProject</artifactId>
+  <packaging>war</packaging>
+  <properties>
+    <maven.compiler.source>20</maven.compiler.source>
+    <maven.compiler.target>20</maven.compiler.target>
+  </properties>
+  <version>1.0-SNAPSHOT</version>
+  <name>webProject Maven Webapp</name>
+>>>>>>> origin/Phước
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -21,6 +32,7 @@
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
+<<<<<<< HEAD
       <version>4.0.1</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.jdbi/jdbi3-core -->
@@ -39,5 +51,12 @@
   </dependencies>
   <build>
     <finalName>untitled</finalName>
+=======
+      <version>3.1.0</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>webProject</finalName>
+>>>>>>> origin/Phước
   </build>
 </project>
