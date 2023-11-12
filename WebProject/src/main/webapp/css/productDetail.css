@@ -1,9 +1,11 @@
 
 /*****************globals*************/
 body {
-    font-family: 'open sans';
     overflow-x: hidden; }
 
+.breadcrumbs{
+    color: #000000;
+}
 img {
     max-width: 100%; }
 
@@ -52,17 +54,17 @@ img {
     animation-duration: .3s; }
 
 .card {
-    margin-top: 50px;
-    background: #eee;
     padding: 3em;
-    line-height: 1.5em; }
+    line-height: 1.5em;
+    border: none}
 
 @media screen and (min-width: 997px) {
     .wrapper {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
-        display: flex; } }
+        display: flex;
+        flex-direction: initial } }
 
 .details {
     display: -webkit-box;
@@ -83,7 +85,7 @@ img {
 
 .product-title, .price, .sizes, .colors {
     text-transform: none;
-    font-weight: bold; }
+}
 
 .checked span {
     color: #ffc107; }
@@ -150,14 +152,11 @@ img {
     content: "\f00d";
     color: #fff; }
 
-.orange {
-    background: #ff9f1a; }
+.brown {
+    background: #864128; }
 
-.green {
-    background: #85ad00; }
-
-.blue {
-    background: #0076ad; }
+.black {
+    background: #231b1b; }
 
 .tooltip-inner {
     padding: 1.3em; }
@@ -183,21 +182,83 @@ img {
         transform: scale(1); } }
 
 /*# sourceMappingURL=style.css.map */
-ul > li{margin-right:25px;font-weight:lighter;cursor:pointer}
-li.active{border-bottom:3px solid silver;}
+ul > li{
+    margin-right:25px;
+    font-weight:lighter;
+    cursor:pointer}
+li.active{
+    border-bottom:3px solid silver;}
 
-.item-photo{display:flex;justify-content:center;align-items:center;border-right:1px solid #f6f6f6;}
-.menu-items{list-style-type:none;font-size:11px;display:inline-flex;margin-bottom:0;margin-top:20px}
-.btn-success{width:100%;border-radius:0;}
-.section{width:100%;margin-left:-15px;padding:2px;padding-left:15px;padding-right:15px;background:#f8f9f9}
-.title-price{margin-top:30px;margin-bottom:0;color:black}
-.title-attr{margin-top:0;margin-bottom:0;color:black;}
-.btn-minus{cursor:pointer;font-size:7px;display:flex;align-items:center;padding:5px;padding-left:10px;padding-right:10px;border:1px solid gray;border-radius:2px;border-right:0;}
-.btn-plus{cursor:pointer;font-size:7px;display:flex;align-items:center;padding:5px;padding-left:10px;padding-right:10px;border:1px solid gray;border-radius:2px;border-left:0;}
-div.section > div {width:100%;display:inline-flex;}
-div.section > div > input {margin:0;padding-left:5px;font-size:10px;padding-right:5px;max-width:18%;text-align:center;}
-.attr,.attr2{cursor:pointer;margin-right:5px;height:20px;font-size:10px;padding:2px;border:1px solid gray;border-radius:2px;}
-.attr.active,.attr2.active{ border:1px solid orange;}
+.item-photo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-right:1px solid #f6f6f6;}
+.menu-items{
+    list-style-type:none;
+    font-size:11px;
+    display:inline-flex;
+    margin-bottom:0;
+    margin-top:20px}
+.btn-success{
+    width:100%;
+    border-radius:0;}
+.section{
+    width:100%;
+    margin-left:-15px;
+    padding:2px;
+    padding-left:15px;
+    padding-right:15px;
+}
+.title-price{
+    margin-top:30px;
+    margin-bottom:0;
+    color:black}
+.title-attr{
+    margin-top:0;
+    margin-bottom:0;
+    color:black;}
+.btn-minus{
+    cursor:pointer;
+    font-size:7px;
+    display:flex;
+    align-items:center;
+    padding:5px;
+    padding-left:10px;
+    padding-right:10px;
+    border:1px solid gray;
+    border-radius:2px;
+    border-right:0;}
+.btn-plus{
+    cursor:pointer;
+    font-size:7px;
+    display:flex;
+    align-items:center;
+    padding:5px;
+    padding-left:10px;
+    padding-right:10px;
+    border:1px solid gray;
+    border-radius:2px;
+    border-left:0;}
+div.section > div {
+    width:100%;
+    display:inline-flex;}
+div.section > div > input {
+    margin:0;
+    padding-left:5px;
+    font-size:10px;
+    padding-right:5px;
+    max-width:18%;
+    text-align:center;}
+.attr,.attr2{cursor:pointer;
+    margin-right:5px;
+    height:20px;
+    font-size:10px;
+    padding:2px;
+    border:1px solid gray;
+    border-radius:2px;}
+.attr.active,.attr2.active{
+    border:1px solid orange;}
 
 @media (max-width: 426px) {
     .container {margin-top:0px !important;}
