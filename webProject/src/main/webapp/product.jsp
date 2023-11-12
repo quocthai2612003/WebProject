@@ -15,7 +15,7 @@
 </head>
 <body>
 <%--Header--%>
-<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="header.html"></jsp:include>
 <div id="content">
     <div class="container">
         <div class="gird">
