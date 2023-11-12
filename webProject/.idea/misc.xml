@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
   </component>
 =======
 >>>>>>> origin/Phước
+=======
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+>>>>>>> 0dbfba4f99547dac64ce3eceeabbed6f81c4ae8d
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -15,10 +21,14 @@
     </option>
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="openjdk-17" project-jdk-type="JavaSDK">
 =======
   <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="20" project-jdk-type="JavaSDK">
 >>>>>>> origin/Phước
+=======
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="openjdk-17" project-jdk-type="JavaSDK">
+>>>>>>> 0dbfba4f99547dac64ce3eceeabbed6f81c4ae8d
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

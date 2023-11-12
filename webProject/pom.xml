@@ -3,6 +3,9 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example</groupId>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0dbfba4f99547dac64ce3eceeabbed6f81c4ae8d
   <artifactId>untitled</artifactId>
   <packaging>war</packaging>
   <properties>
@@ -11,6 +14,7 @@
   </properties>
   <version>1.0-SNAPSHOT</version>
   <name>untitled Maven Webapp</name>
+<<<<<<< HEAD
 =======
   <artifactId>webProject</artifactId>
   <packaging>war</packaging>
@@ -21,6 +25,8 @@
   <version>1.0-SNAPSHOT</version>
   <name>webProject Maven Webapp</name>
 >>>>>>> origin/Phước
+=======
+>>>>>>> 0dbfba4f99547dac64ce3eceeabbed6f81c4ae8d
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -33,6 +39,9 @@
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0dbfba4f99547dac64ce3eceeabbed6f81c4ae8d
       <version>4.0.1</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.jdbi/jdbi3-core -->
@@ -51,6 +60,7 @@
   </dependencies>
   <build>
     <finalName>untitled</finalName>
+<<<<<<< HEAD
 =======
       <version>3.1.0</version>
     </dependency>
@@ -58,5 +68,7 @@
   <build>
     <finalName>webProject</finalName>
 >>>>>>> origin/Phước
+=======
+>>>>>>> 0dbfba4f99547dac64ce3eceeabbed6f81c4ae8d
   </build>
 </project>
