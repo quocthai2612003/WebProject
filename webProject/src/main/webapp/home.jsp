@@ -9,22 +9,40 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </head>
 <body>
-<div class="slider-wrapper">
-    <div class="slider">
-        <img id="slider1" src="https://savani.vn/images/banners/original/uom_1920x680_1685528233.png">
-        <img id="slider2" src="https://savani.vn/images/banners//original/banner-web-min-1_1697100312.jpg" alt="">
-        <img id="slider3" src="https://savani.vn/images/banners/original/bst-moi-nang-reo_1920x680_1681791528.png"
-             alt="">
-
+<jsp:include page="header.html"></jsp:include>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="slider-nav">
-        <a href="#slider1"></a>
-        <a href="#slider2"></a>
-        <a href="#slider3"></a>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://savani.vn/images/banners/original/uom_1920x680_1685528233.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://savani.vn/images/banners//original/kvs_1920x680-min_1698896566.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://savani.vn/images/banners/original/bst-moi-nang-reo_1920x680_1681791528.png" class="d-block w-100" alt="...">
+        </div>
     </div>
+    <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
+        <span class="visually-hidden" >Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
 </div>
 </section>

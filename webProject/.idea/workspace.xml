@@ -10,21 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89c14598-422f-432a-9ab4-6f3b4d1ec1b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/prdt_demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/prdt_demo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/productDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/productDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/shopping-cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/shopping-cart.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheet/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheet/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheet/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheet/user-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/user-page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheet/cart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheet/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheet/user-page.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/users-page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/users-page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Servlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Servlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Util/CreateCaptcha.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Util/HelloServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Product.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +68,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/ltWebdoan",
+    "last_opened_file_path": "D:/WebProject/webProject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,6 +87,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="WebProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="WebProject" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.81" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.81" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -198,6 +209,7 @@
       <workItem from="1699863740096" duration="2875000" />
       <workItem from="1699868129286" duration="516000" />
       <workItem from="1699884343313" duration="721000" />
+      <workItem from="1699885860843" duration="404000" />
     </task>
     <servers />
   </component>
