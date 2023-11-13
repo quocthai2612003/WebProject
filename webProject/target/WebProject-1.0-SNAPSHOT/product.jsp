@@ -69,18 +69,18 @@
                 </div>
                 <div class="pagination">
                     <% if (pageNumber > 1) {%>
-                    <a href="/webProject/product.jsp?page=<%=pageNumber-1%>" class="other-page"><span>Previou</span></a>
+                    <a href="/WebProject/product.jsp?page=<%=pageNumber-1%>" class="other-page"><span>Previou</span></a>
                     <%}%>
                     <%for (int i = 1; i <= pageEnd; i++) {%>
                     <% if (i == pageNumber) {%>
-                    <a href="/webProject/product.jsp?page=<%=i%>" class="other-page"><span
+                    <a href="/WebProject/product.jsp?page=<%=i%>" class="other-page"><span
                             style="color: #ee4d2d;font-weight: 600;"><%=i%></span></a>
                     <%} else {%>
-                    <a href="/webProject/product.jsp?page=<%=i%>" class="other-page"><span><%=i%></span></a>
+                    <a href="/WebProject/product.jsp?page=<%=i%>" class="other-page"><span><%=i%></span></a>
                     <%}%>
                     <%}%>
                     <% if (pageNumber > 1 && pageNumber < pageEnd) {%>
-                    <a href="/webProject/product.jsp?page=<%=pageNumber+1%>" class="other-page"><span>Next</span></a>
+                    <a href="/WebProject/product.jsp?page=<%=pageNumber+1%>" class="other-page"><span>Next</span></a>
                     <%}%>
                 </div>
             </div>

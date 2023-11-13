@@ -9,21 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89c14598-422f-432a-9ab4-6f3b4d1ec1b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/shopping-cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/shopping-cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheet/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheet/cart.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheet/home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheet/user-page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/users-page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/users-page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Servlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Servlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Util/CreateCaptcha.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Util/HelloServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Product.class" beforeDir="false" />
-    </list>
+    <list default="true" id="89c14598-422f-432a-9ab4-6f3b4d1ec1b1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,7 +195,7 @@
       <workItem from="1699863740096" duration="2875000" />
       <workItem from="1699868129286" duration="516000" />
       <workItem from="1699884343313" duration="721000" />
-      <workItem from="1699885860843" duration="404000" />
+      <workItem from="1699885860843" duration="456000" />
     </task>
     <servers />
   </component>
