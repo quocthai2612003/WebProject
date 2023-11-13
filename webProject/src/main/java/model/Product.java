@@ -20,7 +20,7 @@ public class Product {
 
     public static List<Product> createData() {
         for (int i = 0; i < 55; i++) {
-            list.add(new Product("Dây nịt cá sấu", 100000));
+            list.add(new Product("Dây nịt", 100000));
         }
 
         return list;
