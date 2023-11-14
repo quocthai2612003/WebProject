@@ -2,7 +2,7 @@ p{
     font-size: 20px;
 }
 span{
-    
+
 }
 .cart-page {
     margin: 80px auto;
@@ -24,7 +24,6 @@ th {
     background-color: whitesmoke;
     border-right: white solid 5px;
     font-weight: bold;
-    font-size: 1.8rem;
 }
 td {
     padding: 10px 5px;
@@ -69,7 +68,6 @@ th:last-child{
 .quantity-control {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .quantity-control button {

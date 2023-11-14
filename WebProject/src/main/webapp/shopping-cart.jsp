@@ -30,7 +30,7 @@
       <tr>
         <td>
           <div class="cart-info">
-            <img src="img/1.png" alt="">
+            <img src="assets/images/1.png" alt="">
             <div>
               <p>That lung nam</p>
               <i class="fa-solid fa-trash-can remove-button"></i>
@@ -50,7 +50,7 @@
       <tr>
         <td>
           <div class="cart-info">
-            <img src="img/thatlungnu.jpg" alt="">
+            <img src="assets/images/thatlungnu.jpg" alt="">
             <div>
               <p>That lung nam</p>
               <i class="fa-solid fa-trash-can remove-button"></i>
@@ -70,7 +70,7 @@
       <tr>
         <td>
           <div class="cart-info">
-            <img src="img/thatlungtreem.jpg" alt="">
+            <img src="assets/images/thatlungtreem.jpg" alt="">
             <div>
               <p>That lung nam</p>
               <i class="fa-solid fa-trash-can remove-button"></i>
