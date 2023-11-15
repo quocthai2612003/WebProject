@@ -9,7 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf0a2f28-819d-47e0-ae51-3bcb309e791b" name="Changes" comment="" />
+    <list default="true" id="cf0a2f28-819d-47e0-ae51-3bcb309e791b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Product.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/account_img/login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/product_img/day-nit-da.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/product_img/day-nit-nam.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/product_img/day-nit-nu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/product_img/day-nit-tre-em.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/product_img/day-nit-vai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/account.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,10 +33,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="Jsp File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -37,39 +56,43 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2Y7hAGQesBwM7j2GTb6VERgd9VX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/game/intelliJ/DoAn/WebProject/src/main/webapp/css",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Phước&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hieu/Desktop/New folder/WebProject/WebProject/WebProject/src/main/webapp/img/logo&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hieu\Desktop\New folder\WebProject\WebProject\WebProject\src\main\webapp\img\logo" />
       <recent name="D:\game\intelliJ\DoAn\WebProject\src\main\webapp\css" />
       <recent name="D:\game\intelliJ\DoAn\WebProject\src\main\webapp\js" />
       <recent name="D:\game\intelliJ\DoAn\WebProject\src\main\webapp\img\account_img" />
       <recent name="D:\game\intelliJ\DoAn\WebProject\src\main\webapp\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hieu\Desktop\New folder\WebProject\WebProject\WebProject\src\main\webapp" />
       <recent name="D:\game\intelliJ\DoAn\WebProject\src\main\webapp\img\product_img" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -128,6 +151,9 @@
       <option name="presentableId" value="Default" />
       <updated>1699882380356</updated>
       <workItem from="1699882381418" duration="1869000" />
+      <workItem from="1699947220054" duration="14886000" />
+      <workItem from="1700039705831" duration="2423000" />
+      <workItem from="1700054213618" duration="339000" />
     </task>
     <servers />
   </component>

@@ -12,7 +12,7 @@
 <div id="content">
     <div class="form-login">
         <div class="left">
-            <img src="./img/account_img/login.png" alt="">
+            <img src="./assets/images/account_img/login.png" alt="">
             <p class="title-login">Quyền lợi thành viên</p>
             <ul class="list">
                 <li class="list-item"><p>Mua hàng cực dễ dàng, nhanh chóng</p></li>

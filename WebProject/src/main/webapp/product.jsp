@@ -25,15 +25,15 @@
                             : "day-nit-da";
                     String img;
                     if (category.equals("day-nit-da")) {
-                        img = "./img/product_img/day-nit-da.jpg";
+                        img = "./assets/images/product_img/day-nit-da.jpg";
                     } else if (category.equals("day-nit-vai")) {
-                        img = "./img/product_img/day-nit-vai.jpg";
+                        img = "./assets/images/product_img/day-nit-vai.jpg";
                     } else if (category.equals("day-nit-nam")) {
-                        img = "./img/product_img/day-nit-nam.jpg";
+                        img = "./assets/images/product_img/day-nit-nam.jpg";
                     } else if (category.equals("day-nit-nu")){
-                        img = "./img/product_img/day-nit-nu.jpg";
+                        img = "./assets/images/product_img/day-nit-nu.jpg";
                     } else {
-                        img = "./img/product_img/day-nit-tre-em.jpg";
+                        img = "./assets/images/product_img/day-nit-tre-em.jpg";
                     }
                 %>
                 <ul class="list__category">

@@ -48,3 +48,9 @@ html {
 .other-page.previou-page, .other-page.next-page {
     width: 80px;
 }
+
+.notification-error {
+    color: red;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
