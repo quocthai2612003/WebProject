@@ -21,6 +21,7 @@ html {
 #content {
     margin-top: 50px;
     margin-bottom: 50px;
+<<<<<<< HEAD
 }
 
 .pagination {
@@ -53,4 +54,6 @@ html {
     color: red;
     margin-left: 5px;
     margin-bottom: 5px;
+=======
+>>>>>>> main
 }

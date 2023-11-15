@@ -2,29 +2,21 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+<<<<<<< HEAD
       <artifact name="WebProject:war exploded" />
+=======
+      <artifact name="WebProject:war" />
+>>>>>>> main
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf0a2f28-819d-47e0-ae51-3bcb309e791b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Product.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/account_img/login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/product_img/day-nit-da.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/product_img/day-nit-nam.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/product_img/day-nit-nu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/product_img/day-nit-tre-em.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/product_img/day-nit-vai.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/account.js" afterDir="false" />
-    </list>
+<<<<<<< HEAD
+=======
+    <list default="true" id="89c14598-422f-432a-9ab4-6f3b4d1ec1b1" name="Changes" comment="" />
+>>>>>>> main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,9 +25,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+<<<<<<< HEAD
+=======
+        <option value="Class" />
         <option value="Jsp File" />
-        <option value="CSS File" />
-        <option value="HTML File" />
+>>>>>>> main
       </list>
     </option>
   </component>
@@ -49,76 +43,136 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
-      </MavenGeneralSettings>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
-}</component>
-  <component name="ProjectId" id="2Y7hAGQesBwM7j2GTb6VERgd9VX" />
+  <component name="ProjectId" id="2XfYp4VB9vcdts0RdzihHXE3AcA" />
+>>>>>>> main
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Phước&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hieu/Desktop/New folder/WebProject/WebProject/WebProject/src/main/webapp/img/logo&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+<<<<<<< HEAD
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/WebProject/webProject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Hieu\Desktop\New folder\WebProject\WebProject\WebProject\src\main\webapp\img\logo" />
-      <recent name="D:\game\intelliJ\DoAn\WebProject\src\main\webapp\css" />
-      <recent name="D:\game\intelliJ\DoAn\WebProject\src\main\webapp\js" />
-      <recent name="D:\game\intelliJ\DoAn\WebProject\src\main\webapp\img\account_img" />
-      <recent name="D:\game\intelliJ\DoAn\WebProject\src\main\webapp\img" />
+      <recent name="D:\ltweb\ltWeb\untitled\src\main\webapp\img" />
+      <recent name="D:\ltweb\ltWeb\untitled\src\main\webapp\stylesheet" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Hieu\Desktop\New folder\WebProject\WebProject\WebProject\src\main\webapp" />
-      <recent name="D:\game\intelliJ\DoAn\WebProject\src\main\webapp\img\product_img" />
+      <recent name="D:\WebProject\webProject\src\main\webapp\img" />
+      <recent name="D:\WebProject\webProject\src\main\webapp\css" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="model" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="openRunningConfigInTab" value="true" />
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.81" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.81" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="WebProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="WebProject" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.81" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.81" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="WebProject:war exploded">
+        <artifact name="WebProject:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/WebProject_war_exploded" />
+            <option name="CONTEXT_PATH" value="/WebProject_war" />
+>>>>>>> main
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="ab0984dd-c25b-41e3-8149-c974cd33710e" />
+<<<<<<< HEAD
+=======
+        <option name="BASE_DIRECTORY_NAME" value="268b0d18-1630-48f7-b5db-5a4ee3eca602" />
+>>>>>>> main
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+<<<<<<< HEAD
+=======
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55198" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+>>>>>>> main
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -137,7 +191,10 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="WebProject:war exploded" />
+<<<<<<< HEAD
+=======
+          <artifact name="WebProject:war" />
+>>>>>>> main
         </option>
       </method>
     </configuration>
@@ -145,15 +202,28 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cf0a2f28-819d-47e0-ae51-3bcb309e791b" name="Changes" comment="" />
-      <created>1699882380356</created>
+<<<<<<< HEAD
+=======
+      <changelist id="89c14598-422f-432a-9ab4-6f3b4d1ec1b1" name="Changes" comment="" />
+      <created>1699021783061</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1699882380356</updated>
-      <workItem from="1699882381418" duration="1869000" />
-      <workItem from="1699947220054" duration="14886000" />
-      <workItem from="1700039705831" duration="2423000" />
-      <workItem from="1700054213618" duration="339000" />
+      <updated>1699021783061</updated>
+      <workItem from="1699021784379" duration="2909000" />
+      <workItem from="1699153748804" duration="609000" />
+      <workItem from="1699282118841" duration="1452000" />
+      <workItem from="1699326301729" duration="112000" />
+      <workItem from="1699576535919" duration="4167000" />
+      <workItem from="1699583816256" duration="16000" />
+      <workItem from="1699624278935" duration="993000" />
+      <workItem from="1699686131645" duration="66000" />
+      <workItem from="1699686225975" duration="53000" />
+      <workItem from="1699797917478" duration="1244000" />
+      <workItem from="1699863740096" duration="2875000" />
+      <workItem from="1699868129286" duration="516000" />
+      <workItem from="1699884343313" duration="721000" />
+      <workItem from="1699885860843" duration="456000" />
+>>>>>>> main
     </task>
     <servers />
   </component>

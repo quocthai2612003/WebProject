@@ -21,6 +21,7 @@ html {
 #content {
     margin-top: 50px;
     margin-bottom: 50px;
+<<<<<<< HEAD
 }
 
 .pagination {
@@ -47,4 +48,6 @@ html {
 
 .other-page.previou-page, .other-page.next-page {
     width: 80px;
+=======
+>>>>>>> main
 }
