@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+<<<<<<< HEAD
+=======
       <artifact name="WebProject:war" />
+>>>>>>> main
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+=======
     <list default="true" id="89c14598-422f-432a-9ab4-6f3b4d1ec1b1" name="Changes" comment="" />
+>>>>>>> main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,8 +24,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+<<<<<<< HEAD
+=======
         <option value="Class" />
         <option value="Jsp File" />
+>>>>>>> main
       </list>
     </option>
   </component>
@@ -33,6 +42,8 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+<<<<<<< HEAD
+=======
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -44,10 +55,13 @@
     </option>
   </component>
   <component name="ProjectId" id="2XfYp4VB9vcdts0RdzihHXE3AcA" />
+>>>>>>> main
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
+=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -92,17 +106,23 @@
         <artifact name="WebProject:war">
           <settings>
             <option name="CONTEXT_PATH" value="/WebProject_war" />
+>>>>>>> main
           </settings>
         </artifact>
       </deployment>
       <server-settings>
+<<<<<<< HEAD
+=======
         <option name="BASE_DIRECTORY_NAME" value="268b0d18-1630-48f7-b5db-5a4ee3eca602" />
+>>>>>>> main
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+<<<<<<< HEAD
+=======
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="55198" />
       </RunnerSettings>
@@ -151,6 +171,7 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
+>>>>>>> main
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -169,7 +190,10 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
+<<<<<<< HEAD
+=======
           <artifact name="WebProject:war" />
+>>>>>>> main
         </option>
       </method>
     </configuration>
@@ -177,6 +201,8 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+=======
       <changelist id="89c14598-422f-432a-9ab4-6f3b4d1ec1b1" name="Changes" comment="" />
       <created>1699021783061</created>
       <option name="number" value="Default" />
@@ -196,6 +222,7 @@
       <workItem from="1699868129286" duration="516000" />
       <workItem from="1699884343313" duration="721000" />
       <workItem from="1699885860843" duration="456000" />
+>>>>>>> main
     </task>
     <servers />
   </component>

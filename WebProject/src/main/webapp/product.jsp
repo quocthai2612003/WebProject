@@ -14,10 +14,7 @@
 </head>
 <body>
 <%--Header--%>
-<<<<<<< HEAD
-=======
-<jsp:include page="header.html"></jsp:include>
->>>>>>> main
+<%--<jsp:include page="header.html"></jsp:include>--%>
 <div id="content">
     <div class="container">
         <div class="gird">
@@ -28,23 +25,23 @@
                             : "day-nit-da";
                     String img;
                     if (category.equals("day-nit-da")) {
-                        img = "./img/product_img/day-nit-da.jpg";
+                        img = "./assets/images/product_img/day-nit-da.jpg";
                     } else if (category.equals("day-nit-vai")) {
-                        img = "./img/product_img/day-nit-vai.jpg";
+                        img = "./assets/images/product_img/day-nit-vai.jpg";
                     } else if (category.equals("day-nit-nam")) {
-                        img = "./img/product_img/day-nit-nam.jpg";
+                        img = "./assets/images/product_img/day-nit-nam.jpg";
                     } else if (category.equals("day-nit-nu")){
-                        img = "./img/product_img/day-nit-nu.jpg";
+                        img = "./assets/images/product_img/day-nit-nu.jpg";
                     } else {
-                        img = "./img/product_img/day-nit-tre-em.jpg";
+                        img = "./assets/images/product_img/day-nit-tre-em.jpg";
                     }
                 %>
                 <ul class="list__category">
-                    <li class="list__category--item"><a href="./product.jsp?category=day-nit-da&page=1">Dây nịt da</a></li>
-                    <li class="list__category--item"><a href="./product.jsp?category=day-nit-vai&page=1">Dây nịt vải</a></li>
-                    <li class="list__category--item"><a href="./product.jsp?category=day-nit-nam&page=1">Dây nịt dành cho nam</a></li>
-                    <li class="list__category--item"><a href="./product.jsp?category=day-nit-nu&page=1">Dây nịt dành cho nữ</a></li>
-                    <li class="list__category--item"><a href="./product.jsp?category=day-nit-tre-em&page=1">Dây nịt dành cho trẻ em</a></li>
+                    <li class="list__category--item"><a href="./Product.jsp?category=day-nit-da&page=1">Dây nịt da</a></li>
+                    <li class="list__category--item"><a href="./Product.jsp?category=day-nit-vai&page=1">Dây nịt vải</a></li>
+                    <li class="list__category--item"><a href="./Product.jsp?category=day-nit-nam&page=1">Dây nịt dành cho nam</a></li>
+                    <li class="list__category--item"><a href="./Product.jsp?category=day-nit-nu&page=1">Dây nịt dành cho nữ</a></li>
+                    <li class="list__category--item"><a href="./Product.jsp?category=day-nit-tre-em&page=1">Dây nịt dành cho trẻ em</a></li>
                 </ul>
             </div>
 
@@ -78,7 +75,7 @@
                             <a href="#"><img class="product-img" src="<%=img%>" alt=""></a>
                             <p class="product-title"><%=listProduct.get(i).getTitle()%> <%=i+1%>
                             </p>
-                            <p class="product-price"><%=listProduct.get(i).getPrice()%>
+                            <p class="product-price">Giá: <%=listProduct.get(i).getPrice()%>
                             </p>
                             <a href="#" class="product-order">Xem chi tiết</a>
                         </div>
@@ -87,33 +84,18 @@
                 </div>
                 <div class="pagination">
                     <% if (pageNumber > 1) {%>
-<<<<<<< HEAD
-                    <a href="./product.jsp?category=<%=category%>&page=<%=pageNumber-1%>" class="other-page previou-page"><span>Previou</span></a>
+                    <a href="./Product.jsp?category=<%=category%>&page=<%=pageNumber-1%>" class="other-page previou-page"><span>Previou</span></a>
                     <%}%>
                     <%for (int i = 1; i <= pageEnd; i++) {%>
                     <% if (i == pageNumber) {%>
-                    <a href="./product.jsp?category=<%=category%>&page=<%=i%>" class="other-page"><span
+                    <a href="./Product.jsp?category=<%=category%>&page=<%=i%>" class="other-page"><span
                             style="color: #ee4d2d;font-weight: 600;"><%=i%></span></a>
                     <%} else {%>
-                    <a href="./product.jsp?category=<%=category%>&page=<%=i%>" class="other-page"><span><%=i%></span></a>
+                    <a href="./Product.jsp?category=<%=category%>&page=<%=i%>" class="other-page"><span><%=i%></span></a>
                     <%}%>
                     <%}%>
                     <% if (pageNumber > 1 && pageNumber < pageEnd) {%>
-                    <a href="./product.jsp?category=<%=category%>&page=<%=pageNumber+1%>" class="other-page next-page"><span>Next</span></a>
-=======
-                    <a href="/WebProject/product.jsp?page=<%=pageNumber-1%>" class="other-page"><span>Previou</span></a>
-                    <%}%>
-                    <%for (int i = 1; i <= pageEnd; i++) {%>
-                    <% if (i == pageNumber) {%>
-                    <a href="/WebProject/product.jsp?page=<%=i%>" class="other-page"><span
-                            style="color: #ee4d2d;font-weight: 600;"><%=i%></span></a>
-                    <%} else {%>
-                    <a href="/WebProject/product.jsp?page=<%=i%>" class="other-page"><span><%=i%></span></a>
-                    <%}%>
-                    <%}%>
-                    <% if (pageNumber > 1 && pageNumber < pageEnd) {%>
-                    <a href="/WebProject/product.jsp?page=<%=pageNumber+1%>" class="other-page"><span>Next</span></a>
->>>>>>> main
+                    <a href="./Product.jsp?category=<%=category%>&page=<%=pageNumber+1%>" class="other-page next-page"><span>Next</span></a>
                     <%}%>
                 </div>
             </div>

@@ -21,4 +21,39 @@ html {
 #content {
     margin-top: 50px;
     margin-bottom: 50px;
+<<<<<<< HEAD
+}
+
+.pagination {
+    display: flex;
+    padding: 24px 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination .other-page {
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.other-page.previou-page, .other-page.next-page {
+    width: 80px;
+}
+
+.notification-error {
+    color: red;
+    margin-left: 5px;
+    margin-bottom: 5px;
+=======
+>>>>>>> main
 }
