@@ -15,7 +15,6 @@
 <body>
 <%--Header--%>
 <<<<<<< HEAD
-<%--<jsp:include page="header.html"></jsp:include>--%>
 =======
 <jsp:include page="header.html"></jsp:include>
 >>>>>>> main

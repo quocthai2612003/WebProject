@@ -3,7 +3,6 @@
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
 <<<<<<< HEAD
-      <artifact name="WebProject:war exploded" />
 =======
       <artifact name="WebProject:war" />
 >>>>>>> main
