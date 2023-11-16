@@ -58,6 +58,9 @@
 .statistical {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
 }
 
 .statistical-item::after {
@@ -83,6 +86,47 @@
 
 .statistical-item span {
     font-size: 2rem;
+}
+
+.revenue {
+    display: flex;
+    margin-top: 50px;
+}
+
+.revenue-detail {
+    /*width: 100%;*/
+    width: 350px;
+}
+.revenue-detail-title {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.revenue-detail-title h4 {
+    font-size: 1.8rem;
+    padding:10px 0;
+}
+
+.detail-quanlity {
+    margin-top: 15px;
+}
+
+.detail-quanlity p:nth-child(2) {
+    margin-top: 5px;
+}
+
+.detail {
+    height: 15px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50px;
+    margin-top: 5px;
+    display: flex;
+}
+
+.quanlity-sold {
+    border-radius: 50px;
+    background-color: #0aaa99;
 }
 
     /* ManagerAccount.html */
@@ -131,6 +175,10 @@ table, tr, th {
     border: 1px solid #000;
 }
 
+table tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
 thead tr {
     background-color: #4285f4;
 }
@@ -140,15 +188,15 @@ tbody tr th{
 }
 
 tbody tr:hover {
-    background-color: #cccccc;
+    background-color: yellow;
 }
 
 select {
     cursor: pointer;
 }
 
-.background-ccc {
-    background-color: #cccccc;
+.background-yellow {
+    background-color: yellow;
 }
 
 .btn-saveChange {
@@ -165,4 +213,44 @@ select {
 
 .btn-saveChange:hover {
     opacity: 0.7;
+}
+
+/* ManagerReview */
+.btn-delete, .btn-repair {
+    padding: 4px 15px;
+    color: #fff;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-delete {
+    background-color: red;
+}
+
+.btn-repair {
+    background-color: blue;
+}
+
+/* ManagerProduct */
+.product-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-img img {
+    width: 80px;
+}
+
+.btn-addProduct {
+    float: right;
+    margin: 10px;
+    outline: none;
+    background-color: #4285f4;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
 }

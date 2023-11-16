@@ -20,12 +20,12 @@
                     </div>
                     <div class="shop-user">
                         <div class="user">
-                            <img src="../assets/images/logo/icon.jpg" alt="">
+                            <img src="./assets/images/logo/icon.jpg" alt="">
                         </div>
                         <p>Xin chào, admin</p>
                     </div>
                     <div class="menu-item">
-                        <a href="" class="active">
+                        <a href="./Admin.html" class="active">
                             <div class="icon"><i class="fa-solid fa-house-chimney"></i></div>
                             <p class="menu-content">Thống kê</p>
                         </a>
@@ -37,19 +37,19 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="">
+                        <a href="./ManagerAccount.html">
                             <div class="icon"><i class="fa-regular fa-calendar-days"></i></div>
                             <p  class="menu-content">Quản lý sản phẩm</p>
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="">
+                        <a href="./ManagerOrder.html">
                             <div class="icon"><i class="fa-solid fa-clipboard"></i></div>
                             <p class="menu-content">Quản lý đơn hàng</p>
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="">
+                        <a href="./ManagerReview.html">
                             <div class="icon"><i class="fa-solid fa-comment"></i></div>
                             <p class="menu-content">Quản lý bình luận</p>
                         </a>
@@ -64,19 +64,96 @@
                     </div>
                     <div class="statistical-item">
                         <p>Tổng số lượng sản phẩm</p>
-                        <span>2000</span>
+                        <span>1694</span>
                     </div>
                     <div class="statistical-item">
                         <p>Tổng số đơn đặt hàng</p>
-                        <span>100</span>
+                        <span>645</span>
                     </div>
                     <div class="statistical-item">
                         <p>Tổng số lượt bình luận</p>
                         <span>20</span>
                     </div>
                 </div>
+                <div class="contain">
+                    <div class="title">
+                        <h2>Doanh thu từng loại dây nịt</h2>
+                    </div>
+                    <div class="revenue">
+                        <div class="revenue-chart">
+                            <canvas id="myChart" style="width:100%;max-width:850px; height: 450px"></canvas>
+                        </div>
+                        <div class="revenue-detail">
+                            <div class="revenue-detail-title">
+                                <h4>Thống kê số lượng sản phẩm chi tiết</h4>
+                            </div>
+                            <div class="detail-quanlity">
+                                <p>Số lượng bán được dây nịt da/tổng sản phẩm</p>
+                                <p>125/385</p>
+                                <div class="detail">
+                                    <div class="quanlity-sold" style="width: calc((125/385)*100%);"></div>
+                                </div>
+                            </div>
+
+                            <div class="detail-quanlity">
+                                <p>Số lượng bán được dây nịt vải/tổng sản phẩm</p>
+                                <p>172/259</p>
+                                <div class="detail">
+                                    <div class="quanlity-sold" style="width: calc((172/259)*100%);"></div>
+                                </div>
+                            </div>
+
+                            <div class="detail-quanlity">
+                                <p>Số lượng bán được dây nịt trẻ em/tổng sản phẩm</p>
+                                <p>82/100</p>
+                                <div class="detail">
+                                    <div class="quanlity-sold" style="width: calc((82/100)*100%)"></div>
+                                </div>
+                            </div>
+                            <div class="detail-quanlity">
+                                <p>Số lượng bán được dây nịt nam/tổng sản phẩm</p>
+                                <p>128/750</p>
+                                <div class="detail">
+                                    <div class="quanlity-sold" style="width: calc((128/750)*100%);"></div>
+                                </div>
+                            </div>
+                            <div class="detail-quanlity">
+                                <p>Số lượng bán được dây nịt nữ/tổng sản phẩm</p>
+                                <p>138/200</p>
+                                <div class="detail">
+                                    <div class="quanlity-sold" style="width: calc((138/200)*100%);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script>
+    var xValues = ["Dây nịt vải", "Dây nịt da", "Dây nịt nam", "Dây nịt nữ", "Dây nịt trẻ em"];
+    var yValues = [1700000, 3000000, 1200000, 1300000, 560000];
+    var barColors = ["red", "green","blue","orange","brown"];
+
+    new Chart("myChart", {
+        type: "bar",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+        },
+        options: {
+            legend: {display: false},
+            title: {
+                display: true,
+                text: "Doanh thu"
+            }
+        }
+    });
+</script>
 </html>

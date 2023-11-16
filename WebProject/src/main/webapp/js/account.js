@@ -10,7 +10,7 @@ function kiemTraMatKhau() {
 }
 
 function kiemTraSuThayDoi(element, row) {
-    row.classList.add("background-ccc");
+    row.classList.add("background-yellow");
 }
 
 

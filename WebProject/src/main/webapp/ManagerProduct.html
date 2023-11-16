@@ -16,13 +16,13 @@
             <div class="menu">
                 <div class="menu-title">
                     <div class="logo">
-                        <img src="./img/product_img/day-nit-da.jpg" alt="">
+                        <img src="./assets/images/product_img/day-nit-da.jpg" alt="">
                     </div>
                     <h2 class="shop-name">PLQ SHOP</h2>
                 </div>
                 <div class="shop-user">
                     <div class="user">
-                        <img src="./img/logo/icon.jpg" alt="">
+                        <img src="./assets/images/logo/icon.jpg" alt="">
                     </div>
                     <p>Xin chào, admin</p>
                 </div>
@@ -74,284 +74,100 @@
                         <table>
                             <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Tên đăng nhập</th>
-                                <th>Email</th>
-                                <th>Họ và tên</th>
-                                <th>Số điện thoại</th>
-                                <th>Quyền</th>
-                                <th>Trạng thái</th>
+                                <th>Mã sản phẩm</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Hình ảnh</th>
+                                <th>Giá sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Xóa sản phẩm</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <th>1</th>
-                                <th>bandaynit</th>
-                                <th>abc123@gmail.com</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>0987654321</th>
-                                <th>
-                                    <form>
-                                        <select class="role" name = "role" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="admin">Admin</option>
-                                            <option value="user">Người dùng</option>
-                                        </select>
-                                    </form>
-                                </th>
-                                <th>
-                                    <form>
-                                        <select class="status" name = "status" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="-1">-1</option>
-                                        </select>
-                                    </form>
-                                </th>
+                                <th>N123</th>
+                                <th>Dây nịt vải</th>
+                                <th><div class="product-img"><img src="./assets/images/product_img/day-nit-vai.jpg" alt=""></div></th>
+                                <th>100.000</th>
+                                <th>50</th>
+                                <th><button class="btn-delete" style="padding: 10px 40px;"><i class="fa-solid fa-trash-can" style="color: #ffffff;"></i></button></th>
                             </tr>
                             <tr>
-                                <th>2</th>
-                                <th>bandaynit</th>
-                                <th>abc123@gmail.com</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>0987654321</th>
-                                <th>
-                                    <form>
-                                        <select class="role" name = "role" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="admin">Admin</option>
-                                            <option value="user">Người dùng</option>
-                                        </select>
-                                    </form>
-                                </th>
-                                <th>
-                                    <form>
-                                        <select class="status" name = "status" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="-1">-1</option>
-                                        </select>
-                                    </form>
-                                </th>
+                                <th>N123</th>
+                                <th>Dây nịt vải</th>
+                                <th><div class="product-img"><img src="./assets/images/product_img/day-nit-vai.jpg" alt=""></div></th>
+                                <th>100.000</th>
+                                <th>50</th>
+                                <th><button class="btn-delete" style="padding: 10px 40px;"><i class="fa-solid fa-trash-can" style="color: #ffffff;"></i></button></th>
                             </tr>
                             <tr>
-                                <th>3</th>
-                                <th>bandaynit</th>
-                                <th>abc123@gmail.com</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>0987654321</th>
-                                <th>
-                                    <form>
-                                        <select class="role" name = "role" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="admin">Admin</option>
-                                            <option value="user">Người dùng</option>
-                                        </select>
-                                    </form>
-                                </th>
-                                <th>
-                                    <form>
-                                        <select class="status" name = "status" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="-1">-1</option>
-                                        </select>
-                                    </form>
-                                </th>
+                                <th>N123</th>
+                                <th>Dây nịt vải</th>
+                                <th><div class="product-img"><img src="./assets/images/product_img/day-nit-vai.jpg" alt=""></div></th>
+                                <th>100.000</th>
+                                <th>50</th>
+                                <th><button class="btn-delete" style="padding: 10px 40px;"><i class="fa-solid fa-trash-can" style="color: #ffffff;"></i></button></th>
                             </tr>
                             <tr>
-                                <th>4</th>
-                                <th>bandaynit</th>
-                                <th>abc123@gmail.com</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>0987654321</th>
-                                <th>
-                                    <form>
-                                        <select class="role" name = "role" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="admin">Admin</option>
-                                            <option value="user">Người dùng</option>
-                                        </select>
-                                    </form>
-                                </th>
-                                <th>
-                                    <form>
-                                        <select class="status" name = "status" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="-1">-1</option>
-                                        </select>
-                                    </form>
-                                </th>
+                                <th>N123</th>
+                                <th>Dây nịt vải</th>
+                                <th><div class="product-img"><img src="./assets/images/product_img/day-nit-vai.jpg" alt=""></div></th>
+                                <th>100.000</th>
+                                <th>50</th>
+                                <th><button class="btn-delete" style="padding: 10px 40px;"><i class="fa-solid fa-trash-can" style="color: #ffffff;"></i></button></th>
                             </tr>
                             <tr>
-                                <th>5</th>
-                                <th>bandaynit</th>
-                                <th>abc123@gmail.com</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>0987654321</th>
-                                <th>
-                                    <form>
-                                        <select class="role" name = "role" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="admin">Admin</option>
-                                            <option value="user">Người dùng</option>
-                                        </select>
-                                    </form>
-                                </th>
-                                <th>
-                                    <form>
-                                        <select class="status" name = "status" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="-1">-1</option>
-                                        </select>
-                                    </form>
-                                </th>
+                                <th>N123</th>
+                                <th>Dây nịt vải</th>
+                                <th><div class="product-img"><img src="./assets/images/product_img/day-nit-vai.jpg" alt=""></div></th>
+                                <th>100.000</th>
+                                <th>50</th>
+                                <th><button class="btn-delete" style="padding: 10px 40px;"><i class="fa-solid fa-trash-can" style="color: #ffffff;"></i></button></th>
                             </tr>
                             <tr>
-                                <th>6</th>
-                                <th>bandaynit</th>
-                                <th>abc123@gmail.com</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>0987654321</th>
-                                <th>
-                                    <form>
-                                        <select class="role" name = "role" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="admin">Admin</option>
-                                            <option value="user">Người dùng</option>
-                                        </select>
-                                    </form>
-                                </th>
-                                <th>
-                                    <form>
-                                        <select class="status" name = "status" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="-1">-1</option>
-                                        </select>
-                                    </form>
-                                </th>
+                                <th>N123</th>
+                                <th>Dây nịt vải</th>
+                                <th><div class="product-img"><img src="./assets/images/product_img/day-nit-vai.jpg" alt=""></div></th>
+                                <th>100.000</th>
+                                <th>50</th>
+                                <th><button class="btn-delete" style="padding: 10px 40px;"><i class="fa-solid fa-trash-can" style="color: #ffffff;"></i></button></th>
                             </tr>
                             <tr>
-                                <th>7</th>
-                                <th>bandaynit</th>
-                                <th>abc123@gmail.com</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>0987654321</th>
-                                <th>
-                                    <form>
-                                        <select class="role" name = "role" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="admin">Admin</option>
-                                            <option value="user">Người dùng</option>
-                                        </select>
-                                    </form>
-                                </th>
-                                <th>
-                                    <form>
-                                        <select class="status" name = "status" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="-1">-1</option>
-                                        </select>
-                                    </form>
-                                </th>
+                                <th>N123</th>
+                                <th>Dây nịt vải</th>
+                                <th><div class="product-img"><img src="./assets/images/product_img/day-nit-vai.jpg" alt=""></div></th>
+                                <th>100.000</th>
+                                <th>50</th>
+                                <th><button class="btn-delete" style="padding: 10px 40px;"><i class="fa-solid fa-trash-can" style="color: #ffffff;"></i></button></th>
                             </tr>
                             <tr>
-                                <th>7</th>
-                                <th>bandaynit</th>
-                                <th>abc123@gmail.com</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>0987654321</th>
-                                <th>
-                                    <form>
-                                        <select class="role" name = "role" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="admin">Admin</option>
-                                            <option value="user">Người dùng</option>
-                                        </select>
-                                    </form>
-                                </th>
-                                <th>
-                                    <form>
-                                        <select class="status" name = "status" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="-1">-1</option>
-                                        </select>
-                                    </form>
-                                </th>
+                                <th>N123</th>
+                                <th>Dây nịt vải</th>
+                                <th><div class="product-img"><img src="./assets/images/product_img/day-nit-vai.jpg" alt=""></div></th>
+                                <th>100.000</th>
+                                <th>50</th>
+                                <th><button class="btn-delete" style="padding: 10px 40px;"><i class="fa-solid fa-trash-can" style="color: #ffffff;"></i></button></th>
                             </tr>
                             <tr>
-                                <th>8</th>
-                                <th>bandaynit</th>
-                                <th>abc123@gmail.com</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>0987654321</th>
-                                <th>
-                                    <form>
-                                        <select class="role" name = "role" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="admin">Admin</option>
-                                            <option value="user">Người dùng</option>
-                                        </select>
-                                    </form>
-                                </th>
-                                <th>
-                                    <form>
-                                        <select class="status" name = "status" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="-1">-1</option>
-                                        </select>
-                                    </form>
-                                </th>
+                                <th>N123</th>
+                                <th>Dây nịt vải</th>
+                                <th><div class="product-img"><img src="./assets/images/product_img/day-nit-vai.jpg" alt=""></div></th>
+                                <th>100.000</th>
+                                <th>50</th>
+                                <th><button class="btn-delete" style="padding: 10px 40px;"><i class="fa-solid fa-trash-can" style="color: #ffffff;"></i></button></th>
                             </tr>
                             <tr>
-                                <th>9</th>
-                                <th>bandaynit</th>
-                                <th>abc123@gmail.com</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>0987654321</th>
-                                <th>
-                                    <form>
-                                        <select class="role" name = "role" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="admin">Admin</option>
-                                            <option value="user">Người dùng</option>
-                                        </select>
-                                    </form>
-                                </th>
-                                <th>
-                                    <form>
-                                        <select class="status" name = "status" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="-1">-1</option>
-                                        </select>
-                                    </form>
-                                </th>
+                                <th>N123</th>
+                                <th>Dây nịt vải</th>
+                                <th><div class="product-img"><img src="./assets/images/product_img/day-nit-vai.jpg" alt=""></div></th>
+                                <th>100.000</th>
+                                <th>50</th>
+                                <th><button class="btn-delete" style="padding: 10px 40px;"><i class="fa-solid fa-trash-can" style="color: #ffffff;"></i></button></th>
                             </tr>
-                            <tr>
-                                <th>10</th>
-                                <th>bandaynit</th>
-                                <th>abc123@gmail.com</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>0987654321</th>
-                                <th>
-                                    <form>
-                                        <select class="role" name = "role" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="admin">Admin</option>
-                                            <option value="user">Người dùng</option>
-                                        </select>
-                                    </form>
-                                </th>
-                                <th>
-                                    <form>
-                                        <select class="status" name = "status" onchange="kiemTraSuThayDoi(this, this.parentNode.parentNode.parentNode)">
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="-1">-1</option>
-                                        </select>
-                                    </form>
-                                </th>
-                            </tr>
+
                             </tbody>
                         </table>
                     </div>
-                    <button class="btn-saveChange">Lưu thay đổi</button>
+                    <button class="btn-addProduct">Thêm sản phẩm</button>
                     <div class="pagination">
                         <a href="#" class="other-page" style="color: red; font-weight: bold;"><span>1</span></a>
                         <a href="#" class="other-page"><span>2</span></a>
