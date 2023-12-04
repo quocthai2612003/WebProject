@@ -9,19 +9,18 @@
 }
 
 .container {
-    width: 1260px;
-    margin: 0 auto;
-    display: block;
+    width: 1260px !important;
+    margin: 0 auto !important;
+    display: block !important;
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5% !important;
 }
 
 #content {
     margin-top: 50px;
     margin-bottom: 50px;
-<<<<<<< HEAD
 }
 
 .pagination {
@@ -54,6 +53,4 @@ html {
     color: red;
     margin-left: 5px;
     margin-bottom: 5px;
-=======
->>>>>>> main
 }

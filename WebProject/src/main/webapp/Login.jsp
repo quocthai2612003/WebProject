@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/account.css">
+    <link rel="stylesheet" href="./css/base.css">
 </head>
 <body>
 <div id="content">
@@ -22,10 +22,10 @@
         </div>
         <div class="right">
             <div class="function">
-                <a class="function-login" href="./Login.jsp">Đăng nhập</a>
-                <a class="function-register" href="./Register.jsp">Đăng ký</a>
+                <a class="function-login" href="./Login.html">Đăng nhập</a>
+                <a class="function-register" href="./Register.html">Đăng ký</a>
             </div>
-            <form class="infor" action="">
+            <form class="infor" action="" method="post">
                 <div class="form-group">
                     <input type="text" id="email" placeholder="Tên đăng nhập" required = "required">
                     <input type="password" id="password" placeholder="Mật khẩu" required = "required">

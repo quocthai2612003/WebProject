@@ -1,4 +1,10 @@
-
+<%--
+  Created by IntelliJ IDEA.
+  User: Hieu
+  Date: 04/12/2023
+  Time: 12:52 PM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,20 +28,21 @@
         </div>
         <div class="right">
             <div class="function">
-                <a class="function-login" style="border-bottom: 1px solid #ccc" href="./Login.jsp">Đăng nhập</a>
-                <a class="function-register" style="border-bottom: 1px solid #000" href="./Register.jsp">Đăng ký</a>
+                <a class="function-login" style="border-bottom: 1px solid #ccc" href="./Login.html">Đăng nhập</a>
+                <a class="function-register" style="border-bottom: 1px solid #000" href="./Register.html">Đăng ký</a>
             </div>
-            <form class="infor" action="">
+            <form class="infor" action="" method="post">
                 <div class="form-group">
                     <input type="text" id = "fullname" placeholder="Họ và tên" required = "required">
                     <input type="email" id="email" placeholder="Nhập địa chỉ email" required = "required">
-                    <input type="text" id = "phone" placeholder="Số điện thoại" required = "required">
+                    <p id="checkPhone"></p>
+                    <input type="text" id = "phone" placeholder="Số điện thoại" required = "required" onkeyup="kiemTraSoDienThoai()">
                     <input type="text" id = "username" placeholder="Tên đăng nhập" required = "required">
                     <input type="password" id="password" placeholder="Mật khẩu" required = "required">
-                    <p style="color: red; margin-left: 5px; margin-bottom: 5px;" id="notification"></p>
+                    <p id="checkPass"></p>
                     <input type="password" id="password__repeat" placeholder="Xác nhận mật khẩu" required = "required" onkeyup="kiemTraMatKhau()">
                 </div>
-                <button type ="submit" class="btn_createAccount">Tạo tài khoản</button>
+                <button type="submit" class="btn_createAccount">Tạo tài khoản</button>
             </form>
             <p class="commit">
                 Chúng tôi cam kết bảo mật và không bao giờ đăng hay chia sẻ thông tin mà chưa có được sự đồng ý của bạn

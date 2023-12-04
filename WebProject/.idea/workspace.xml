@@ -2,20 +2,143 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-<<<<<<< HEAD
-=======
-      <artifact name="WebProject:war" />
->>>>>>> main
+      <artifact name="WebProject:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-=======
-    <list default="true" id="89c14598-422f-432a-9ab4-6f3b4d1ec1b1" name="Changes" comment="" />
->>>>>>> main
+    <list default="true" id="02d188f2-732c-462c-9376-c5f7b5b81b52" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Servlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/users-page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerAccount.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerOrder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerProduct.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerReview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/account_img/login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/logo/icon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/day-nit-da.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/day-nit-nam.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/day-nit-nu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/day-nit-tre-em.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/day-nit-vai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/thatlungnu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/thatlungtreem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/account.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/account.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/cart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/history.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/productDetail.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/user-page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/account.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/product.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/shopping-cart.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/users-page.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/Login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/Register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/classes/Servlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/classes/Util/CreateCaptcha.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/classes/Util/HelloServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/classes/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/lib/activation-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/lib/checker-qual-3.31.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/lib/commons-codec-1.16.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/lib/javax.mail-1.6.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/lib/postgresql-42.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/assets/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/css/account.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/css/product.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/css/productDetail.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/account_img/login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/day-nit-da.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/day-nit-nam.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/day-nit-nu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/day-nit-tre-em.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/day-nit-vai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/product_img/day-nit-da.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/product_img/day-nit-nam.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/product_img/day-nit-nu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/product_img/day-nit-tre-em.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/product_img/day-nit-vai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/thatlungnu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/thatlungtreem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/js/account.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/js/loadHeaderFooter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/js/productDetail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/prdt_demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/product.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/productDetail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/shopping-cart.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/stylesheet/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/stylesheet/cart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/stylesheet/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/stylesheet/user-page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/users-page.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DB.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Servlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bean/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/DBProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/JDBIConnetor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/DB.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Servlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/bean/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/db/DBProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/db/JDBIConnetor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/lib/geantyref-1.3.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/lib/javax.servlet-api-4.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/lib/jdbi3-core-3.41.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/lib/mysql-connector-j-8.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/lib/protobuf-java-3.21.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/lib/slf4j-api-1.7.36.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,11 +147,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-<<<<<<< HEAD
-=======
         <option value="Class" />
         <option value="Jsp File" />
->>>>>>> main
       </list>
     </option>
   </component>
@@ -42,33 +162,25 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-<<<<<<< HEAD
-=======
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2Z43GITr4hSFvoma3YXOqfURayq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2XfYp4VB9vcdts0RdzihHXE3AcA" />
->>>>>>> main
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/WebProject/webProject",
+    "git-widget-placeholder": "Phước",
+    "last_opened_file_path": "C:/Users/Hieu/Desktop/New folder/New folder/WebProject/WebProject/src/main/webapp/js",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -78,53 +190,34 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\ltweb\ltWeb\untitled\src\main\webapp\img" />
-      <recent name="D:\ltweb\ltWeb\untitled\src\main\webapp\stylesheet" />
+      <recent name="C:\Users\Hieu\Desktop\New folder\New folder\WebProject\WebProject\src\main\webapp\js" />
+      <recent name="C:\Users\Hieu\Desktop\New folder\New folder\WebProject\WebProject\src\main\webapp\assets" />
+      <recent name="C:\Users\Hieu\Desktop\New folder\New folder\WebProject\WebProject\src\main\webapp\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WebProject\webProject\src\main\webapp\img" />
-      <recent name="D:\WebProject\webProject\src\main\webapp\css" />
+      <recent name="C:\Users\Hieu\Desktop\New folder\New folder\WebProject\WebProject\src\main\webapp\assets\images" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="WebProject" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="WebProject" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 9.0.81" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.81" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="WebProject:war">
+        <artifact name="WebProject:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/WebProject_war" />
->>>>>>> main
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-<<<<<<< HEAD
-=======
-        <option name="BASE_DIRECTORY_NAME" value="268b0d18-1630-48f7-b5db-5a4ee3eca602" />
->>>>>>> main
+        <option name="BASE_DIRECTORY_NAME" value="31bc414a-f506-4ecb-aa15-67a3859c3278" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
-<<<<<<< HEAD
-=======
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="55198" />
+        <option name="DEBUG_PORT" value="63331" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -171,7 +264,6 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
->>>>>>> main
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -190,10 +282,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-<<<<<<< HEAD
-=======
-          <artifact name="WebProject:war" />
->>>>>>> main
+          <artifact name="WebProject:war exploded" />
         </option>
       </method>
     </configuration>
@@ -201,28 +290,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-<<<<<<< HEAD
-=======
-      <changelist id="89c14598-422f-432a-9ab4-6f3b4d1ec1b1" name="Changes" comment="" />
-      <created>1699021783061</created>
+      <changelist id="02d188f2-732c-462c-9376-c5f7b5b81b52" name="Changes" comment="" />
+      <created>1701667427711</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1699021783061</updated>
-      <workItem from="1699021784379" duration="2909000" />
-      <workItem from="1699153748804" duration="609000" />
-      <workItem from="1699282118841" duration="1452000" />
-      <workItem from="1699326301729" duration="112000" />
-      <workItem from="1699576535919" duration="4167000" />
-      <workItem from="1699583816256" duration="16000" />
-      <workItem from="1699624278935" duration="993000" />
-      <workItem from="1699686131645" duration="66000" />
-      <workItem from="1699686225975" duration="53000" />
-      <workItem from="1699797917478" duration="1244000" />
-      <workItem from="1699863740096" duration="2875000" />
-      <workItem from="1699868129286" duration="516000" />
-      <workItem from="1699884343313" duration="721000" />
-      <workItem from="1699885860843" duration="456000" />
->>>>>>> main
+      <updated>1701667427711</updated>
+      <workItem from="1701667428860" duration="2909000" />
     </task>
     <servers />
   </component>
