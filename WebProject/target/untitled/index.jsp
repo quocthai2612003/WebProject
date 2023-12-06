@@ -1,29 +1,13 @@
-<%@ page import="bean.User" %>
-<!doctype html>
-<html lang="en">
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>JSP - Hello World</title>
 </head>
 <body>
-<%
-    User us = (User)session.getAttribute("qq");
-
-%>
-<%
-    if(us!=null){
-%>
-<p>Xin chao <%= us.getName()%></p>
-
-<%
-    }else {
-%>
-<p>ban chua dang nhap</p>
-<% }%>
-
-
+<h1><%= "Hello World!" %>
+</h1>
+<br/>
+<a href="hello-servlet">Hello Servlet</a>
 </body>
 </html>
