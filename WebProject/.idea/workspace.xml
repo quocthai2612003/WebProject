@@ -10,134 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02d188f2-732c-462c-9376-c5f7b5b81b52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cart.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Servlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/users-page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Admin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerAccount.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerOrder.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerProduct.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerReview.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Product.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Register.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/account_img/login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/logo/icon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/day-nit-da.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/day-nit-nam.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/day-nit-nu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/day-nit-tre-em.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/day-nit-vai.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/thatlungnu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/thatlungtreem.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/account.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/account.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/cart.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/history.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/product.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/productDetail.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/user-page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/account.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/product.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/shopping-cart.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/users-page.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/Login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/Register.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/classes/Servlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/classes/Util/CreateCaptcha.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/classes/Util/HelloServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/classes/model/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/lib/activation-1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/lib/checker-qual-3.31.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/lib/commons-codec-1.16.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/lib/javax.mail-1.6.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/lib/postgresql-42.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/assets/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/css/account.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/css/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/css/product.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/css/productDetail.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/header.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/home.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/account_img/login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/day-nit-da.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/day-nit-nam.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/day-nit-nu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/day-nit-tre-em.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/day-nit-vai.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/product_img/day-nit-da.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/product_img/day-nit-nam.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/product_img/day-nit-nu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/product_img/day-nit-tre-em.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/product_img/day-nit-vai.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/thatlungnu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/img/thatlungtreem.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/js/account.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/js/loadHeaderFooter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/js/productDetail.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/prdt_demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/product.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/productDetail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/shopping-cart.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/stylesheet/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/stylesheet/cart.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/stylesheet/home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/stylesheet/user-page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebProject-1.0-SNAPSHOT/users-page.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DB.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Servlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bean/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/DBProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/JDBIConnetor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/DB.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Servlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/bean/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/db/DBProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/db/JDBIConnetor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/lib/geantyref-1.3.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/lib/javax.servlet-api-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/lib/jdbi3-core-3.41.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/lib/mysql-connector-j-8.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/lib/protobuf-java-3.21.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/lib/slf4j-api-1.7.36.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/home.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Product.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -162,9 +37,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2Z43GITr4hSFvoma3YXOqfURayq" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -173,21 +48,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Phước",
-    "last_opened_file_path": "C:/Users/Hieu/Desktop/New folder/New folder/WebProject/WebProject/src/main/webapp/js",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Phước&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hieu/Desktop/New folder/New folder/WebProject/WebProject/src/main/webapp/js&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Hieu\Desktop\New folder\New folder\WebProject\WebProject\src\main\webapp\js" />
@@ -295,7 +170,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701667427711</updated>
-      <workItem from="1701667428860" duration="2909000" />
+      <workItem from="1701667428860" duration="3641000" />
+      <workItem from="1701832281430" duration="43000" />
+      <workItem from="1702197357289" duration="3200000" />
     </task>
     <servers />
   </component>
