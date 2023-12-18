@@ -91,7 +91,7 @@
 
                     <% for (int i = 1; i <= totalPage; i++) {%>
                         <% if (i == pageCurrent) {%>
-                            <a href="/product?page=<%=i%>" class="other-page notification-error"><span><%=i%></span></a>
+                            <a href="/product?category=<%=category%>&page=<%=i%>" style = "color: red;" class="other-page"><span><%=i%></span></a>
                         <%} else {%>
                             <a href="/product?category=<%=category%>&page=<%=i%>" class="other-page"><span><%=i%></span></a>
                         <%}%>
