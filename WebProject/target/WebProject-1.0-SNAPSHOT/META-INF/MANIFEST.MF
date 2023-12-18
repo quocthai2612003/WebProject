@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Created-By: IntelliJ IDEA
-<<<<<<< HEAD
-=======
-Built-By: Asus
-Build-Jdk: 17.0.7
->>>>>>> main
-
