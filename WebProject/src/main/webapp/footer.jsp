@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,11 +37,9 @@
     <div class="row">
         <div class="col-6 col-md-2 mb-3">
             <h6>LIÊN HỆ</h6>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Dịa chỉ</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Diện thoại liên hệ</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Email</a></li>
-            </ul>
+            <p><strong>Địa chỉ</strong>: Khu Phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh</p>
+            <p><strong>Điện thoại liên hệ</strong>: 0935.826.249</p>
+            <p><strong>Email</strong>: 21130426@st.hcmuaf.edu.vn</p>
         </div>
 
         <div class="col-6 col-md-2 mb-3">
@@ -48,9 +47,8 @@
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Giới thiệu</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Diều khoaản</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sự kiện</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Liên hệ</a></li>
+                <li class="nav-item mb-2"><a href="contact.jsp" class="nav-link p-0 text-muted">Liên hệ</a></li>
             </ul>
         </div>
 

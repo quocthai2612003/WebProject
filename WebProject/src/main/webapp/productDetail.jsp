@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,42 +33,45 @@
 
 </head>
 <body>
-
+<div id="header_contain"></div>
 <div class="container">
         <div class='breadcrumbs row-item'>
             <ol class="breadcrumb row-item">
-                <li class='breadcrumb-item breadcumbs-first'>
-                    <a title='PQL' href="index.html" rel='nofollow'>Trang chủ</a>
+                <li class='breadcrumb-item breadcrumbs-first'>
+                    <a title='PQL' href="home.jsp" rel='nofollow'>Trang chủ</a>
                 </li>
                 <li class="breadcrumb-item ">
                     <a href="#" title="Thắt lưng">Thắt lưng</a>
                 </li>
-                <li class="breadcrumb-item active">Tên sản phẩm</li>
+                <li class="breadcrumb-item">Tên sản phẩm</li>
             </ol><!-- END: .breadcrumb-content -->
         </div><!-- END: .breadcrumb -->
         <div class="clear"></div>
-    <div class="card">
         <div class="container-fliud">
             <div class="wrapper row">
                     <div class="image w-50">
                         <div class="preview-pic tab-content">
-                            <div class="tab-pane active" id="pic-1"><img src="assets/images/that-lung-nam-zuciani-IT02-nau-1.jpg"/></div>
-                            <div class="tab-pane" id="pic-2"><img src=""/></div>
-                            <div class="tab-pane" id="pic-3"><img src=""/></div>
-                            <div class="tab-pane" id="pic-4"><img src=""/></div>
-                            <div class="tab-pane" id="pic-5"><img src=""/></div>
+                            <div class="tab-pane active" id="pic-1"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox.jpg" /></div>
+                            <div class="tab-pane" id="pic-2"><img src="" /></div>
+                            <div class="tab-pane" id="pic-3"><img src="" /></div>
+                            <div class="tab-pane" id="pic-4"><img src="" /></div>
+                            <div class="tab-pane" id="pic-5"><img src="" /></div>
+
                         </div>
                         <ul class="preview-thumbnail nav nav-tabs">
-                            <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="assets/images/that-lung-nam-zuciani-IT02-nau-1.jpg"/></a></li>
-                            <li><a data-target="#pic-2" data-toggle="tab"><img src="assets/images/that-lung-nam-zuciani-IT02-nau-2.jpg"/></a></li>
-                            <li><a data-target="#pic-3" data-toggle="tab"><img src="assets/images/that-lung-nam-zuciani-IT02-nau-3.jpg"/></a></li>
-<!--                            <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126"/></a></li>-->
-<!--                            <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126"/></a></li>-->
+                            <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox.jpg" /></a></li>
+                            <li><a data-target="#pic-2" data-toggle="tab"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-1.jpg" /></a></li>
+                            <li><a data-target="#pic-3" data-toggle="tab"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-2.jpg" /></a></li>
+                            <li><a data-target="#pic-4" data-toggle="tab"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-3.jpg" /></a></li>
+                            <li><a data-target="#pic-5" data-toggle="tab"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-4.jpg" /></a></li>
+
                         </ul>
                     </div>
 
                     <div class="details col-md-6">
-                        <h3 class="product-title">men's shoes fashion</h3>
+                        <h3 class="product-title">Thắt lưng nam cao cấp FaiaoePOLO</h3>
+
+                        <h4 class="price"><span>120.000₫</span></h4>
                         <div class="rating">
                             <div class="stars">
                                 <span class="fa fa-star checked"></span>
@@ -77,20 +81,8 @@
                                 <span class="fa fa-star checked"></span>
                             </div>
                             <span class="review-no">.<strong>100</strong> Đánh giá</span>
-                        <span class="vote"><strong>200</strong> Đã bán</span>
+                            <span class="vote"><strong>200</strong> Đã bán</span>
                         </div>
-    <!--                    <p class="product-description"></p>-->
-                        <h4 class="price"><span>120.000₫</span></h4>
-                        <h5 class="colors">Màu sắc
-                            <span class="color black not-available" data-toggle="tooltip" title="Not In store"></span>
-                            <span class="color brown"></span>
-                        </h5>
-                        <h5 class="sizes">Kích cỡ
-                            <span class="size" data-toggle="tooltip" title="small">S</span>
-                            <span class="size" data-toggle="tooltip" title="medium">M</span>
-                            <span class="size" data-toggle="tooltip" title="large">L</span>
-                            <span class="size" data-toggle="tooltip" title="xtra large">XL</span>
-                        </h5>
                         <div class="section" style="padding-bottom:20px;">
                             <h5 class="title-attr"><small>Số lượng</small></h5>
                             <div>
@@ -99,17 +91,15 @@
                                 <div class="btn-plus"><span class="glyphicon glyphicon-plus"></span></div>
                             </div>
                         </div>
-                        <div class="action">
-                            <button class="add-to-cart btn btn-default" type="button">Thêm vào giỏ hàng</button>
-                            <button class="buy-now btn btn-default" type="button">Mua ngay</button>
-                            <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
-                        </div>
+                        <div class="action d-flex">
+                            <button id="addToCartBtn" class="add-to-cart btn btn-default" type="button">Thêm vào giỏ hàng</button>
+                            <button  class="buy-now btn btn-default" type="button">Mua ngay</button>
+
                     </div>
             </div>
             <div class="col-xs-9">
                 <ul class="menu-items">
-                    <li class="active"><h5>Chi tiết sản phẩm</h5></li>
-                    <li><h5>Đánh giá sản phẩm</h5></li>
+                    <li><h5>Chi tiết sản phẩm</h5></li>
                 </ul>
                 <div style="width:100%;border-top:1px solid silver">
                     <p style="padding:15px;">
@@ -121,18 +111,34 @@
                         <ul>
                             <li>Chất liệu: Thắt lưng có thể được làm từ nhiều loại chất liệu khác nhau như da, vải, nhựa, kim loại, và các vật liệu tổng hợp. Chất liệu sẽ ảnh hưởng đến vẻ ngoài, độ bền và cảm giác khi sử dụng.</li>
                             <li>Kích thước và chiều dài: Thắt lưng thường có một dây dài có thể điều chỉnh để phù hợp với nhiều kích cỡ vòng eo khác nhau. Kích thước thông thường được ghi trên thẻ sản phẩm hoặc trên đính kèm.</li>
-                            <li>Kiểu dáng: Có nhiều kiểu dáng thắt lưng khác nhau như thắt lưng dây, thắt lưng rộng, thắt lưng hẹp, thắt lưng nữ, và nhiều kiểu dáng khác. Mỗi kiểu dáng mang đến vẻ ngoài và phong cách riêng biệt.</li>
                             <li>Màu sắc và hoa văn: Thắt lưng có thể có nhiều màu sắc và hoa văn khác nhau, từ các màu sắc cơ bản như đen, nâu, xanh đến các màu sắc sặc sỡ hoặc có họa tiết độc đáo.</li>
-                            <li>Khóa và phần đính kèm: Thắt lưng thường đi kèm với một khóa hoặc cài đặt để giữ cho dây thắt lưng ở vị trí cố định. Khóa có thể được làm từ kim loại, nhựa, hoặc các vật liệu khác.</li>
-                            <li>Công dụng và tính năng đặc biệt: Một số thắt lưng có tính năng đặc biệt như thắt lưng co dãn, thắt lưng có túi đựng tiền, hoặc các tính năng khác tùy thuộc vào mục đích sử dụng cụ thể.</li>
-                            <li>Thương hiệu và xuất xứ: Thương hiệu và xuất xứ cũng là yếu tố quan trọng, vì một số thương hiệu có tiếng nổi về chất lượng và thiết kế sáng tạo.</li>
                         </ul>
                     </small>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+                <div class="col-xs-9">
+                    <ul class="menu-items">
+                        <li><h5>Đánh giá sản phẩm</h5></li>
+                    </ul>
+                    <div style="width:100%;border-top:1px solid silver">
+                        <p style="padding:15px;">
+                            <small>
 
+                            </small>
+                        </p>
+                        <small>
+
+                        </small>
+                    </div>
+                </div>
+        </div>
+</div>
+<div id="footer_contain"></div>
+<script>
+    $(function () {
+        $('#header_contain').load("header.jsp")
+        $('#footer_contain').load("footer.jsp")
+    })
+</script>
 </body>
 </html>

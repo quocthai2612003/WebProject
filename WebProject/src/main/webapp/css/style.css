@@ -81,10 +81,6 @@ html, body{
 a{
     text-decoration: none;
 }
-#header.container{
-    border-bottom: 2px solid #000;
-
-}
 
 .global-nav {
     padding-bottom: 1.125rem;
@@ -98,4 +94,7 @@ a{
 }
 footer{
     background-color: #e9ecef;
+}
+.breadcrumbs{
+    color: #000000;
 }
