@@ -1,6 +1,10 @@
+<%@ page import="Beans.Account" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Iterator" %>
 <!DOCTYPE html>
 <html lang="en">
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,19 +106,30 @@
                             </div>
                             <hr class="border-light m-0">
                             <div class="card-body">
+                                <%
+                                    Object currentUserAttribute = request.getAttribute("currentUser");
+
+                                    if (currentUserAttribute != null && currentUserAttribute instanceof Beans.Account) {
+                                        Beans.Account currentUser = (Beans.Account) currentUserAttribute;
+                                %>
                                 <div class="form-group">
-                                    <label class="form-label">Họ và tên: Nguyễn Văn A </label>
+                                    <label class="form-label">Họ và tên: <%= currentUser.getFullname() %></label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Email: abc123@gmail.com</label>
+                                    <label class="form-label">Email: <%= currentUser.getEmail() %></label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Số điện thoại: 0987654321</label>
+                                    <label class="form-label">Số điện thoại: <%= currentUser.getNumberPhone() %></label>
                                 </div>
-                                <button class="btn btn-primary" style="font-size: 14px;">Thay đổi thông tin</button>
-                            </div>
+                                <%
+                                    } else {
+                                        // Handle the case where currentUser is null or not an instance of Account (optional)
+                                        System.out.println("No valid currentUser available.");
+                                    }
+                                %>
+                                </div>
                         </div>
-                        <div class="tab-pane fade" id="account-change-password">
+                                <div class="tab-pane fade" id="account-change-password">
                             <div class="card-body pb-2">
                                 <div class="form-group">
                                     <label class="form-label">Mật khẩu hiên tại</label>
@@ -298,7 +313,34 @@
         </div>
     </div>
 </div>
-
+<div class="modal fade" id="myChangingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Thay đổi thông tin</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Add your form elements for changing information -->
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Họ và tên:</label>
+                        <input type="text" class="form-control" placeholder="Nhập họ và tên mới">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email:</label>
+                        <input type="email" class="form-control" placeholder="Nhập email mới">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Số điện thoại:</label>
+                        <input type="tel" class="form-control" placeholder="Nhập số điện thoại mới">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

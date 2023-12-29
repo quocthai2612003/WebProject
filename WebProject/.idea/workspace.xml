@@ -10,24 +10,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1ce7088-8c03-4e34-b5ea-2eebe276bce6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/WebProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/WebProject_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/WebProject_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_21_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Servlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/SliderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/SliderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JDBIConnector/JDBIConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JDBIConnector/ConnectJDBI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/user-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/user-page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/users-page.jap" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/users-page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/users-page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/users-page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Beans/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Beans/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/HomeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/SliderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/SliderDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JDBIConnector/JDBIConnector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/ProductService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/untitled.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/lib/slf4j-api-1.7.36.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Beans/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Beans/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/HomeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/DAO/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/DAO/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/DAO/SliderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/DAO/SliderDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/JDBIConnector/JDBIConnector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/css/user-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/css/user-page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/untitled/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/shopping-cart.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/users-page-phuoc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/users-page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/untitled/users-page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/users-page.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,9 +53,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -78,7 +93,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/github-cloneArea/jsp-servlet-ecommerce-website&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/WebProject-main/WebProject&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -92,22 +107,44 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="JDBIConnector" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\WebProject-main\WebProject\src\main\webapp\js" />
       <recent name="D:\WebProject-main\WebProject\src\main\webapp\css" />
+      <recent name="D:\WebProject-main\WebProject\src\main\webapp\js" />
       <recent name="D:\WebProject-main\WebProject\src\main\webapp" />
       <recent name="D:\WebProject\WebProject\src\main\webapp\assets\images" />
       <recent name="D:\ltweb\ltWeb\untitled\src\main\webapp\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WebProject-main\WebProject\src\main\resources" />
+      <recent name="D:\WebProject-main\WebProject\src\main\java" />
       <recent name="D:\WebProject\WebProject\src\main\webapp" />
       <recent name="D:\WebProject\webProject\src\main\webapp\img" />
       <recent name="D:\WebProject\webProject\src\main\webapp\css" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Controller" />
+      <recent name="Service" />
+    </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.81">
-    <configuration name="JDBIConnector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JDBIConnector.JDBIConnector" />
+    <configuration name="AccountDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DAO.AccountDAO" />
+      <module name="WebProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConnectJDBI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JDBIConnector.ConnectJDBI" />
       <module name="WebProject" />
       <extension name="coverage">
         <pattern>
@@ -249,8 +286,9 @@
       <list>
         <item itemvalue="Application.ProductDAO" />
         <item itemvalue="Application.SliderDAO" />
+        <item itemvalue="Application.AccountDAO" />
         <item itemvalue="Application.SliderService" />
-        <item itemvalue="Application.JDBIConnector" />
+        <item itemvalue="Application.ConnectJDBI" />
       </list>
     </recent_temporary>
   </component>
@@ -308,7 +346,16 @@
       <workItem from="1702468918809" duration="763000" />
       <workItem from="1702472857077" duration="107000" />
       <workItem from="1702475357835" duration="261000" />
-      <workItem from="1702555778494" duration="686000" />
+      <workItem from="1702555778494" duration="1022000" />
+      <workItem from="1702646400611" duration="2281000" />
+      <workItem from="1702806036998" duration="168000" />
+      <workItem from="1702814735478" duration="3028000" />
+      <workItem from="1702818007154" duration="943000" />
+      <workItem from="1702902115978" duration="230000" />
+      <workItem from="1702902805664" duration="5414000" />
+      <workItem from="1703235330041" duration="3537000" />
+      <workItem from="1703738886785" duration="4265000" />
+      <workItem from="1703838798194" duration="2853000" />
     </task>
     <servers />
   </component>

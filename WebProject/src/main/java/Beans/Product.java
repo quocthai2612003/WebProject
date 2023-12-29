@@ -86,7 +86,15 @@ public class Product {
     public void setRating(int rating) {
         this.rating = rating;
     }
+    private int cartQuantity;
 
+    public int getCartQuantity() {
+        return cartQuantity;
+    }
+
+    public void setCartQuantity(int cartQuantity) {
+        this.cartQuantity = cartQuantity;
+    }
     @Override
     public String toString() {
         return "Product{" +

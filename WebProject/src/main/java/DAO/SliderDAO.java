@@ -1,6 +1,6 @@
 package DAO;
 import Beans.Slider;
-import JDBIConnector.JDBIConnector;
+import JDBIConnector.ConnectJDBI;
 import org.jdbi.v3.core.Jdbi;
 
 import java.util.Arrays;
@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class SliderDAO {
     public List<Slider> findAll() {
-        Jdbi jdbi = JDBIConnector.getJdbi();
+        Jdbi jdbi = ConnectJDBI.connector();
         List<Slider> sliders = jdbi.withHandle(handle -> {
             String sql = "SELECT * FROM SLIDER_IMGS";
             return handle.createQuery(sql).mapToBean(Slider.class).stream().collect(Collectors.toList());
@@ -18,8 +18,8 @@ public class SliderDAO {
         return sliders;
     }
 
-//    public static void main(String[] args) {
-//        ProductDAO d1 = new ProductDAO();
-//        d1.findAll();
-//    }
+    public static void main(String[] args) {
+        SliderDAO d1 = new SliderDAO();
+        d1.findAll();
+    }
 }

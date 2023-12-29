@@ -1,3 +1,9 @@
+<%@ page import="Beans.Product" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Iterator" %>
+<%@ page import="Beans.ShoppingCart" %>
+<%@ page import="Beans.CartItems" %>
+<%@ page import="java.text.NumberFormat" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,47 +16,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+
 <div id="headerContainer"></div>
 <div class="container">
+    <%
+        ShoppingCart shoppingCart = (ShoppingCart) session.getAttribute("cart");
+        if(shoppingCart==null){
+            response.sendRedirect("ProductController");
+        }
+        List<CartItems> cartItems = shoppingCart.getCartItemList();
+        NumberFormat numberFormat = NumberFormat.getCurrencyInstance();
+        String e = request.getAttribute("error")==null?"":(String) request.getAttribute("error");
+    %>
     <div class="small-container cart-page">
         <table class="cart-table">
             <tr>
-                <th>Stt</th>
-                <th>Sản phẩm</th>
-                <th></th>
-                <th>Giá</th>
-                <th>Số lượng</th>
-                <th>Thành tiền</th>
-                <th></th>
+                <th scope="col">Stt</th>
+                <th scope="col">Sản phẩm</th>
+                <th scope="col"></th>
+                <th scope="col">Giá</th>
+                <th scope="col">Số lượng</th>
+                <th scope="col">Thành tiền</th>
+                <th scope="col"></th>
             </tr>
+            <%
+                int count = 0;
+                for (CartItems cartItem : cartItems) {
+            %>
             <tr>
-                <td>1</td>
-                <td>
-                        <div>
-                            <p>That lung nam</p>
-                        </div>
-                </td>
-                <td>
-                    <div class="cart-info">
-                        <img src="assets/images/1.png" alt="">
-                    </div>
-                </td>
-                <td><span class="price">300000</span></td>
-                <td>
-                    <div class="quantity-control">
-                        <button class="decrement">-</button>
-                        <div class="quantity-display">1</div>
-                        <button class="increment">+</button>
-                    </div>
-                </td>
-                <td class="totalPricePerItem">300.000</td>
-                <td>  <i class="fa-solid fa-trash-can remove-button"></i></td>
-            </tr>
-            <tr>
-                <td>1</td>
+                <td><%=count++%></td>
                 <td>
                     <div>
-                        <p>That lung tre em</p>
+                        <p><%=cartItem.getProduct().getName() %></p>
                     </div>
                 </td>
                 <td>
@@ -58,30 +55,11 @@
                         <img src="assets/images/thatlungtreem.jpg" alt="">
                     </div>
                 </td>
-                <td><span class="price">300000</span></td>
-                <td>
-                    <div class="quantity-control">
-                        <button class="decrement">-</button>
-                        <div class="quantity-display">1</div>
-                        <button class="increment">+</button>
-                    </div>
-                </td>
-                <td class="totalPricePerItem">300.000</td>
-                <td>  <i class="fa-solid fa-trash-can remove-button"></i></td>
-            </tr>
-            <tr>
-                <td>1</td>
                 <td>
                     <div>
-                        <p>That lung nu</p>
+                        <p><%= cartItem.getProduct().getPrice() %></p>
                     </div>
                 </td>
-                <td>
-                    <div class="cart-info">
-                        <img src="assets/images/thatlungnu.jpg" alt="">
-                    </div>
-                </td>
-                <td><span class="price">300000</span></td>
                 <td>
                     <div class="quantity-control">
                         <button class="decrement">-</button>
@@ -89,11 +67,24 @@
                         <button class="increment">+</button>
                     </div>
                 </td>
-                <td class="totalPricePerItem">300.000</td>
-                <td>  <i class="fa-solid fa-trash-can remove-button"></i></td>
+                <td><%=numberFormat.format(cartItem.getTotalPrice())%></td>
+
+                <!-- Add more table columns based on your Product properties -->
             </tr>
-            <!-- Add more rows as needed -->
+            <% } // End of while loop %>
         </table>
+        <!-- Other HTML content... -->
+    </div>
+    <%
+    } else {
+        // Handle the case where the shopping cart is empty
+    %>
+    <div class="small-container cart-page">
+        <p>Your shopping cart is empty.</p>
+    </div>
+    <%
+        }
+    %>
         <div class="total-price">
             <table>
                 <tr>
@@ -123,7 +114,7 @@
             grandTotal = 0;
             quantityDisplays.forEach((display, index) => {
                 const quantity = parseInt(display.textContent);
-                const priceElement = display.closest("tr").querySelector("span.price");
+                const priceElement = display.closest("tr").querySelector("td:nth-child(4) p"); // Adjust the selector based on your HTML structure
                 const price = parseFloat(priceElement.textContent);
                 const totalItemPrice = quantity * price;
                 totalPricePerItemElements[index].textContent = totalItemPrice.toFixed(0);
@@ -141,19 +132,17 @@
         function removeItem(row) {
             const quantityDisplay = row.querySelector(".quantity-display");
             const quantity = parseInt(quantityDisplay.textContent);
-            const priceElement = row.querySelector("span.price");
+            const priceElement = row.querySelector("td:nth-child(4) p"); // Adjust the selector based on your HTML structure
             const itemPrice = parseFloat(priceElement.textContent);
             const itemTotal = quantity * itemPrice;
             updateGrandTotalChange(-itemTotal);
             row.remove();
-
         }
 
         quantityDisplays.forEach((display, index) => {
             const incrementButton = display.closest("tr").querySelector(".increment");
             const decrementButton = display.closest("tr").querySelector(".decrement");
-            const removeButton = display.closest("tr").querySelector(".remove-button");
-            const priceElement = display.closest("tr").querySelector("span.price");
+            const priceElement = display.closest("tr").querySelector("td:nth-child(4) p"); // Adjust the selector based on your HTML structure
 
             incrementButton.addEventListener("click", () => {
                 const currentQuantity = parseInt(display.textContent);
@@ -175,23 +164,11 @@
                     updateGrandTotalChange(-parseFloat(priceElement.textContent));
                 }
             });
-
-            removeButton.addEventListener("click", () => {
-                const row = display.closest("tr");
-                removeItem(row);
-            });
         });
 
         updateTotalPricePerItem();
     });
-    $(document).ready(function() {
-        $("#headerContainer").load("header.html");
-    });
-
-    // Load Footer
-    $(document).ready(function() {
-        $("#footerContainer").load("footer.html");
-    });
 </script>
+
 </body>
 </html>

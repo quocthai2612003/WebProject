@@ -2,6 +2,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="Beans.Product" %>
 <%@ page import="Service.ProductService" %>
+
 <%
     List<Slider> sliders = (List<Slider>) request.getAttribute("products");
 %>
@@ -35,6 +36,7 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
+<%--<jsp:include page="header.jsp" />--%>
 <%-- Check if products is not null and not empty --%>
 <% if (sliders != null && !sliders.isEmpty()) { %>
 <div id="carouselExampleIndicators" class="carousel slide" style="padding-bottom: 15px" data-bs-ride="carousel">
@@ -56,7 +58,7 @@
     </button>
 </div>
 <% } else { %>
-<p>No products available.</p>
+<p>No slider available.</p>
 <% } %>
 </section>
 <%
@@ -65,41 +67,44 @@
     %>
 
     <div class="container" id="Nam-Container">
-        <div class="top-prodcut">
-            <div class="title">Nam</div>
-            <div class="menu-item">
-                <div class="menu-item"><a href="">Xem tất cả</a></div>
+        <div class="container" id="Nam-Container">
+            <div class="top-prodcut">
+                <div class="title">Nam</div>
+                <div class="menu-item">
+                    <div class="menu-item"><a href="">Xem tất cả</a></div>
+                </div>
             </div>
-        </div>
-        <div class="bottom-product">
-            <div class="left-menu-item">
-                <img src="assets/images/nam1.jpg" alt="">
-            </div>
-            <div class="right-menu-list">
-                <div class="slider-product">
-                    <% for (Product product : productsNam) { %>
-                    <div class="product-item">
-                        <div class="product">
-                            <a href="#"><img class="product-img" src="assets/images/1.png" alt=""></a>
-                            <p class="product-title"><%= product.getName() %></p>
-                            <div class="product-detail">
-                                <p class="product-price"><%= product.getPrice() %></p>
-                                <button type="button" class="btn btn-light rounded-circle">
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </button>
-                                <span class="rating">
+            <div class="bottom-product">
+                <div class="left-menu-item">
+                    <img src="assets/images/nam1.jpg" alt="">
+                </div>
+                <div class="right-menu-list">
+                    <div class="slider-product">
+                        <% for (Product product : productsNam) { %>
+                        <div class="product-item">
+                            <div class="product">
+                                <a href="#"><img class="product-img" src="assets/images/1.png" alt=""></a>
+                                <p class="product-title"><%= product.getName() %></p>
+                                <div class="product-detail">
+                                    <p class="product-price"><%= product.getPrice() %></p>
+                                    <form action="/CartServlet" method="post">
+                                        <input type="hidden" name="productId" value="<%= product.getId() %>">
+                                        <input type="submit" class="btn btn-light rounded-circle" value="Add to Cart">
+                                    </form>
+                                    <span class="rating">
                                     <span class="rating-value"><%= product.getRating() %></span>
                                     <i class="fa-solid fa-star"></i>
                                 </span>
+                                </div>
+                                <a href="productDetail.html" class="product-order">Xem chi tiết</a>
                             </div>
-                            <a href="productDetail.html" class="product-order">Xem chi tiết</a>
                         </div>
+                        <% } %>
                     </div>
-                    <% } %>
                 </div>
             </div>
         </div>
-    </div>
+
 <%
     String typeNu = "nu";
     List<Product> productsNu = new ProductService().findByTitleAndType("nu");
