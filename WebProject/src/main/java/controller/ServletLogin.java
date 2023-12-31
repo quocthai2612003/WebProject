@@ -24,7 +24,7 @@ public class ServletLogin extends HttpServlet {
         String password = req.getParameter("password") == null ? "" : req.getParameter("password");
         AccountService as = AccountService.getInstance();
         Account account = as.checkLogin(username, password);
-        if (account != null) {
+        if (account != null && as.isCustomer(account)) {
             HttpSession session = req.getSession();
             session.setAttribute("account", account);
             resp.sendRedirect("/product");

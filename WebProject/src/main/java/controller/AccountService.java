@@ -21,4 +21,8 @@ public class AccountService {
 
         return null;
     }
+
+    public boolean isCustomer(Account account) {
+        return account.getStatus() == 0;
+    }
 }

@@ -31,7 +31,7 @@
                 <a class="function-login" style="border-bottom: 1px solid #ccc" href="./Login.html">Đăng nhập</a>
                 <a class="function-register" style="border-bottom: 1px solid #000" href="./Register.html">Đăng ký</a>
             </div>
-            <form class="infor" action="" method="post">
+            <form class="infor" action="/register" method="post">
                 <div class="form-group">
                     <input type="text" id = "fullname" placeholder="Họ và tên" required = "required">
                     <input type="email" id="email" placeholder="Nhập địa chỉ email" required = "required">

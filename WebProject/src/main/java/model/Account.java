@@ -22,9 +22,10 @@ public class Account {
     public Account() {
     }
 
-    public Account(String username, String password) {
+    public Account(String username, String password, int status) {
         this.username = username;
         this.password = password;
+        this.status = status;
     }
 
     public int getID() {
