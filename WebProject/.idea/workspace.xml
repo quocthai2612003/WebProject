@@ -11,8 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="02d188f2-732c-462c-9376-c5f7b5b81b52" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/AccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AccountDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ConnectJDBI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ConnectJDBI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +239,8 @@
       <workItem from="1703876141052" duration="1909000" />
       <workItem from="1703984938828" duration="1144000" />
       <workItem from="1704008521074" duration="4295000" />
-      <workItem from="1704074008669" duration="2043000" />
+      <workItem from="1704074008669" duration="2490000" />
+      <workItem from="1704076745853" duration="11000" />
     </task>
     <servers />
   </component>
