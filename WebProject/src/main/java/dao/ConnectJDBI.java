@@ -22,7 +22,7 @@ public class ConnectJDBI {
             throw new RuntimeException(e);
         }
 
-        JDBI = JDBI.create(mysqlDataSource);
+        JDBI = Jdbi.create(mysqlDataSource);
     }
 
     public static Jdbi connector() {

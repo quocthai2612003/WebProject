@@ -21,13 +21,19 @@ public class AccountDAO {
     public static boolean createAccount(String username, String password, String email, String fullname, String number_phone) {
         Jdbi JDBI = ConnectJDBI.connector();
         int execute = JDBI.withHandle(handle ->
-                handle.createUpdate("Insert into accounts(username, password, email, fullname, number_phone, status) " +
-                                "values(?, ?, ?, ?, ?, ?)").bind(0, username).bind(1, password).bind(2, email)
-                        .bind(3, fullname).bind(4, number_phone)).bind(5, 0).execute();
-        return execute >0;
+                handle.createUpdate("INSERT INTO accounts(username, password, email, fullname, number_phone, status) " +
+                                "VALUES (?, ?, ?, ?, ?, ?)")
+                        .bind(0, username)
+                        .bind(1, password)
+                        .bind(2, email)
+                        .bind(3, fullname)
+                        .bind(4, number_phone)
+                        .bind(5, 0)
+                        .execute());
+        return true;
     }
 
     public static void main(String[] args) {
-        System.out.println(createAccount("admin1", "123456", "abcxyz@gmail.com", "Nguyễn Văn C", "0987654321"));
+
     }
 }
