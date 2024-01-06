@@ -33,7 +33,7 @@ public class EmailService {
             }
         });
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(MailProperties.user, "WEB Ban that lung"));
+            message.setFrom(new InternetAddress(MailProperties.user, "WEB ban that lung"));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
             message.setSubject(subject);
             message.setText(mess);
@@ -55,6 +55,5 @@ public class EmailService {
 
         return re.toString();
     }
-
 
 }

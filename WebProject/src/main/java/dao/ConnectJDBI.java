@@ -21,7 +21,6 @@ public class ConnectJDBI {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
         JDBI = Jdbi.create(mysqlDataSource);
     }
 

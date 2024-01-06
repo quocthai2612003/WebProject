@@ -21,7 +21,6 @@ function kiemTraSoDienThoai() {
         document.getElementById("checkPhone").innerHTML = "";
     } else {
         document.getElementById("checkPhone").innerHTML = "Số điện thoại không hợp lệ";
-        console.log("helo");
         document.getElementById("checkPhone").classList.add("notification-error");
     }
 }

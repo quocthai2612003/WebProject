@@ -24,13 +24,20 @@ public class ServletLogin extends HttpServlet {
         String password = req.getParameter("password") == null ? "" : req.getParameter("password");
         AccountService as = AccountService.getInstance();
         Account account = as.checkLogin(username, password);
-        if (account != null && as.isCustomer(account)) {
-            HttpSession session = req.getSession();
-            session.setAttribute("account", account);
-            resp.sendRedirect("/product");
+        if (account != null) {
+            if (as.isLoginSuccess(account)) {
+                HttpSession session = req.getSession();
+                session.setAttribute("account", account);
+                resp.sendRedirect("/product");
+            } else {
+                req.setAttribute("error", "Tài khoản đã bị khóa");
+                req.getRequestDispatcher("Login.jsp").forward(req, resp);
+                resp.sendRedirect("Login.jsp");
+            }
         } else {
             req.setAttribute("error", "Bạn nhập sai email hoặc mật khẩu");
             req.getRequestDispatcher("Login.jsp").forward(req, resp);
+            resp.sendRedirect("Login.jsp");
         }
     }
 }
