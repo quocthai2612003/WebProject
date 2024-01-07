@@ -2,10 +2,15 @@
 <%@ page import="java.util.List" %>
 <%@ page import="Beans.Product" %>
 <%@ page import="Service.ProductService" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="Beans.ShoppingCart" %>
 
 <%
     List<Slider> sliders = (List<Slider>) request.getAttribute("products");
+    ShoppingCart gh = (ShoppingCart) session.getAttribute("cart");
+    if (gh == null) gh = new ShoppingCart();
 %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en" xmlns:D="http://www.w3.org/1999/xhtml">
@@ -36,6 +41,57 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+            Zay
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+            <div class="flex-fill">
+                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar align-self-center d-flex">
+                <div class="container-fluid">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"> <i class="fa fa-fw fa-search text-dark mr-2"></i></button>
+                    </form>
+                </div>
+            </div>
+            <a class="nav-icon position-relative text-decoration-none" href="CartServlet">
+                <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
+            <%= gh.getSize() %>
+        </span>
+            </a>
+            <a class="nav-icon position-relative text-decoration-none" href="#">
+                <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+            </a>
+        </div>
+    </div>
+
+    </div>
+</nav>
 <%--<jsp:include page="header.jsp" />--%>
 <%-- Check if products is not null and not empty --%>
 <% if (sliders != null && !sliders.isEmpty()) { %>
@@ -62,8 +118,9 @@
 <% } %>
 </section>
 <%
-    String type = "nam";
-    List<Product> productsNam = new ProductService().findByTitleAndType("nam");
+    int id_category = 1;
+    List<Product> productsNam = new ProductService().findByCategory(1);
+    NumberFormat nf = NumberFormat.getInstance();
     %>
 
     <div class="container" id="Nam-Container">
@@ -86,17 +143,17 @@
                                 <a href="#"><img class="product-img" src="assets/images/1.png" alt=""></a>
                                 <p class="product-title"><%= product.getName() %></p>
                                 <div class="product-detail">
-                                    <p class="product-price"><%= product.getPrice() %></p>
-                                    <form action="/CartServlet" method="post">
-                                        <input type="hidden" name="productId" value="<%= product.getId() %>">
-                                        <input type="submit" class="btn btn-light rounded-circle" value="Add to Cart">
-                                    </form>
+                                    <p class="product-price"><%= nf.format(product.getPrice()) %>đ</p>
+                                    <div class="order">
+                                        <a href="AddToCartServlet?masanpham=<%=product.getId()%>" class="btn-add-to-cart" style="text-decoration: none">Thêm vào giỏ hàng</a>
+                                    </div>
                                     <span class="rating">
                                     <span class="rating-value"><%= product.getRating() %></span>
                                     <i class="fa-solid fa-star"></i>
                                 </span>
                                 </div>
                                 <a href="productDetail.html" class="product-order">Xem chi tiết</a>
+
                             </div>
                         </div>
                         <% } %>
@@ -106,8 +163,8 @@
         </div>
 
 <%
-    String typeNu = "nu";
-    List<Product> productsNu = new ProductService().findByTitleAndType("nu");
+    int category = 2;
+    List<Product> productsNu = new ProductService().findByCategory(category);
 %>
 
 <div class="container" id="Nam-Container">
@@ -146,75 +203,6 @@
         </div>
     </div>
 </div>
-
-<div class="container" id="TreEm-Container">
-    <div class="top-prodcut">
-        <div class="title">Trẻ em</div>
-        <div class="menu-item">
-            <div class="menu-item"><a href="">Xem tất cả</a></div>
-        </div>
-    </div>
-    <div class="bottom-product">
-        <div class="left-menu-item">
-            <img src="assets/images/thatlungtreem.jpg"
-                 alt="">
-        </div>
-        <div class="right-menu-list">
-            <div class="slider-product ">
-
-                <div class="product-item">
-                    <div class="product">
-                        <a href="#"><img class="product-img" src="assets/images/treem.jpg" alt=""></a>
-                        <p class="product-title">Dây nịt trẻ em</p>
-                        <p class="product-price">180000</p>
-                        <a href="productDetail.html" class="product-order">Xem chi tiết</a>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="product">
-                        <a href="#"><img class="product-img" src="assets/images/treem.jpg" alt=""></a>
-                        <p class="product-title">Dây nịt trẻ em</p>
-                        <p class="product-price">180000</p>
-                        <a href="productDetail.html" class="product-order">Xem chi tiết</a>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="product">
-                        <a href="#"><img class="product-img" src="assets/images/treem.jpg" alt=""></a>
-                        <p class="product-title">Dây nịt trẻ em</p>
-                        <p class="product-price">180000</p>
-                        <a href="productDetail.html" class="product-order">Xem chi tiết</a>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="product">
-                        <a href="#"><img class="product-img" src="assets/images/treem.jpg" alt=""></a>
-                        <p class="product-title">Dây nịt trẻ em</p>
-                        <p class="product-price">180000</p>
-                        <a href="productDetail.html" class="product-order">Xem chi tiết</a>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="product">
-                        <a href="#"><img class="product-img" src="assets/images/treem.jpg" alt=""></a>
-                        <p class="product-title">Dây nịt trẻ em</p>
-                        <p class="product-price">180000</p>
-                        <a href="productDetail.html" class="product-order">Xem chi tiết</a>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <div class="product">
-                        <a href="#"><img class="product-img" src="assets/images/treem.jpg" alt=""></a>
-                        <p class="product-title">Dây nịt trẻ em</p>
-                        <p class="product-price">180000</p>
-                        <a href="productDetail.html" class="product-order">Xem chi tiết</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <script>
     $('.slider-product').slick({
         dots: true,

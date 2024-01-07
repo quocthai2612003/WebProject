@@ -1,61 +1,63 @@
 package Beans;
 
+import Service.ProductService;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ShoppingCart {
-    private List<CartItems> cartItemList;
+    Map<Integer, CartItems> data = new HashMap<Integer, CartItems>();
 
-    public ShoppingCart() {
-        this.cartItemList = new ArrayList<>();
+    public boolean add(int maSP){
+        return add(maSP, 1);
     }
 
-    public void add(CartItems cartItem) {
-        for (CartItems i : cartItemList) {
-            if (i.getProduct().getId() == cartItem.getProduct().getId()) {
-                i.addQuanlity(1);
-                return;
+    public boolean add(int maSP, int soLuong){
+        Product products = ProductService.getInstance().findById(maSP);
+        if (products == null) return false;
+        CartItems cartItems = null;
+        if (data.containsKey(maSP)) {
+            cartItems = data.get(maSP);
+            cartItems.increaseQuantity(soLuong);
+        } else {
+            cartItems = new CartItems(products, soLuong);
+        }
+        data.put(maSP, cartItems);
+        return true;
+    }
+
+    public boolean decrease(int maSP) {
+        return decrease(maSP, 1);
+    }
+
+    public boolean decrease(int maSP, int soLuong) {
+        if (data.containsKey(maSP)) {
+            CartItems cartItems = data.get(maSP);
+            cartItems.decreaseQuantity(soLuong);
+            if (cartItems.getQuantity() <= 0) {
+                // Nếu số lượng giảm xuống dưới hoặc bằng 0, xóa sản phẩm khỏi giỏ hàng
+                data.remove(maSP);
             }
+            return true;
         }
-        this.cartItemList.add(cartItem);
+        return false;
     }
 
-    public void remove(int id) {
-        for (CartItems c : cartItemList) {
-            if (c.getProduct().getId() == id) {
-                cartItemList.remove(c);
-                return;
-            }
-        }
+    public int getToTal(){
+        return data.size();
     }
 
-    public void update(int id, int quanlity) {
-        for (CartItems c : cartItemList) {
-            if (c.getProduct().getId() == id) {
-                c.setQuantity(quanlity);
-                return;
-            }
-        }
+    public List<CartItems> getDanhSachSanPham() {
+        return new ArrayList<>(data.values());
     }
 
-    public int getSize() {
-        int re = 0;
-        for (CartItems c : cartItemList) {
-            re += c.getQuantity();
-        }
-        return re;
+    public CartItems remove(int maSP) {
+        return data.remove(maSP);
+    }
+    public int getSize (){
+        return data.size();
     }
 
-    public List<CartItems> getCartItemList() {
-        return this.cartItemList;
-    }
-
-    public double getTotalPrice() {
-        double re = 0;
-        for (CartItems c : cartItemList) {
-            re += c.getTotalPrice();
-        }
-        return re;
-
-    }
 }

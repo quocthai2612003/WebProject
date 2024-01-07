@@ -2,21 +2,19 @@ package Beans;
 
 public class Product {
     private int id ;
-    private String type;
     private String name;
     private int price;
     private int quanlity;
     private String material;
-    private String size;
     private int rating;
 
-    public Product(int id, String type, String name, int price, int quanlity, String size,int rating) {
+    public Product(int id, String name, int price, int quanlity,int rating) {
         this.id = id;
-        this.type=type;
+
         this.name = name;
         this.price = price;
         this.quanlity = quanlity;
-        this.size = size;
+
         this.rating=rating;
     }
 
@@ -63,22 +61,6 @@ public class Product {
         this.material = material;
     }
 
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public int getRating() {
         return rating;
     }
@@ -95,17 +77,17 @@ public class Product {
     public void setCartQuantity(int cartQuantity) {
         this.cartQuantity = cartQuantity;
     }
+
     @Override
     public String toString() {
         return "Product{" +
                 "id=" + id +
-                ", type='" + type + '\'' +
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 ", quanlity=" + quanlity +
                 ", material='" + material + '\'' +
-                ", size='" + size + '\'' +
                 ", rating=" + rating +
+                ", cartQuantity=" + cartQuantity +
                 '}';
     }
 }

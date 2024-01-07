@@ -1,13 +1,13 @@
 package Beans;
 
 public class CartItems {
-        private Product product;
-        private int quantity;
+    private Product product;
+    private int quantity;
 
-        public CartItems(Product product, int quantity) {
-            this.product = product;
-            this.quantity = quantity;
-        }
+    public CartItems (Product product, int quantity) {
+        this.product = product;
+        this.quantity = quantity;
+    }
 
     public Product getProduct() {
         return product;
@@ -24,13 +24,20 @@ public class CartItems {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-    // Getter and setter methods
-    public boolean addQuanlity(int quanlity){
-        this.quantity+=quanlity;
-        return true;
+
+    public void increaseQuantity(int quantity) {
+        this.quantity += quantity;
     }
-    public double getTotalPrice(){
-        return this.quantity*this.product.getPrice();
+
+    public void decreaseQuantity(int quantity) {
+        this.quantity -= quantity;
+        if (this.quantity < 0) {
+            this.quantity = 0;
+        }
     }
+
+    public double getTotalPrice() {
+        return quantity * product.getPrice();
     }
+}
 

@@ -19,15 +19,16 @@ public class ProductsServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String type = request.getParameter("type");
+        String id_category = request.getParameter("id");
+        int categoryId = Integer.parseInt(id_category);
 
-        if (type == null) {
+        if (categoryId == 0) {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Missing parameters");
             return;
         }
 
 
-        List<Product> productList = productService.findByTitleAndType(type);
+       List<Product> productList = productService.findByCategory(categoryId);
 
         // Set the sliders in the request attribute
         request.setAttribute("products", productList);

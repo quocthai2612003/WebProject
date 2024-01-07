@@ -4,34 +4,33 @@ import Beans.Product;
 import org.jdbi.v3.core.Jdbi;
 import JDBIConnector.ConnectJDBI;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
-
 public class ProductDAO {
     private static final Logger LOGGER = Logger.getLogger(ProductDAO.class.getName());
 
-    public List<Product> findByType(String type) {
+    public List<Product> findByCategory(int categoryId) {
         Jdbi jdbi = ConnectJDBI.connector();
         List<Product> products;
         try {
             products = jdbi.withHandle(handle -> {
-                String sql = "SELECT * FROM products WHERE TYPE = :type";
+                String sql = "SELECT * FROM products WHERE ID_category = :categoryId";
                 return handle.createQuery(sql)
-                        .bind("type", type)
+                        .bind("categoryId", categoryId)
                         .mapToBean(Product.class)
                         .stream()
                         .collect(Collectors.toList());
             });
-            LOGGER.log(Level.INFO, "Retrieved products: {0}", products);
+            LOGGER.log(Level.INFO, "Retrieved products for category ID {0}: {1}", new Object[]{categoryId, products});
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error retrieving products by type: " + type, e);
-            throw new RuntimeException("Error retrieving products by type", e);
+            LOGGER.log(Level.SEVERE, "Error retrieving products by category ID: " + categoryId, e);
+            throw new RuntimeException("Error retrieving products by category ID", e);
         }
         return products;
     }
+
     public Product getProductById(int productId) {
         Jdbi jdbi = ConnectJDBI.connector();
         try {
@@ -48,15 +47,12 @@ public class ProductDAO {
             throw new RuntimeException("Error retrieving product by ID", e);
         }
     }
+        public static void main(String[] args) {
+        ProductDAO productDAO = new ProductDAO();
+        List<Product> products = productDAO.findByCategory(1);
+        productDAO.getProductById(1);
 
-
-//    public static void main(String[] args) {
-//        ProductDAO productDAO = new ProductDAO();
-//        List<Product> products = productDAO.findByType("nam");
-//        productDAO.getProductById(1);
-//
-//        // Print or log the retrieved products
-//        System.out.println("Retrieved products: " + products);
-//    }
-
+        // Print or log the retrieved products
+        System.out.println("Retrieved products: " + products);
+    }
 }

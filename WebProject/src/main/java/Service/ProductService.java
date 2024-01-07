@@ -6,29 +6,24 @@ import DAO.ProductDAO;
 import java.util.List;
 
 public class ProductService {
-private ProductDAO  productDAO = new ProductDAO();
-private ShoppingCartService shoppingCart = new ShoppingCartService();
+        private static ProductService instance;
 
-public List<Product> findByTitleAndType( String type){
-    return productDAO.findByType(type);
-}
-    public void addToCart(Product product, int quantity) {
-        shoppingCart.addToCart(product, quantity);
-    }
+        private ProductDAO productDAO = new ProductDAO();
+   //     private ShoppingCartService shoppingCart = new ShoppingCartService();
 
-    public Product findById(int id) {
-        // Assuming getProductById returns a List<Product>
-        List<Product> productList = (List<Product>) productDAO.getProductById(id);
+        public static ProductService getInstance() {
+            if (instance == null) instance = new ProductService();
+            return instance;
+        }
+        public List<Product> findByCategory(int id) {
+            return productDAO.findByCategory(id);
+        }
 
-        // Check if the list is not empty before calling get() on the Optional
-        if (!productList.isEmpty()) {
-            return productList.stream().findFirst().orElse(null);
-        } else {
-            // Handle the case where the product is not found
-            return null; // or throw an exception, or return a default product, etc.
+        public Product findById(int id) {
+            return productDAO.getProductById(id);
+        }
+        public static void main(String[] args) {
+            Product product = ProductService.getInstance().findById(1);
+            System.out.println(product);
         }
     }
-    public ShoppingCartService getShoppingCart() {
-        return shoppingCart;
-    }
-}
