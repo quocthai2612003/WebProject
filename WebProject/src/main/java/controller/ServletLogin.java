@@ -30,7 +30,7 @@ public class ServletLogin extends HttpServlet {
                 session.setAttribute("account", account);
                 resp.sendRedirect("/product");
             } else {
-                req.setAttribute("error", "Tài khoản đã bị khóa");
+                req.setAttribute("error", "Tài khoản chưa được xác nhận hoặc đã bị khóa");
                 req.getRequestDispatcher("Login.jsp").forward(req, resp);
                 resp.sendRedirect("Login.jsp");
             }
