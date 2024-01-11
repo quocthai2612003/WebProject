@@ -13,7 +13,7 @@
     String phone = request.getAttribute("phone") == null ? "" : request.getAttribute("phone").toString();
     String username = request.getAttribute("username") == null ? "" : request.getAttribute("username").toString();
     String email = request.getAttribute("email") == null ? "" : request.getAttribute("email").toString();
-    String error = request.getAttribute("error") == null ? "" : request.getAttribute("error").toString();
+    String notify = request.getAttribute("notify") == null ? "" : request.getAttribute("notify").toString();
 %>
 <div id="content">
     <div class="form-login">
@@ -33,8 +33,8 @@
             </div>
             <form class="infor" action="/register" method="post">
                 <div class="form-group">
-                    <% if (!error.isEmpty()) {%>
-                        <p class="notification-error"><%=error%></p>
+                    <% if (!notify.isEmpty()) {%>
+                        <p class="notification-error"><%=notify%></p>
                     <%}%>
                     <input type="text" name = "fullname" value="<%=fullname%>" id = "fullname" placeholder="Họ và tên*" required = "required">
                     <input type="email" name = "email" value="<%=email%>" id="email" placeholder="Nhập địa chỉ email*" required = "required">

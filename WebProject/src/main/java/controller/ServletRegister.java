@@ -1,5 +1,7 @@
 package controller;
 
+import model.Account;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,24 +24,30 @@ public class ServletRegister extends HttpServlet {
         String username = req.getParameter("username") == null ? "" : req.getParameter("username");
         String password = req.getParameter("password") == null ? "" : req.getParameter("password");
         String repeatPassword = req.getParameter("repeatPassword") == null ? "" : req.getParameter("repeatPassword");
+        String notify = "";
         AccountService as = AccountService.getInstance();
-        String error = "";
         req.setAttribute("fullname", fullname);
+        req.setAttribute("email", email);
         req.setAttribute("phone", phone);
         req.setAttribute("username", username);
-        req.setAttribute("email", email);
         if (as.isPhoneValid(phone) && password.equals(repeatPassword)) {
-            if (as.vertifyEmail(username, email)) {
-                req.setAttribute("password", password);
-                req.getRequestDispatcher("vertifyEmail").forward(req, resp);
+            if (as.accountByUsernameOrEmail(username, email) == null)  {
+                if (as.createAccount(username, password, email, fullname, phone, 0) != 0) {
+                    Account account = as.accountByUsername(username);
+                    if (as.vertifyEmail(account)) {
+                        notify = "Vui lòng xác minh email";
+                        req.setAttribute("notify", notify);
+                        req.getRequestDispatcher("Register.jsp");
+                    }
+                }
             } else {
-                error = "username hoặc email đã tồn tại";
-                req.setAttribute("error", error);
+                notify = "username hoặc email đã tồn tại";
+                req.setAttribute("notify", notify);
                 req.getRequestDispatcher("Register.jsp").forward(req, resp);
             }
         } else {
-            error = "vui lòng kiểm tra lại thông tin đã nhập";
-            req.setAttribute("error", error);
+            notify = "vui lòng kiểm tra lại thông tin đã nhập";
+            req.setAttribute("notify", notify);
             req.getRequestDispatcher("Register.jsp").forward(req, resp);
         }
     }

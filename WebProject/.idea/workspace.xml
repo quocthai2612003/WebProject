@@ -10,17 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02d188f2-732c-462c-9376-c5f7b5b81b52" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ServletVerifyEmail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ServletLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ServletLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ServletRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ServletRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ServletVertifyEmail.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/AccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AccountDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ConnectJDBI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ConnectJDBI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mail.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mail.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/account.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/day-nit-da.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/day-nit-nam.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/day-nit-nu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/day-nit-tre-em.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/day-nit-vai.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +69,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -239,8 +241,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AccountService" />
         <item itemvalue="Application.AccountDAO" />
+        <item itemvalue="Application.AccountService" />
         <item itemvalue="Tomcat Server.Product.jsp" />
       </list>
     </recent_temporary>
@@ -268,6 +270,10 @@
       <workItem from="1704077508309" duration="867000" />
       <workItem from="1704441212068" duration="4462000" />
       <workItem from="1704529237495" duration="4150000" />
+      <workItem from="1704785833405" duration="1575000" />
+      <workItem from="1704807859481" duration="30000" />
+      <workItem from="1704868476761" duration="6536000" />
+      <workItem from="1704940781923" duration="4697000" />
     </task>
     <servers />
   </component>
