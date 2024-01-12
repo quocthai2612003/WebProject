@@ -1,6 +1,6 @@
 package Controller;
 
-import Beans.Product;
+import Beans.Products;
 import Service.ProductService;
 
 import javax.servlet.*;
@@ -28,10 +28,10 @@ public class ProductsServlet extends HttpServlet {
         }
 
 
-       List<Product> productList = productService.findByCategory(categoryId);
+       List<Products> productsList = productService.findByCategory(categoryId);
 
         // Set the sliders in the request attribute
-        request.setAttribute("products", productList);
+        request.setAttribute("products", productsList);
 
 
         request.getRequestDispatcher("/home.jsp").forward(request, response);

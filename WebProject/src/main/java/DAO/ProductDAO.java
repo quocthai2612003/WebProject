@@ -1,6 +1,6 @@
 package DAO;
 
-import Beans.Product;
+import Beans.Products;
 import org.jdbi.v3.core.Jdbi;
 import JDBIConnector.ConnectJDBI;
 
@@ -11,15 +11,15 @@ import java.util.stream.Collectors;
 public class ProductDAO {
     private static final Logger LOGGER = Logger.getLogger(ProductDAO.class.getName());
 
-    public List<Product> findByCategory(int categoryId) {
+    public List<Products> findByCategory(int categoryId) {
         Jdbi jdbi = ConnectJDBI.connector();
-        List<Product> products;
+        List<Products> products;
         try {
             products = jdbi.withHandle(handle -> {
                 String sql = "SELECT * FROM products WHERE ID_category = :categoryId";
                 return handle.createQuery(sql)
                         .bind("categoryId", categoryId)
-                        .mapToBean(Product.class)
+                        .mapToBean(Products.class)
                         .stream()
                         .collect(Collectors.toList());
             });
@@ -31,14 +31,14 @@ public class ProductDAO {
         return products;
     }
 
-    public Product getProductById(int productId) {
+    public Products getProductById(int productId) {
         Jdbi jdbi = ConnectJDBI.connector();
         try {
             return jdbi.withHandle(handle -> {
                 String sql = "SELECT * FROM products WHERE id = :id";
                 return handle.createQuery(sql)
                         .bind("id", productId)
-                        .mapToBean(Product.class)
+                        .mapToBean(Products.class)
                         .findFirst()
                         .orElse(null);
             });
@@ -49,7 +49,7 @@ public class ProductDAO {
     }
         public static void main(String[] args) {
         ProductDAO productDAO = new ProductDAO();
-        List<Product> products = productDAO.findByCategory(1);
+        List<Products> products = productDAO.findByCategory(1);
         productDAO.getProductById(1);
 
         // Print or log the retrieved products

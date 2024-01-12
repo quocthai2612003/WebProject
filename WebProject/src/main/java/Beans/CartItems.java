@@ -1,20 +1,20 @@
 package Beans;
 
 public class CartItems {
-    private Product product;
+    private Products products;
     private int quantity;
 
-    public CartItems (Product product, int quantity) {
-        this.product = product;
+    public CartItems (Products products, int quantity) {
+        this.products = products;
         this.quantity = quantity;
     }
 
-    public Product getProduct() {
-        return product;
+    public Products getProduct() {
+        return products;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void setProduct(Products products) {
+        this.products = products;
     }
 
     public int getQuantity() {
@@ -37,7 +37,7 @@ public class CartItems {
     }
 
     public double getTotalPrice() {
-        return quantity * product.getPrice();
+        return quantity * products.getPrice();
     }
 }
 

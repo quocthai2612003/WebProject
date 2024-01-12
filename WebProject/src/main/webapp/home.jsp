@@ -1,6 +1,6 @@
 <%@ page import="Beans.Slider" %>
 <%@ page import="java.util.List" %>
-<%@ page import="Beans.Product" %>
+<%@ page import="Beans.Products" %>
 <%@ page import="Service.ProductService" %>
 <%@ page import="java.text.NumberFormat" %>
 <%@ page import="Beans.ShoppingCart" %>
@@ -83,7 +83,7 @@
             <%= gh.getSize() %>
         </span>
             </a>
-            <a class="nav-icon position-relative text-decoration-none" href="#">
+            <a class="nav-icon position-relative text-decoration-none" href="Login.jsp">
                 <i class="fa fa-fw fa-user text-dark mr-3"></i>
                 <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
             </a>
@@ -119,7 +119,7 @@
 </section>
 <%
     int id_category = 1;
-    List<Product> productsNam = new ProductService().findByCategory(1);
+    List<Products> productsNam = new ProductService().findByCategory(1);
     NumberFormat nf = NumberFormat.getInstance();
     %>
 
@@ -137,18 +137,18 @@
                 </div>
                 <div class="right-menu-list">
                     <div class="slider-product">
-                        <% for (Product product : productsNam) { %>
+                        <% for (Products products : productsNam) { %>
                         <div class="product-item">
                             <div class="product">
-                                <a href="#"><img class="product-img" src="assets/images/1.png" alt=""></a>
-                                <p class="product-title"><%= product.getName() %></p>
+                                <a href="#"><img class="product-img" src="assets/images/product_img/TL001(1).png" alt=""></a>
+                                <p class="product-title"><%= products.getName() %></p>
                                 <div class="product-detail">
-                                    <p class="product-price"><%= nf.format(product.getPrice()) %>đ</p>
+                                    <p class="product-price"><%= nf.format(products.getPrice()) %>đ</p>
                                     <div class="order">
-                                        <a href="AddToCartServlet?masanpham=<%=product.getId()%>" class="btn-add-to-cart" style="text-decoration: none">Thêm vào giỏ hàng</a>
+                                        <a href="AddToCartServlet?masanpham=<%=products.getId()%>" class="btn-add-to-cart" style="text-decoration: none">Thêm vào giỏ hàng</a>
                                     </div>
                                     <span class="rating">
-                                    <span class="rating-value"><%= product.getRating() %></span>
+                                    <span class="rating-value"><%= products.getRating() %></span>
                                     <i class="fa-solid fa-star"></i>
                                 </span>
                                 </div>
@@ -164,7 +164,7 @@
 
 <%
     int category = 2;
-    List<Product> productsNu = new ProductService().findByCategory(category);
+    List<Products> productsNu = new ProductService().findByCategory(category);
 %>
 
 <div class="container" id="Nam-Container">
@@ -180,18 +180,18 @@
         </div>
         <div class="right-menu-list">
             <div class="slider-product">
-                <% for (Product product : productsNu) { %>
+                <% for (Products products : productsNu) { %>
                 <div class="product-item">
                     <div class="product">
-                        <a href="#"><img class="product-img" src="assets/images/nu.jpg" alt=""></a>
-                        <p class="product-title"><%= product.getName() %></p>
+                        <a href="#"><img class="product-img" src="assets/images/product_img/nu.jpg" alt=""></a>
+                        <p class="product-title"><%= products.getName() %></p>
                         <div class="product-detail">
-                            <p class="product-price"><%= product.getPrice() %></p>
+                            <p class="product-price"><%= products.getPrice() %></p>
                             <button type="button" class="btn btn-light rounded-circle">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </button>
                             <span class="rating">
-                                    <span class="rating-value"><%= product.getRating() %></span>
+                                    <span class="rating-value"><%= products.getRating() %></span>
                                     <i class="fa-solid fa-star"></i>
                                 </span>
                         </div>

@@ -25,17 +25,19 @@ public class ServletLogin extends HttpServlet {
         AccountService as = AccountService.getInstance();
         Account account = as.checkLogin(username, password);
         if (account != null) {
-            HttpSession session = req.getSession();
-            session.setAttribute("currentUsername", username);
-            session.setAttribute("currentUser", account);
-
-            // Forward to the user page JSP relative to the root context
-            String contextPath = req.getContextPath();
-            RequestDispatcher dispatcher = req.getRequestDispatcher(contextPath + "/user"); // Change this line to "/login"
-            dispatcher.forward(req, resp);
+            if (as.isLoginSuccess(account)) {
+                HttpSession session = req.getSession();
+                session.setAttribute("account", account);
+                resp.sendRedirect("/home");
+            } else {
+                req.setAttribute("error", "Tài khoản đã bị khóa");
+                req.getRequestDispatcher("Login.jsp").forward(req, resp);
+                resp.sendRedirect("Login.jsp");
+            }
         } else {
             req.setAttribute("error", "Bạn nhập sai email hoặc mật khẩu");
-            req.getRequestDispatcher("users-page.jsp").forward(req, resp);
+            req.getRequestDispatcher("Login.jsp").forward(req, resp);
+            resp.sendRedirect("Login.jsp");
         }
     }
 }

@@ -15,7 +15,7 @@ public class ShoppingCart {
     }
 
     public boolean add(int maSP, int soLuong){
-        Product products = ProductService.getInstance().findById(maSP);
+        Products products = ProductService.getInstance().findById(maSP);
         if (products == null) return false;
         CartItems cartItems = null;
         if (data.containsKey(maSP)) {

@@ -1,6 +1,6 @@
 package Service;
 
-import Beans.Product;
+import Beans.Products;
 import DAO.ProductDAO;
 
 import java.util.List;
@@ -15,15 +15,15 @@ public class ProductService {
             if (instance == null) instance = new ProductService();
             return instance;
         }
-        public List<Product> findByCategory(int id) {
+        public List<Products> findByCategory(int id) {
             return productDAO.findByCategory(id);
         }
 
-        public Product findById(int id) {
+        public Products findById(int id) {
             return productDAO.getProductById(id);
         }
         public static void main(String[] args) {
-            Product product = ProductService.getInstance().findById(1);
-            System.out.println(product);
+            Products products = ProductService.getInstance().findById(1);
+            System.out.println(products);
         }
     }

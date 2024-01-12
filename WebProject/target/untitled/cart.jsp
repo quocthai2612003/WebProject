@@ -1,4 +1,4 @@
-<%@ page import="Beans.Product" %>
+<%@ page import="Beans.Products" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Iterator" %>
 <%@ page import="Beans.ShoppingCart" %>
@@ -34,9 +34,12 @@
                 NumberFormat nf = NumberFormat.getInstance();
                 List<CartItems> sanPhams = (List<CartItems>) request.getAttribute("list-sp");
                 double tongGiaTri = 0;
-                for (CartItems sp: sanPhams) {
-                    tongGiaTri+= sp.getTotalPrice();
+
+                for (int i = 0; i < sanPhams.size(); i++) {
+                    CartItems sp = sanPhams.get(i);
+                    tongGiaTri += sp.getTotalPrice();
             %>
+            <td><%= i + 1 %></td>
                 <td>
                     <div>
                         <p><%= sp.getProduct().getName() %></p>
@@ -65,6 +68,11 @@
                     </div>
                 </td>
                 <td class="totalPricePerItem"><%= nf.format(sp.getTotalPrice()) %>đ</td>
+            <td>
+                <a href="DeleteServlet?masanpham=<%=sp.getProduct().getId()%>">Xóa</a>
+<%--                <i class="fas fa-trash-alt"></i> <!-- Font Awesome trash icon -->--%>
+            </a>
+            </td>
             </tr>
             <% } // End of for loop %>
         </table>
@@ -86,74 +94,5 @@
     <a href="another-page.html" class="button-link">Mua</a>
 </div>
     <div id="footerContainer"></div>
-
-<%--<script>--%>
-<%--    document.addEventListener("DOMContentLoaded", function () {--%>
-<%--        const quantityDisplays = document.querySelectorAll(".quantity-display");--%>
-<%--        const totalPricePerItemElements = document.querySelectorAll(".totalPricePerItem");--%>
-<%--        let grandTotal = 0;--%>
-
-<%--        const grandTotalElement = document.getElementById("grandTotal");--%>
-
-<%--        function updateTotalPricePerItem() {--%>
-<%--            grandTotal = 0;--%>
-<%--            quantityDisplays.forEach((display, index) => {--%>
-<%--                const quantity = parseInt(display.textContent);--%>
-<%--                const priceElement = display.closest("tr").querySelector("td:nth-child(4) p"); // Adjust the selector based on your HTML structure--%>
-<%--                const price = parseFloat(priceElement.textContent);--%>
-<%--                const totalItemPrice = quantity * price;--%>
-<%--                totalPricePerItemElements[index].textContent = totalItemPrice.toFixed(0);--%>
-<%--                grandTotal += totalItemPrice;--%>
-<%--            });--%>
-
-<%--            grandTotalElement.textContent = grandTotal.toFixed(0);--%>
-<%--        }--%>
-
-<%--        function updateGrandTotalChange(changeAmount) {--%>
-<%--            grandTotal += changeAmount;--%>
-<%--            grandTotalElement.textContent = grandTotal.toFixed(0);--%>
-<%--        }--%>
-
-<%--        function removeItem(row) {--%>
-<%--            const quantityDisplay = row.querySelector(".quantity-display");--%>
-<%--            const quantity = parseInt(quantityDisplay.textContent);--%>
-<%--            const priceElement = row.querySelector("td:nth-child(4) p"); // Adjust the selector based on your HTML structure--%>
-<%--            const itemPrice = parseFloat(priceElement.textContent);--%>
-<%--            const itemTotal = quantity * itemPrice;--%>
-<%--            updateGrandTotalChange(-itemTotal);--%>
-<%--            row.remove();--%>
-<%--        }--%>
-
-<%--        quantityDisplays.forEach((display, index) => {--%>
-<%--            const incrementButton = display.closest("tr").querySelector(".increment");--%>
-<%--            const decrementButton = display.closest("tr").querySelector(".decrement");--%>
-<%--            const priceElement = display.closest("tr").querySelector("td:nth-child(4) p"); // Adjust the selector based on your HTML structure--%>
-
-<%--            incrementButton.addEventListener("click", () => {--%>
-<%--                const currentQuantity = parseInt(display.textContent);--%>
-<%--                display.textContent = (currentQuantity + 1).toString();--%>
-
-<%--                // Subtract the current total for this item and then add the updated total--%>
-<%--                const currentTotal = parseFloat(totalPricePerItemElements[index].textContent);--%>
-<%--                const updatedTotal = currentTotal + parseFloat(priceElement.textContent);--%>
-<%--                totalPricePerItemElements[index].textContent = updatedTotal.toFixed(0);--%>
-
-<%--                updateGrandTotalChange(parseFloat(priceElement.textContent));--%>
-<%--            });--%>
-
-<%--            decrementButton.addEventListener("click", () => {--%>
-<%--                const currentQuantity = parseInt(display.textContent);--%>
-<%--                if (currentQuantity > 1) {--%>
-<%--                    display.textContent = (currentQuantity - 1).toString();--%>
-<%--                    updateTotalPricePerItem();--%>
-<%--                    updateGrandTotalChange(-parseFloat(priceElement.textContent));--%>
-<%--                }--%>
-<%--            });--%>
-<%--        });--%>
-
-<%--        updateTotalPricePerItem();--%>
-<%--    });--%>
-<%--</script>--%>
-
 </body>
 </html>

@@ -1,4 +1,4 @@
-<%@ page import="Beans.Product" %>
+<%@ page import="Beans.Products" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Iterator" %>
 <%@ page import="Beans.ShoppingCart" %>
@@ -34,9 +34,12 @@
                 NumberFormat nf = NumberFormat.getInstance();
                 List<CartItems> sanPhams = (List<CartItems>) request.getAttribute("list-sp");
                 double tongGiaTri = 0;
-                for (CartItems sp: sanPhams) {
-                    tongGiaTri+= sp.getTotalPrice();
+
+                for (int i = 0; i < sanPhams.size(); i++) {
+                    CartItems sp = sanPhams.get(i);
+                    tongGiaTri += sp.getTotalPrice();
             %>
+            <td><%= i + 1 %></td>
                 <td>
                     <div>
                         <p><%= sp.getProduct().getName() %></p>
@@ -65,6 +68,11 @@
                     </div>
                 </td>
                 <td class="totalPricePerItem"><%= nf.format(sp.getTotalPrice()) %>đ</td>
+            <td>
+                <a href="DeleteServlet?masanpham=<%=sp.getProduct().getId()%>">Xóa</a>
+<%--                <i class="fas fa-trash-alt"></i> <!-- Font Awesome trash icon -->--%>
+            </a>
+            </td>
             </tr>
             <% } // End of for loop %>
         </table>

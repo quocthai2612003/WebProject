@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="WebProject:war" />
+      <artifact name="WebProject:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,29 +10,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1ce7088-8c03-4e34-b5ea-2eebe276bce6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Beans/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Beans/CartItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/CartItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/Products.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Beans/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/ShoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CartServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/AccountServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ProductsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ProductsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ServletLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ServletLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/AccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/AccountDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAO/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/AccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/ShoppingCartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/ShoppingCartService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL001(1).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/nu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/nu.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/thatlungtreem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/treem.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cart.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Beans/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Beans/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Beans/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Beans/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Beans/CartItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Beans/CartItems.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Beans/Product.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Beans/ShoppingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Beans/ShoppingCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/CartServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/CartServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/AccountServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controller/ProductsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ProductsServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/QuantityServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/QuantityServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/ServletLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ServletLogin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/AccountDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/AccountDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DAO/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/AccountService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/ShoppingCartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/ShoppingCartService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/untitled.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/CartServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/CartServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Beans/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Beans/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Beans/CartItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Beans/CartItems.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Beans/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Beans/ShoppingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Beans/ShoppingCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/AccountServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/ProductsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/ProductsServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/QuantityServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/QuantityServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/ServletLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/ServletLogin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/DAO/AccountDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/DAO/AccountDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/DAO/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/DAO/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Service/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Service/ShoppingCartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Service/ShoppingCartService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/assets/images/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/assets/images/nu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/assets/images/thatlungtreem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/assets/images/treem.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/untitled/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/cart.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/untitled/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,26 +108,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/WebProject-main/WebProject&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Asus/Desktop/sendToStudents",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="JDBIConnector" />
@@ -107,11 +140,11 @@
       <recent name="D:\ltweb\ltWeb\untitled\src\main\webapp\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WebProject-main\WebProject\src\main\webapp\assets\images\product_img" />
       <recent name="D:\WebProject-main\WebProject\src\main\resources" />
       <recent name="D:\WebProject-main\WebProject\src\main\java" />
       <recent name="D:\WebProject\WebProject\src\main\webapp" />
       <recent name="D:\WebProject\webProject\src\main\webapp\img" />
-      <recent name="D:\WebProject\webProject\src\main\webapp\css" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Controller" />
@@ -267,16 +300,24 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="WebProject:war" />
+          <artifact name="WebProject:war exploded" />
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.AccountDAO" />
+      <item itemvalue="Application.ProductDAO" />
+      <item itemvalue="Application.ProductService" />
+      <item itemvalue="Application.SliderDAO" />
+      <item itemvalue="Application.SliderService" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.81" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AccountDAO" />
         <item itemvalue="Application.ProductService" />
         <item itemvalue="Application.ProductDAO" />
         <item itemvalue="Application.SliderDAO" />
-        <item itemvalue="Application.AccountDAO" />
         <item itemvalue="Application.SliderService" />
       </list>
     </recent_temporary>
@@ -349,6 +390,15 @@
       <workItem from="1704114300329" duration="2986000" />
       <workItem from="1704528693067" duration="2945000" />
       <workItem from="1704616029386" duration="5808000" />
+      <workItem from="1704629052668" duration="4680000" />
+      <workItem from="1704704047469" duration="4378000" />
+      <workItem from="1704710179893" duration="128000" />
+      <workItem from="1704710323199" duration="4054000" />
+      <workItem from="1704719157230" duration="156000" />
+      <workItem from="1704775663219" duration="2375000" />
+      <workItem from="1704781319493" duration="1739000" />
+      <workItem from="1704807699963" duration="149000" />
+      <workItem from="1704895097985" duration="59000" />
     </task>
     <servers />
   </component>
