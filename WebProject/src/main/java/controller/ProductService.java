@@ -26,8 +26,8 @@ public class ProductService {
         return ProductDAO.paginationProduct(limit, page, id_category);
     }
 
-    public int totalProduct() {
-        return ProductDAO.countProduct();
+    public int totalProduct(String id_category) {
+        return ProductDAO.countProduct(id_category);
     }
 
 }

@@ -49,10 +49,11 @@ public class ProductDAO {
         return listProducts;
     }
 
-    public static int countProduct() {
+    public static int countProduct(String id_category) {
         JDBI = ConnectJDBI.connector();
         Integer count = JDBI.withHandle(handle ->
-                handle.createQuery("Select COUNT(ID) From products").mapTo(Integer.class).findOnly());
+                handle.createQuery("Select COUNT(ID) From products Where ID_category = ?")
+                        .bind(0, id_category).mapTo(Integer.class).findOnly());
 
         return count;
     }

@@ -19,7 +19,7 @@ public class ServletProduct extends HttpServlet {
         int page = Integer.valueOf(pageCurrent) - 1;
         ProductService ps = ProductService.getInstance();
         List<Product> listProduct = ps.paginationProduct(12, page*12, id_category);
-        int totalProduct = ps.totalProduct();
+        int totalProduct = ps.totalProduct(id_category);
         int totalPage = totalProduct/12;
         if (totalProduct % 12 != 0) totalPage++;
         req.setAttribute("listProduct", listProduct);
