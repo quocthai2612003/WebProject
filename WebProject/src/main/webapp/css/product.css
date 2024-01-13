@@ -205,11 +205,20 @@ li.filter-price-title {
     padding: 15px;
 }
 
+product-container__tittle {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 220px;
+}
+
 .product-title {
     font-size: 1.8rem;
     font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Giới hạn 2 dòng */
+    overflow: hidden; /* Đảm bảo nội dung vượt quá sẽ bị ẩn đi */
+    text-overflow: ellipsis;
 }
 
 .product-price {

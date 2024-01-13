@@ -7,22 +7,30 @@ public class Product {
     private String id;
     private String name;
     private int price;
-    private int quanlity;
+    private int quantity;
     private String material;
     private String size;
     private String color;
     private String gender;
 
-    public Product(String id, String name, int price, int quanlity, String material, String size, String color, String gender) {
+    private String id_category;
+
+
+    public Product() {
+    }
+
+    public Product(String id, String name, int price, int quantity, String material, String size, String color, String gender, String id_category) {
         this.id = id;
         this.name = name;
         this.price = price;
-        this.quanlity = quanlity;
+        this.quantity = quantity;
         this.material = material;
         this.size = size;
         this.color = color;
         this.gender = gender;
+        this.id_category = id_category;
     }
+
 
     public String getId() {
         return id;
@@ -48,12 +56,12 @@ public class Product {
         this.price = price;
     }
 
-    public int getQuanlity() {
-        return quanlity;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setQuanlity(int quanlity) {
-        this.quanlity = quanlity;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public String getMaterial() {
@@ -88,13 +96,11 @@ public class Product {
         this.gender = gender;
     }
 
-    public static List<Product> createData() {
-        List<Product> productList = new ArrayList<Product>();
-        for (int i = 0; i < 52; i++) {
-            productList.add(new Product("N111V", "Dây nịt vải", 100000, 20,
-                    "Vải", "M", "Màu đen", "Nam"));
-        }
+    public String getId_category() {
+        return id_category;
+    }
 
-        return productList;
+    public void setId_category(String id_category) {
+        this.id_category = id_category;
     }
 }
