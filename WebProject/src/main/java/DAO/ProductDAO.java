@@ -16,26 +16,22 @@ public class ProductDAO {
         List<Products> products;
         try {
             products = jdbi.withHandle(handle -> {
-                String sql = "SELECT * FROM products WHERE ID_category = :categoryId";
+                String sql = "SELECT p.ID, p.name, p.price, p.quanlity, p.material, p.gender, p.ID_category FROM products p where p.ID_category = :categoryId";
                 return handle.createQuery(sql)
                         .bind("categoryId", categoryId)
-                        .mapToBean(Products.class)
-                        .stream()
-                        .collect(Collectors.toList());
+                        .mapToBean(Products.class).stream().toList();
             });
-            LOGGER.log(Level.INFO, "Retrieved products for category ID {0}: {1}", new Object[]{categoryId, products});
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error retrieving products by category ID: " + categoryId, e);
-            throw new RuntimeException("Error retrieving products by category ID", e);
+            throw e;
         }
         return products;
     }
 
-    public Products getProductById(int productId) {
+    public Products getProductById(String productId) {
         Jdbi jdbi = ConnectJDBI.connector();
         try {
             return jdbi.withHandle(handle -> {
-                String sql = "SELECT * FROM products WHERE id = :id";
+                String sql = "SELECT p.ID,p.name,p.price,p.quanlity,p.material,p.gender,p.ID_category  FROM products p  on p.ID=pr.ID_product WHERE id = :id";
                 return handle.createQuery(sql)
                         .bind("id", productId)
                         .mapToBean(Products.class)
@@ -47,12 +43,16 @@ public class ProductDAO {
             throw new RuntimeException("Error retrieving product by ID", e);
         }
     }
-        public static void main(String[] args) {
+
+    public static void main(String[] args) {
         ProductDAO productDAO = new ProductDAO();
         List<Products> products = productDAO.findByCategory(1);
-        productDAO.getProductById(1);
-
-        // Print or log the retrieved products
-        System.out.println("Retrieved products: " + products);
+        if (products.isEmpty()) {
+            System.out.println("No products found for the given category ID.");
+        } else {
+            for (Products product : products) {
+                System.out.println(product);
+            }
+        }
     }
 }

@@ -13,7 +13,7 @@ public class AccountDAO {
     public static Account accountByUsername(String username) {
         JDBI = ConnectJDBI.connector();
         Optional<Account> account = JDBI.withHandle(handle ->
-                handle.createQuery("Select id, username, password,email, fullname, number_phone, status From account where username = ?")
+                handle.createQuery("Select id, username, password,email, fullname, number_phone, status From accounts where username = ?")
                         .bind(0, username).mapToBean(Account.class).stream().findFirst()
         );
         return account.isEmpty() ? null : account.get();
@@ -22,7 +22,7 @@ public class AccountDAO {
     public static Account accountByUsernameAndEmail(String username, String email) {
         JDBI = ConnectJDBI.connector();
         Optional<Account> account = JDBI.withHandle(handle ->
-                handle.createQuery("Select id, username, password,email, fullname, number_phone, status From account where username = ? And email = ?")
+                handle.createQuery("Select id, username, password,email, fullname, number_phone, status From accounts where username = ? And email = ?")
                         .bind(0, username).bind(1, email).mapToBean(Account.class).stream().findFirst()
         );
         return account.isEmpty() ? null : account.get();
@@ -31,7 +31,7 @@ public class AccountDAO {
     public static boolean createAccount(String username, String password, String email, String fullname, String number_phone, int status) {
         JDBI = ConnectJDBI.connector();
         int execute = JDBI.withHandle(handle ->
-                handle.createUpdate("INSERT INTO account(username, password, email, fullname, number_phone, status) " +
+                handle.createUpdate("INSERT INTO accounts(username, password, email, fullname, number_phone, status) " +
                                 "VALUES (?, ?, ?, ?, ?, ?)")
                         .bind(0, username)
                         .bind(1, password)
@@ -71,8 +71,8 @@ public class AccountDAO {
         AccountDAO accountDAO = new AccountDAO();
 
         // Provide sample username and email for testing
-        String username = "quoc2612003";
-        String email = "quoc2612003@gmail.com";
+        String username = "admin";
+        String email = "abc@gmail.com";
 
         // Call the method and print the result
         Account result = accountDAO.accountByUsernameAndEmail(username, email);

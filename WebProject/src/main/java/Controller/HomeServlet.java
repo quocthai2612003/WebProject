@@ -1,6 +1,8 @@
 package Controller;
 
+import Beans.Products;
 import Beans.Slider;
+import Service.ProductService;
 import Service.SliderService;
 
 import javax.servlet.*;
@@ -20,12 +22,14 @@ public class HomeServlet extends HttpServlet {
         try {
             List<Slider> sliders = sliderService.findAll();
             request.setAttribute("products", sliders);
+            List<Products> listProduct = ProductService.getInstance().findByCategory(1) ;
+            request.setAttribute("listProduct", listProduct);
             String url = "/home.jsp";
             request.getRequestDispatcher(url).forward(request, response);
         } catch (Exception e) {
             // Handle the exception appropriately, e.g., log it
             e.printStackTrace();
-            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error fetching products");
+//            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error fetching products");
         }
     }
 

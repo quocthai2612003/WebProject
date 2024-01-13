@@ -15,7 +15,6 @@ import java.io.IOException;
 public class ServletLogin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
     }
 
     @Override
@@ -28,7 +27,7 @@ public class ServletLogin extends HttpServlet {
             if (as.isLoginSuccess(account)) {
                 HttpSession session = req.getSession();
                 session.setAttribute("account", account);
-                resp.sendRedirect("/home");
+                resp.sendRedirect("./home");
             } else {
                 req.setAttribute("error", "Tài khoản đã bị khóa");
                 req.getRequestDispatcher("Login.jsp").forward(req, resp);

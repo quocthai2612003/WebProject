@@ -19,11 +19,12 @@ public class ProductService {
             return productDAO.findByCategory(id);
         }
 
-        public Products findById(int id) {
-            return productDAO.getProductById(id);
+        public Products findById(String id) {
+            return productDAO.getProductById("id");
         }
-        public static void main(String[] args) {
-            Products products = ProductService.getInstance().findById(1);
-            System.out.println(products);
-        }
+
+    public static void main(String[] args) {
+        ProductService ps= new ProductService();
+        ps.findByCategory(3);
+    }
     }

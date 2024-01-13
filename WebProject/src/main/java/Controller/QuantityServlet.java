@@ -16,8 +16,8 @@ public class QuantityServlet extends HttpServlet {
         ShoppingCart gioHang = (ShoppingCart) req.getSession().getAttribute("cart");
         List<CartItems> sanPhams = gioHang.getDanhSachSanPham();
         String hanhdong = req.getParameter("thuchien");
-        int masanpham = Integer.parseInt(req.getParameter("masanpham"));
-        if (hanhdong != null && masanpham >=1){
+        String masanpham = req.getParameter("masanpham");
+        if (hanhdong != null && masanpham !=null){
             if (hanhdong.equals("tang")){
                 for (CartItems sp: sanPhams){
                     if (sp.getProduct().getId() == masanpham){

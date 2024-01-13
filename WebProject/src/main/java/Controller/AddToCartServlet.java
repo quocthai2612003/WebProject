@@ -19,8 +19,9 @@ public class AddToCartServlet extends HttpServlet {
         HttpSession session = req.getSession();
         ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
         if (cart == null) cart = new ShoppingCart();
+        String maSp =req.getParameter("masanpham");
         int ma = Integer.parseInt(req.getParameter("masanpham").trim());
-        cart.add(ma);
+        cart.add(maSp,ma);
         session.setAttribute("cart", cart);
 
         resp.sendRedirect("home");//phan van

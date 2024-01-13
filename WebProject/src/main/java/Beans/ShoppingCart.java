@@ -8,36 +8,31 @@ import java.util.List;
 import java.util.Map;
 
 public class ShoppingCart {
-    Map<Integer, CartItems> data = new HashMap<Integer, CartItems>();
+    Map<String, CartItems> data = new HashMap<>();
 
-    public boolean add(int maSP){
-        return add(maSP, 1);
-    }
 
-    public boolean add(int maSP, int soLuong){
+    public boolean add(String maSP, int soLuong) {
         Products products = ProductService.getInstance().findById(maSP);
         if (products == null) return false;
-        CartItems cartItems = null;
+
+        CartItems cartItems;
         if (data.containsKey(maSP)) {
             cartItems = data.get(maSP);
             cartItems.increaseQuantity(soLuong);
         } else {
             cartItems = new CartItems(products, soLuong);
         }
+
         data.put(maSP, cartItems);
         return true;
     }
 
-    public boolean decrease(int maSP) {
-        return decrease(maSP, 1);
-    }
-
-    public boolean decrease(int maSP, int soLuong) {
+    public boolean decrease(String maSP, int soLuong) {
         if (data.containsKey(maSP)) {
             CartItems cartItems = data.get(maSP);
             cartItems.decreaseQuantity(soLuong);
             if (cartItems.getQuantity() <= 0) {
-                // Nếu số lượng giảm xuống dưới hoặc bằng 0, xóa sản phẩm khỏi giỏ hàng
+                // If the quantity decreases to or below 0, remove the product from the cart
                 data.remove(maSP);
             }
             return true;
@@ -53,7 +48,7 @@ public class ShoppingCart {
         return new ArrayList<>(data.values());
     }
 
-    public CartItems remove(int maSP) {
+    public CartItems remove(String maSP) {
         return data.remove(maSP);
     }
     public int getSize (){

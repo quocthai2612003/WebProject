@@ -4,6 +4,7 @@
 <%@ page import="Service.ProductService" %>
 <%@ page import="java.text.NumberFormat" %>
 <%@ page import="Beans.ShoppingCart" %>
+<%@ page import="java.util.ArrayList" %>
 
 <%
     List<Slider> sliders = (List<Slider>) request.getAttribute("products");
@@ -118,53 +119,50 @@
 <% } %>
 </section>
 <%
-    int id_category = 1;
-    List<Products> productsNam = new ProductService().findByCategory(1);
+    List<Products> productsList = request.getAttribute("listProduct") == null ? new ArrayList<>() : (List<Products>) request.getAttribute("listProduct");
     NumberFormat nf = NumberFormat.getInstance();
-    %>
+%>
 
+<div class="container" id="Nam-Container">
     <div class="container" id="Nam-Container">
-        <div class="container" id="Nam-Container">
-            <div class="top-prodcut">
-                <div class="title">Nam</div>
-                <div class="menu-item">
-                    <div class="menu-item"><a href="">Xem tất cả</a></div>
-                </div>
+        <div class="top-prodcut">
+            <div class="title">Nam</div>
+            <div class="menu-item">
+                <div class="menu-item"><a href="">Xem tất cả</a></div>
             </div>
-            <div class="bottom-product">
-                <div class="left-menu-item">
-                    <img src="assets/images/nam1.jpg" alt="">
-                </div>
-                <div class="right-menu-list">
-                    <div class="slider-product">
-                        <% for (Products products : productsNam) { %>
-                        <div class="product-item">
-                            <div class="product">
-                                <a href="#"><img class="product-img" src="assets/images/product_img/TL001(1).png" alt=""></a>
-                                <p class="product-title"><%= products.getName() %></p>
-                                <div class="product-detail">
-                                    <p class="product-price"><%= nf.format(products.getPrice()) %>đ</p>
-                                    <div class="order">
-                                        <a href="AddToCartServlet?masanpham=<%=products.getId()%>" class="btn-add-to-cart" style="text-decoration: none">Thêm vào giỏ hàng</a>
-                                    </div>
-                                    <span class="rating">
+        </div>
+        <div class="bottom-product">
+            <div class="left-menu-item">
+                <img src="assets/images/nam1.jpg" alt="">
+            </div>
+            <div class="right-menu-list">
+                <div class="slider-product">
+                    <% for (Products products : productsList) { %>
+                    <div class="product-item">
+                        <div class="product">
+                            <a href="#"><img class="product-img" src="assets/images/product_img/TL001(1).png" alt=""></a>
+                            <p class="product-title"><%= products.getName() %></p>
+                            <div class="product-detail">
+                                <p class="product-price"><%= nf.format(products.getPrice()) %>đ</p>
+                                <div class="order">
+                                    <a href="AddToCartServlet?masanpham=<%=products.getId()%>" class="btn-add-to-cart" style="text-decoration: none">Thêm vào giỏ hàng</a>
+                                </div>
+                                <span class="rating">
                                     <span class="rating-value"><%= products.getRating() %></span>
                                     <i class="fa-solid fa-star"></i>
                                 </span>
-                                </div>
-                                <a href="productDetail.html" class="product-order">Xem chi tiết</a>
-
                             </div>
+                            <a href="productDetail.html" class="product-order">Xem chi tiết</a>
+
                         </div>
-                        <% } %>
                     </div>
+                    <% } %>
                 </div>
             </div>
         </div>
-
+    </div>
 <%
-    int category = 2;
-    List<Products> productsNu = new ProductService().findByCategory(category);
+    List<Products> productsNu = new ProductService().findByCategory(2);
 %>
 
 <div class="container" id="Nam-Container">
@@ -191,7 +189,7 @@
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </button>
                             <span class="rating">
-                                    <span class="rating-value"><%= products.getRating() %></span>
+<%--                                    <span class="rating-value"><%= products.getRating() %></span>--%>
                                     <i class="fa-solid fa-star"></i>
                                 </span>
                         </div>

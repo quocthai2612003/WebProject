@@ -1,32 +1,53 @@
 package Beans;
 
 public class Products {
-    private int id ;
+    private String id ;
     private String name;
     private int price;
     private int quanlity;
     private String material;
+
+    private String gender;
+
+    private String ID_category;
     private int rating;
 
-    public Products(int id, String name, int price, int quanlity, int rating) {
+    public Products(String id, String name, int price, int quanlity, String material, String gender, String ID_category,int rating ) {
         this.id = id;
-
         this.name = name;
         this.price = price;
         this.quanlity = quanlity;
-
-        this.rating=rating;
+        this.material = material;
+        this.gender = gender;
+        this.ID_category = ID_category;
+        this.rating = rating;
     }
 
     public Products() {
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getID_category() {
+        return ID_category;
+    }
+
+    public void setID_category(String ID_category) {
+        this.ID_category = ID_category;
     }
 
     public String getName() {
@@ -61,13 +82,6 @@ public class Products {
         this.material = material;
     }
 
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
     private int cartQuantity;
 
     public int getCartQuantity() {
@@ -78,16 +92,25 @@ public class Products {
         this.cartQuantity = cartQuantity;
     }
 
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
     @Override
     public String toString() {
-        return "Product{" +
-                "id=" + id +
+        return "Products{" +
+                "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 ", quanlity=" + quanlity +
                 ", material='" + material + '\'' +
+                ", gender='" + gender + '\'' +
+                ", ID_category='" + ID_category + '\'' +
                 ", rating=" + rating +
-                ", cartQuantity=" + cartQuantity +
                 '}';
     }
 }

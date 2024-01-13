@@ -15,7 +15,7 @@ public class DeleteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ShoppingCart gioHang = (ShoppingCart) req.getSession().getAttribute("cart");
         List<CartItems> sanPhams = gioHang.getDanhSachSanPham();
-        int masanpham = Integer.parseInt(req.getParameter("masanpham").trim());
+        String masanpham = req.getParameter("masanpham").trim();
         for (CartItems sp :sanPhams) {
             if (sp.getProduct().getId() == masanpham) {
                 gioHang.remove(masanpham);
