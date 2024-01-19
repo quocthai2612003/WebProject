@@ -5,8 +5,10 @@
 <%@ page import="java.text.NumberFormat" %>
 <%@ page import="Beans.ShoppingCart" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="Beans.Account" %>
 
 <%
+    Account account = (Account) session.getAttribute("account");
     List<Slider> sliders = (List<Slider>) request.getAttribute("products");
     ShoppingCart gh = (ShoppingCart) session.getAttribute("cart");
     if (gh == null) gh = new ShoppingCart();
@@ -84,10 +86,18 @@
             <%= gh.getSize() %>
         </span>
             </a>
+            <%-- Check if the user is authenticated --%>
+            <% if (account == null) { %>
             <a class="nav-icon position-relative text-decoration-none" href="Login.jsp">
                 <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                <!-- Add the label or badge if needed -->
             </a>
+            <% } else { %>
+            <a class="nav-icon position-relative text-decoration-none" href="users-page.jsp">
+                <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                <!-- Add the label or badge if needed -->
+            </a>
+            <% } %>
         </div>
     </div>
 
@@ -141,7 +151,9 @@
                     <div class="product-item">
                         <div class="product">
                             <a href="#"><img class="product-img" src="assets/images/product_img/TL001(1).png" alt=""></a>
-                            <p class="product-title"><%= products.getName() %></p>
+                            <p class="product-title">
+                                <%= products.getName().length() > 20 ? products.getName().substring(0, 20) + "..." : products.getName() %>
+                            </p>
                             <div class="product-detail">
                                 <p class="product-price"><%= nf.format(products.getPrice()) %>đ</p>
                                 <div class="order">
@@ -181,7 +193,7 @@
                 <% for (Products products : productsNu) { %>
                 <div class="product-item">
                     <div class="product">
-                        <a href="#"><img class="product-img" src="assets/images/product_img/nu.jpg" alt=""></a>
+                        <a href="#"><img class="product-img" src="assets/images/product_img/TL302(1).png" alt=""></a>
                         <p class="product-title"><%= products.getName() %></p>
                         <div class="product-detail">
                             <p class="product-price"><%= products.getPrice() %></p>

@@ -21,7 +21,6 @@ public class CartServlet extends HttpServlet {
 
         List<CartItems> danhSachSanPham = gioHang.getDanhSachSanPham();
         req.setAttribute("list-sp", danhSachSanPham);
-
         req.getRequestDispatcher("cart.jsp").forward(req, resp);
     }
 

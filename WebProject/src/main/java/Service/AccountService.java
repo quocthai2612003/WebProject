@@ -24,10 +24,11 @@ public class AccountService {
         // Kiểm tra xem chuỗi có khớp với biểu thức chính quy không
         return matcher.matches();
     }
+
     public Account checkLogin(String username, String password) {
         Account account = AccountDAO.accountByUsername(username);
         if (account != null) {
-            if (account.getUsername().equals(username) && account.getPassword().equals(password)){
+            if (account.getUsername().equals(username) && account.getPassword().equals(password)) {
                 return account;
             }
         }
@@ -61,6 +62,30 @@ public class AccountService {
     public boolean createAccount(String username, String password, String email, String fullname, String number_phone, int status) {
         return AccountDAO.createAccount(username, password, email, fullname, number_phone, status);
     }
+
+    public boolean changePassword(String username, String currentPassword, String newPassword) {
+        Account account = AccountDAO.accountByUsername(username);
+        if (account != null && account.getPassword().equals(currentPassword)) {
+            return AccountDAO.updatePassword(username, newPassword);
+        }
+        return false;
+    }
+
+    public boolean updateUserInfo(String username, String newFullname) {
+        // Retrieve the current account information
+        Account currentAccount = AccountDAO.accountByUsername(username);
+
+        // Check if the account exists
+        if (currentAccount != null) {
+            // Update the account information
+            currentAccount.setFullname(newFullname);
+            // Update the account in the database
+            return AccountDAO.updateUserInfo(currentAccount);
+        }
+
+        return false;
+    }
+
     public boolean isLoginSuccess(Account account) {
         return account.getStatus() != 0;
     }
@@ -68,4 +93,4 @@ public class AccountService {
 //    public static void main(String[] args) {
 //        System.out.println(AccountService.getInstance().vertifyEmail("toanphuoc", "toanphuoc2611203@gmail.com"));
 //    }
-    }
+}

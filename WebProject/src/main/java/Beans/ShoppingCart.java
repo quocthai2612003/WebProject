@@ -10,10 +10,18 @@ import java.util.Map;
 public class ShoppingCart {
     Map<String, CartItems> data = new HashMap<>();
 
+    public boolean add(String maSP) {
+        return add(maSP, 1);
+    }
 
     public boolean add(String maSP, int soLuong) {
         Products products = ProductService.getInstance().findById(maSP);
-        if (products == null) return false;
+        System.out.println("Product retrieved from ProductService: " + products);
+
+        if (products == null) {
+            System.out.println("Product not found for ID: " + maSP);
+            return false;
+        }
 
         CartItems cartItems;
         if (data.containsKey(maSP)) {
@@ -40,7 +48,7 @@ public class ShoppingCart {
         return false;
     }
 
-    public int getToTal(){
+    public int getToTal() {
         return data.size();
     }
 
@@ -51,8 +59,45 @@ public class ShoppingCart {
     public CartItems remove(String maSP) {
         return data.remove(maSP);
     }
-    public int getSize (){
+
+    public int getSize() {
         return data.size();
     }
 
+    @Override
+    public String toString() {
+        return "ShoppingCart{" +
+                "data=" + data +
+                '}';
+    }
+
+    public static void main(String[] args) {
+        ShoppingCart sp = new ShoppingCart();
+
+        // Try to add a product
+        boolean added = sp.add("TL003", 2);
+        boolean added2 = sp.add("TL004", 2);
+        boolean added3 = sp.add("TL005", 2);
+        boolean decre =sp.decrease("TL003",2);
+
+        // Print the result of the add operation
+        System.out.println("Product added: " + added);
+
+        // Print the current state of the shopping cart
+        System.out.println("ShoppingCart after adding product:");
+        System.out.println(sp);
+
+        // Print the size of the shopping cart
+        System.out.println("ShoppingCart size: " + sp.getSize());
+
+        // Print details of each CartItems in the shopping cart
+        List<CartItems> cartItemsList = sp.getDanhSachSanPham();
+        System.out.println("Details of CartItems in the shopping cart:");
+        for (CartItems cartItems : cartItemsList) {
+            System.out.println("Product ID: " + cartItems.getProduct().getId());
+            System.out.println("Quantity: " + cartItems.getQuantity());
+            System.out.println("Total Price: " + cartItems.getTotalPrice());
+            System.out.println("--------------");
+        }
+    }
 }

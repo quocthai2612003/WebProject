@@ -17,7 +17,7 @@ public class DeleteServlet extends HttpServlet {
         List<CartItems> sanPhams = gioHang.getDanhSachSanPham();
         String masanpham = req.getParameter("masanpham").trim();
         for (CartItems sp :sanPhams) {
-            if (sp.getProduct().getId() == masanpham) {
+            if (sp.getProduct().getId().equals(masanpham)) {
                 gioHang.remove(masanpham);
             }
         }

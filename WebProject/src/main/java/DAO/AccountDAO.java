@@ -10,6 +10,7 @@ import java.util.Optional;
 
 public class AccountDAO {
     private static Jdbi JDBI;
+
     public static Account accountByUsername(String username) {
         JDBI = ConnectJDBI.connector();
         Optional<Account> account = JDBI.withHandle(handle ->
@@ -65,30 +66,52 @@ public class AccountDAO {
                         .bind(0, code).mapToMap().stream().findFirst());
         return !stringObjectMap.isEmpty();
     }
+    public static boolean updatePassword(String username, String newPassword) {
+        JDBI = ConnectJDBI.connector();
+        int execute = JDBI.withHandle(handle ->
+                handle.createUpdate("UPDATE accounts SET password = ? WHERE username = ?")
+                        .bind(0, newPassword)
+                        .bind(1, username)
+                        .execute());
+        return execute > 0;
+    }
+    public static boolean updateUserInfo(Account account) {
+        JDBI = ConnectJDBI.connector();
+        int execute = JDBI.withHandle(handle ->
+                handle.createUpdate("UPDATE accounts SET fullname = ?  WHERE username = ?")
+                        .bind(0, account.getFullname())
+                        .bind(2, account.getUsername())
+                        .execute());
+        return execute > 0;
+    }
 
     public static void main(String[] args) {
         // Create an instance of AccountDAO
         AccountDAO accountDAO = new AccountDAO();
-
+        Account acount = new Account(1,"admin","12345","quoc2612003","quocthai","0909102999",1);
+        accountDAO.updateUserInfo(acount);
         // Provide sample username and email for testing
-        String username = "admin";
-        String email = "abc@gmail.com";
-
-        // Call the method and print the result
-        Account result = accountDAO.accountByUsernameAndEmail(username, email);
-
-        // Check if the result is not null
-        if (result != null) {
-            System.out.println("Account found:");
-            System.out.println("ID: " + result.getID());
-            System.out.println("Username: " + result.getUsername());
-            System.out.println("Email: " + result.getEmail());
-            System.out.println("Fullname: " + result.getFullname());
-            System.out.println("Phone Number: " + result.getNumberPhone());
-            System.out.println("Status: " + result.getStatus());
-        } else {
-            System.out.println("Account not found for the given username and email.");
-        }
+//        String username = "admin";
+//        String email = "abc@gmail.com";
+//
+//        // Call the method and print the result
+//        Account result = accountDAO.accountByUsernameAndEmail(username, email);
+//
+//
+//        // Check if the result is not null
+//        if (result != null) {
+//            System.out.println("Account found:");
+//            System.out.println("ID: " + result.getID());
+//            System.out.println("Username: " + result.getUsername());
+//            System.out.println("Email: " + result.getEmail());
+//            System.out.println("Fullname: " + result.getFullname());
+//            System.out.println("Phone Number: " + result.getNumberPhone());
+//            System.out.println("Status: " + result.getStatus());
+//        } else {
+//            System.out.println("Account not found for the given username and email.");
+//        }
     }
+
 }
+
 

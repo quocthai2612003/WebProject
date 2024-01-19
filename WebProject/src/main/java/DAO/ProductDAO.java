@@ -31,7 +31,9 @@ public class ProductDAO {
         Jdbi jdbi = ConnectJDBI.connector();
         try {
             return jdbi.withHandle(handle -> {
-                String sql = "SELECT p.ID,p.name,p.price,p.quanlity,p.material,p.gender,p.ID_category  FROM products p  on p.ID=pr.ID_product WHERE id = :id";
+                String sql = "SELECT p.ID, p.name, p.price, p.quanlity, p.material, p.gender, p.ID_category " +
+                        "FROM products p " +
+                        "WHERE p.ID = :id";
                 return handle.createQuery(sql)
                         .bind("id", productId)
                         .mapToBean(Products.class)
@@ -42,17 +44,19 @@ public class ProductDAO {
             LOGGER.log(Level.SEVERE, "Error retrieving product by ID: " + productId, e);
             throw new RuntimeException("Error retrieving product by ID", e);
         }
+
     }
 
     public static void main(String[] args) {
         ProductDAO productDAO = new ProductDAO();
-        List<Products> products = productDAO.findByCategory(1);
-        if (products.isEmpty()) {
-            System.out.println("No products found for the given category ID.");
-        } else {
-            for (Products product : products) {
-                System.out.println(product);
-            }
-        }
+     //   List<Products> products = productDAO.findByCategory(1);
+        System.out.println(productDAO.getProductById("TL003"));
+//        if (products.isEmpty()) {
+//            System.out.println("No products found for the given category ID.");
+//        } else {
+//            for (Products product : products) {
+//                System.out.println(product);
+//            }
+//        }
     }
 }

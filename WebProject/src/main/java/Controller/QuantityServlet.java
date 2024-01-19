@@ -20,14 +20,14 @@ public class QuantityServlet extends HttpServlet {
         if (hanhdong != null && masanpham !=null){
             if (hanhdong.equals("tang")){
                 for (CartItems sp: sanPhams){
-                    if (sp.getProduct().getId() == masanpham){
+                    if (sp.getProduct().getId().equals(masanpham)){
                         gioHang.add(masanpham, 1);
                     }
                 }
             }
             if (hanhdong.equals("giam")){
                 for (CartItems sp: sanPhams){
-                    if (sp.getProduct().getId() == masanpham){
+                    if (sp.getProduct().getId().equals(masanpham)){
                         gioHang.decrease(masanpham, 1);
                     }
                 }
