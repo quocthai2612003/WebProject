@@ -92,6 +92,7 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
+
         <option value="Jsp File" />
         <option value="Class" />
       </list>
@@ -252,6 +253,7 @@
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="50594" />
+
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />

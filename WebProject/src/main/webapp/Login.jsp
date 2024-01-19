@@ -1,3 +1,4 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +30,7 @@
                 <a class="function-register" href="./Register.html">Đăng ký</a>
             </div>
             <form class="infor" action="./login" method="post">
+
                 <div class="form-group">
                     <%if (error != null) {%>
                     <p class="notification-error"><%=error%></p>
