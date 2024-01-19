@@ -29,7 +29,8 @@
                 <a class="function-login" href="./Login.html">Đăng nhập</a>
                 <a class="function-register" href="./Register.html">Đăng ký</a>
             </div>
-            <form class="infor" action="/login" method="post">
+            <form class="infor" action="./login" method="post">
+
                 <div class="form-group">
                     <%if (error != null) {%>
                     <p class="notification-error"><%=error%></p>

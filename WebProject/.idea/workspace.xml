@@ -9,8 +9,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d188f2-732c-462c-9376-c5f7b5b81b52" name="Changes" comment="">
+    <list default="true" id="b1ce7088-8c03-4e34-b5ea-2eebe276bce6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL322(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL322(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL322(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL324(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL325(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL325(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL325(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL326(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL326(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL326(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL328(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL328(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL328(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL329(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL329(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL329(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL330(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL330(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL330(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL331(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL331(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL331(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL333(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL333(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL333(3).png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Beans/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Beans/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/ShoppingCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/AddToCartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/AddToCartServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CartServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/DeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/DeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/QuantityServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/QuantityServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/AccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/AccountDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL001(1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL001(2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL001(3).webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL002(2).webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL002(2).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL002(3).webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL002(3).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/nu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL302(1).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/src.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/users-page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/users-page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Beans/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Beans/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Beans/ShoppingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Beans/ShoppingCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/AddToCartServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/AddToCartServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/CartServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/CartServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/DeleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/DeleteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/QuantityServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/QuantityServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/AccountDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/AccountDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Beans/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Beans/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Beans/ShoppingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Beans/ShoppingCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/AddToCartServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/AddToCartServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/CartServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/CartServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/DeleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/DeleteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/QuantityServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Controller/QuantityServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/DAO/AccountDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/DAO/AccountDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/DAO/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/DAO/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Service/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/WEB-INF/classes/Service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/assets/images/product_img/TL001(2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/assets/images/product_img/TL002(2).webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/assets/images/product_img/TL002(3).webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/assets/images/product_img/nu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/untitled/users-page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/users-page.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +90,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+
         <option value="Jsp File" />
         <option value="Class" />
       </list>
@@ -35,53 +108,73 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
-}</component>
-  <component name="ProjectId" id="2Z43GITr4hSFvoma3YXOqfURayq" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2XfYp4VB9vcdts0RdzihHXE3AcA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Phước&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hieu/Desktop/New folder/New folder/WebProject/WebProject&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/WebProject-main/WebProject&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Beans" />
+      <recent name="JDBIConnector" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Hieu\Desktop\New folder\New folder\WebProject\WebProject\src\main\webapp\js" />
-      <recent name="C:\Users\Hieu\Desktop\New folder\New folder\WebProject\WebProject\src\main\webapp\assets" />
-      <recent name="C:\Users\Hieu\Desktop\New folder\New folder\WebProject\WebProject\src\main\webapp\css" />
+      <recent name="D:\WebProject-main\WebProject\src\main\webapp\assets\images\product_img" />
+      <recent name="D:\WebProject-main\WebProject\src\main\webapp\css" />
+      <recent name="D:\WebProject-main\WebProject\src\main\webapp\js" />
+      <recent name="D:\WebProject-main\WebProject\src\main\webapp" />
+      <recent name="D:\WebProject\WebProject\src\main\webapp\assets\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Hieu\Desktop\New folder\New folder\WebProject\WebProject\src\main\webapp\assets\images" />
+      <recent name="D:\WebProject-main\WebProject\src\main\webapp\assets\images\product_img" />
+      <recent name="D:\WebProject-main\WebProject\src\main\resources" />
+      <recent name="D:\WebProject-main\WebProject\src\main\java" />
+      <recent name="D:\WebProject\WebProject\src\main\webapp" />
+      <recent name="D:\WebProject\webProject\src\main\webapp\img" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Controller" />
+      <recent name="Service" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.81">
     <configuration name="AccountDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dao.AccountDAO" />
+      <option name="MAIN_CLASS_NAME" value="DAO.AccountDAO" />
       <module name="WebProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dao.*" />
+          <option name="PATTERN" value="DAO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,11 +183,11 @@
       </method>
     </configuration>
     <configuration name="AccountService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="controller.AccountService" />
+      <option name="MAIN_CLASS_NAME" value="Service.AccountService" />
       <module name="WebProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dao.*" />
+          <option name="PATTERN" value="Service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,11 +196,11 @@
       </method>
     </configuration>
     <configuration name="ProductDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dao.ProductDAO" />
+      <option name="MAIN_CLASS_NAME" value="DAO.ProductDAO" />
       <module name="WebProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dao.*" />
+          <option name="PATTERN" value="DAO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,43 +208,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Product.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.81" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Product.jsp" />
-      <deployment>
-        <artifact name="WebProject:war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/WebProject_war" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="b03630d0-d327-4abd-92f1-8c63e51269b6" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
+    <configuration name="ShoppingCart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Beans.ShoppingCart" />
+      <module name="WebProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Beans.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="WebProject:war" />
-        </option>
+      </method>
+    </configuration>
+    <configuration name="SliderDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DAO.SliderDAO" />
+      <module name="WebProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.81" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.81" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -159,12 +239,12 @@
       <deployment>
         <artifact name="WebProject:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/WebProject_war_exploded" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="31bc414a-f506-4ecb-aa15-67a3859c3278" />
+        <option name="BASE_DIRECTORY_NAME" value="a648f926-67a0-4a4c-8861-4fc35e4ae883" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -172,7 +252,8 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="63331" />
+        <option name="DEBUG_PORT" value="50594" />
+
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -241,47 +322,118 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.AccountDAO" />
+      <item itemvalue="Application.AccountService" />
+      <item itemvalue="Application.ShoppingCart" />
+      <item itemvalue="Application.ProductDAO" />
+      <item itemvalue="Application.SliderDAO" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.81" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProductDAO" />
-        <item itemvalue="Application.AccountDAO" />
         <item itemvalue="Application.AccountService" />
-        <item itemvalue="Tomcat Server.Product.jsp" />
+        <item itemvalue="Application.AccountDAO" />
+        <item itemvalue="Application.ShoppingCart" />
+        <item itemvalue="Application.ProductDAO" />
+        <item itemvalue="Application.SliderDAO" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="02d188f2-732c-462c-9376-c5f7b5b81b52" name="Changes" comment="" />
-      <created>1701667427711</created>
+      <changelist id="b1ce7088-8c03-4e34-b5ea-2eebe276bce6" name="Changes" comment="" />
+      <created>1699021783061</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1701667427711</updated>
-      <workItem from="1701667428860" duration="3641000" />
-      <workItem from="1701832281430" duration="43000" />
-      <workItem from="1702197357289" duration="3200000" />
-      <workItem from="1702270938914" duration="339000" />
-      <workItem from="1702824556862" duration="685000" />
-      <workItem from="1702872605485" duration="2743000" />
-      <workItem from="1703874363088" duration="803000" />
-      <workItem from="1703876141052" duration="1909000" />
-      <workItem from="1703984938828" duration="1144000" />
-      <workItem from="1704008521074" duration="4295000" />
-      <workItem from="1704074008669" duration="2490000" />
-      <workItem from="1704076745853" duration="11000" />
-      <workItem from="1704077508309" duration="867000" />
-      <workItem from="1704441212068" duration="4462000" />
-      <workItem from="1704529237495" duration="4150000" />
-      <workItem from="1704785833405" duration="1575000" />
-      <workItem from="1704807859481" duration="30000" />
-      <workItem from="1704868476761" duration="6536000" />
-      <workItem from="1704940781923" duration="6626000" />
-      <workItem from="1704978912196" duration="599000" />
-      <workItem from="1705107810443" duration="6146000" />
-      <workItem from="1705113976646" duration="2000" />
-      <workItem from="1705114175502" duration="443000" />
-      <workItem from="1705114665688" duration="274000" />
+      <updated>1699021783061</updated>
+      <workItem from="1699021784379" duration="2909000" />
+      <workItem from="1699153748804" duration="609000" />
+      <workItem from="1699282118841" duration="1452000" />
+      <workItem from="1699326301729" duration="112000" />
+      <workItem from="1699576535919" duration="4167000" />
+      <workItem from="1699583816256" duration="16000" />
+      <workItem from="1699624278935" duration="993000" />
+      <workItem from="1699686131645" duration="66000" />
+      <workItem from="1699686225975" duration="53000" />
+      <workItem from="1699797917478" duration="1244000" />
+      <workItem from="1699863740096" duration="2875000" />
+      <workItem from="1699868129286" duration="516000" />
+      <workItem from="1699884343313" duration="721000" />
+      <workItem from="1699885860843" duration="456000" />
+      <workItem from="1700281862768" duration="2566000" />
+      <workItem from="1700285770094" duration="4224000" />
+      <workItem from="1700298495454" duration="6799000" />
+      <workItem from="1700318752738" duration="88000" />
+      <workItem from="1700324225565" duration="784000" />
+      <workItem from="1700464462079" duration="1215000" />
+      <workItem from="1700658398241" duration="97000" />
+      <workItem from="1701522480566" duration="54000" />
+      <workItem from="1701522544444" duration="41000" />
+      <workItem from="1701522789687" duration="31000" />
+      <workItem from="1701523499732" duration="3660000" />
+      <workItem from="1701601092830" duration="60000" />
+      <workItem from="1701602469211" duration="3878000" />
+      <workItem from="1701606696483" duration="1900000" />
+      <workItem from="1701617167928" duration="178000" />
+      <workItem from="1701664262429" duration="1981000" />
+      <workItem from="1701667864478" duration="1618000" />
+      <workItem from="1701669502629" duration="1271000" />
+      <workItem from="1701783816864" duration="1258000" />
+      <workItem from="1701868297332" duration="1408000" />
+      <workItem from="1701939267319" duration="3611000" />
+      <workItem from="1701947488482" duration="1651000" />
+      <workItem from="1702026772601" duration="10012000" />
+      <workItem from="1702113413026" duration="1739000" />
+      <workItem from="1702199233046" duration="2882000" />
+      <workItem from="1702208882833" duration="3142000" />
+      <workItem from="1702213600672" duration="2244000" />
+      <workItem from="1702298352304" duration="4433000" />
+      <workItem from="1702372882454" duration="1574000" />
+      <workItem from="1702468918809" duration="763000" />
+      <workItem from="1702472857077" duration="107000" />
+      <workItem from="1702475357835" duration="261000" />
+      <workItem from="1702555778494" duration="1022000" />
+      <workItem from="1702646400611" duration="2281000" />
+      <workItem from="1702806036998" duration="168000" />
+      <workItem from="1702814735478" duration="3028000" />
+      <workItem from="1702818007154" duration="943000" />
+      <workItem from="1702902115978" duration="230000" />
+      <workItem from="1702902805664" duration="5414000" />
+      <workItem from="1703235330041" duration="3537000" />
+      <workItem from="1703738886785" duration="4265000" />
+      <workItem from="1703838798194" duration="2853000" />
+      <workItem from="1703843226416" duration="5000" />
+      <workItem from="1704114300329" duration="2986000" />
+      <workItem from="1704528693067" duration="2945000" />
+      <workItem from="1704616029386" duration="5808000" />
+      <workItem from="1704629052668" duration="4680000" />
+      <workItem from="1704704047469" duration="4378000" />
+      <workItem from="1704710179893" duration="128000" />
+      <workItem from="1704710323199" duration="4054000" />
+      <workItem from="1704719157230" duration="156000" />
+      <workItem from="1704775663219" duration="2375000" />
+      <workItem from="1704781319493" duration="1739000" />
+      <workItem from="1704807699963" duration="149000" />
+      <workItem from="1704895097985" duration="59000" />
+      <workItem from="1705072870002" duration="319000" />
+      <workItem from="1705125675780" duration="1249000" />
+      <workItem from="1705127972491" duration="4610000" />
+      <workItem from="1705144494701" duration="2089000" />
+      <workItem from="1705146866764" duration="1985000" />
+      <workItem from="1705151144992" duration="1956000" />
+      <workItem from="1705153120675" duration="1144000" />
+      <workItem from="1705154304613" duration="1059000" />
+      <workItem from="1705290048243" duration="8789000" />
+      <workItem from="1705308083601" duration="844000" />
+      <workItem from="1705379375737" duration="173000" />
+      <workItem from="1705559993929" duration="5442000" />
+      <workItem from="1705570361493" duration="168000" />
+      <workItem from="1705573580641" duration="650000" />
+      <workItem from="1705580812826" duration="2822000" />
+      <workItem from="1705629168590" duration="4596000" />
+      <workItem from="1705633977466" duration="950000" />
     </task>
     <servers />
   </component>

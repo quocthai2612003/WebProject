@@ -1,0 +1,115 @@
+p{
+    font-size: 20px;
+}
+span{
+    
+}
+.cart-page {
+    margin: 40px auto;
+    border-right: black 2px;
+
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+th {
+    padding:5px;
+    color: black;
+    background-color: whitesmoke;
+    border-right: white solid 5px ;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center !important;
+}
+td {
+    padding: 10px 5px;
+    text-align: center;
+    border-bottom: #1d242d !important;
+}
+td input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+
+}
+
+.cart-page table tr:last-child {
+    border: none;
+}
+td a {
+    color: black;
+    font-size: 15px;
+}
+td img{
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+}
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+
+}
+.total-price table {
+    border-top: 3px solid black;
+    width: 100%;
+    max-width: 400px;
+    transform: translateX(-100px);
+}
+td:last-child{
+    text-align: center;
+}
+th:last-child{
+    text-align: right;
+}
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-control button {
+    background-color: #eee;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.quantity-display {
+    margin: 0 10px;
+}
+.remove-button {
+    color: red;
+    cursor: pointer;
+}
+.cart-info p {
+    font-size: 3rem;
+}
+.buy-button-wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right */
+    padding-bottom: 5px;
+}
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff; /* Button text color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #0056b3; /* Change color on hover */
+}
