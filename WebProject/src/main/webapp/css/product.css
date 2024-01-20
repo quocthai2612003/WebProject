@@ -205,10 +205,10 @@ li.filter-price-title {
     padding: 15px;
 }
 
-product-container__tittle {
+.product-container__tittle {
     margin-top: 20px;
     margin-bottom: 10px;
-    height: 220px;
+    height: 45px;
 }
 
 .product-title {

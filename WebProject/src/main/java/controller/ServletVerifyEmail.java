@@ -1,7 +1,7 @@
 package controller;
 
-import dao.AccountDAO;
 import model.Account;
+import service.AccountService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,6 +22,8 @@ public class ServletVerifyEmail extends HttpServlet {
             as.updateStatusAccount(account.getID());
             as.createRoleAccount(account, 1);
             resp.sendRedirect("Login.jsp");
+        } else {
+            resp.sendRedirect("Register.jsp");
         }
     }
 }

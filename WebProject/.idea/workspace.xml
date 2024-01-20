@@ -10,7 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02d188f2-732c-462c-9376-c5f7b5b81b52" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MailProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MailProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ServletLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ServletLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ServletProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ServletProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ServletRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ServletRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ServletVerifyEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ServletVerifyEmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/AccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AccountDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/product.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +103,7 @@
       </method>
     </configuration>
     <configuration name="AccountService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="controller.AccountService" />
+      <option name="MAIN_CLASS_NAME" value="service.AccountService" />
       <module name="WebProject" />
       <extension name="coverage">
         <pattern>
@@ -243,8 +256,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProductDAO" />
         <item itemvalue="Application.AccountDAO" />
+        <item itemvalue="Application.ProductDAO" />
         <item itemvalue="Application.AccountService" />
         <item itemvalue="Tomcat Server.Product.jsp" />
       </list>
@@ -282,6 +295,11 @@
       <workItem from="1705113976646" duration="2000" />
       <workItem from="1705114175502" duration="443000" />
       <workItem from="1705114665688" duration="274000" />
+      <workItem from="1705153496698" duration="1403000" />
+      <workItem from="1705627830753" duration="60000" />
+      <workItem from="1705629028755" duration="3838000" />
+      <workItem from="1705637020256" duration="1410000" />
+      <workItem from="1705711570578" duration="5186000" />
     </task>
     <servers />
   </component>

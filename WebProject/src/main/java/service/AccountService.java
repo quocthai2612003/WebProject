@@ -1,13 +1,10 @@
-package controller;
+package service;
 
 import dao.AccountDAO;
 import model.Account;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.sql.Date;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -43,13 +40,9 @@ public class AccountService {
     }
         // Chức năng đăng ký
     public boolean isPhoneValid(String phone) {
-        String regex = "^0[0-9]{9}$"; // Đây là một biểu thức chính quy cơ bản cho số điện thoại 10 chữ số bắt đầu bằng số 0
-
-        // Tạo một Pattern từ biểu thức chính quy
+        String regex = "^0[0-9]{9}$";
         Pattern pattern = Pattern.compile(regex);
-        // Tạo một Matcher để so khớp chuỗi với biểu thức chính quy
         Matcher matcher = pattern.matcher(phone);
-        // Kiểm tra xem chuỗi có khớp với biểu thức chính quy không
         return matcher.matches();
     }
 
@@ -62,7 +55,7 @@ public class AccountService {
         date.add(Calendar.DAY_OF_MONTH, 1);
         String formatDateExpired = dateFormat.format(date.getTime());
         if (AccountDAO.createVerifyEmail(code, formatDateCreate,
-                formatDateExpired, account.getID()) != 0) {
+                formatDateExpired, false, account.getID()) != 0) {
             return EmailService.send(account.getEmail(), "Xac nhan email", mess);
         }
         return false;
@@ -87,7 +80,6 @@ public class AccountService {
     public int createRoleAccount(Account account, int role) {
         return AccountDAO.createRoleAccount(account, role);
     }
-
 
     public static void main(String[] args) {
 

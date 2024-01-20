@@ -1,13 +1,10 @@
 package dao;
 
-import controller.AccountService;
 import model.Account;
 import org.jdbi.v3.core.Jdbi;
-import java.sql.Date;
+
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Calendar;
-import java.util.Map;
 import java.util.Optional;
 
 public class AccountDAO {
@@ -64,15 +61,16 @@ public class AccountDAO {
         return execute;
     }
 
-    public static int createVerifyEmail(String code, String dateCreate, String dateExpired, int idAccount) {
+    public static int createVerifyEmail(String code, String dateCreate, String dateExpired,boolean status, int idAccount) {
         JDBI = ConnectJDBI.connector();
         int execute = JDBI.withHandle(handle ->
-                handle.createUpdate("INSERT INTO verify_email(code, date_created, date_expired, ID_account) " +
-                                "VALUES (?, ?, ?, ?)")
+                handle.createUpdate("INSERT INTO verify_email(code, date_created, date_expired, status, ID_account) " +
+                                "VALUES (?, ?, ?, ?, ?)")
                         .bind(0, code)
                         .bind(1, dateCreate)
                         .bind(2, dateExpired)
-                        .bind(3, idAccount)
+                        .bind(3, status)
+                        .bind(4, idAccount)
                         .execute());
         return execute;
     }
@@ -84,15 +82,27 @@ public class AccountDAO {
         String formatDate = dateFormat.format(date.getTime());
         Optional<Account> account = JDBI.withHandle(handle ->
                 handle.createQuery("SELECT accounts.ID, accounts.username, accounts.password, " +
-                        "accounts.email, accounts.fullname, accounts.number_phone, accounts.status " +
-                        "FROM accounts " +
-                        "INNER JOIN verify_email ON accounts.id = verify_email.ID_account " +
-                        "WHERE verify_email.code = ? AND verify_email.date_expired > ?")
+                                "accounts.email, accounts.fullname, accounts.number_phone, accounts.status " +
+                                "FROM accounts " +
+                                "INNER JOIN verify_email ON accounts.id = verify_email.ID_account " +
+                                "WHERE verify_email.code = ? AND verify_email.date_expired > ? AND verify_email.status = 0")
                         .bind(0, code)
                         .bind(1, formatDate)
                         .mapToBean(Account.class).stream().findFirst()
         );
-        return account.isEmpty() ? null : account.get();
+        int execute = 0;
+        if (!account.isEmpty()) {
+            execute = updateStatusVerifyEmail(code);
+        }
+        if (execute > 0) return account.get();
+        return null;
+    }
+
+    private static int updateStatusVerifyEmail(String code) {
+        int execute = JDBI.withHandle(handle ->
+                handle.createUpdate("UPDATE verify_email SET status = 1 WHERE code = ?")
+                        .bind(0, code).execute());
+        return execute;
     }
 
     public static int createRoleAccount(Account account, int role) {
@@ -107,7 +117,24 @@ public class AccountDAO {
         return execute;
     }
 
-    public static void main(String[] args) {
+    public static int test() {
+        JDBI = ConnectJDBI.connector();
+        int index = 116;
+        int execute = 0;
+        for (int i = 2; i<=101; i++) {
+            int finalI = i;
+            int finalIndex = index;
+            execute += JDBI.withHandle(handle ->
+                    handle.createUpdate("Update images set ID = ? where ID = ?")
+                            .bind(0, finalIndex)
+                            .bind(1, finalI).execute());
+            index++;
+        }
 
+        return execute;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(test());
     }
 }

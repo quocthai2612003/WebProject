@@ -1,4 +1,4 @@
-package controller;
+package service;
 
 import dao.ProductDAO;
 import model.Product;
@@ -22,12 +22,13 @@ public class ProductService {
         return ProductDAO.selectImageThumbnail();
     }
 
-    public List<Product> paginationProduct(int limit, int page, String id_category) {
-        return ProductDAO.paginationProduct(limit, page, id_category);
+
+    public int totalProductByCategory(String id_category) {
+        return ProductDAO.countProductByCategory(id_category);
     }
 
-    public int totalProduct(String id_category) {
-        return ProductDAO.countProduct(id_category);
+    public int totalProduct() {
+        return ProductDAO.countProduct();
     }
 
 }

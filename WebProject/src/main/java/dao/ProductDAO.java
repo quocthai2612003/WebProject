@@ -38,22 +38,19 @@ public class ProductDAO {
         return listImages;
     }
 
-    public static List<Product> paginationProduct(int limit, int page, String id_category) {
-        JDBI = ConnectJDBI.connector();
-        List<Product> listProducts = JDBI.withHandle(handle ->
-                handle.createQuery("Select ID, name, price, ID_category From products " +
-                                "Where ID_category = ? Limit ? Offset ?")
-                        .bind(0, id_category)
-                        .bind(1, limit)
-                        .bind(2, page).mapToBean(Product.class).stream().toList());
-        return listProducts;
-    }
-
-    public static int countProduct(String id_category) {
+    public static int countProductByCategory(String id_category) {
         JDBI = ConnectJDBI.connector();
         Integer count = JDBI.withHandle(handle ->
                 handle.createQuery("Select COUNT(ID) From products Where ID_category = ?")
                         .bind(0, id_category).mapTo(Integer.class).findOnly());
+
+        return count;
+    }
+
+    public static int countProduct() {
+        JDBI = ConnectJDBI.connector();
+        Integer count = JDBI.withHandle(handle ->
+                handle.createQuery("Select COUNT(ID) From products").mapTo(Integer.class).findOnly());
 
         return count;
     }

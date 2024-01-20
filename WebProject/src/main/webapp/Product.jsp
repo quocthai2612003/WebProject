@@ -1,7 +1,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="model.Product" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="controller.ProductService" %>
+<%@ page import="service.ProductService" %>
 <%@ page import="java.util.Map" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -22,7 +22,9 @@
     List<Product> listProduct = request.getAttribute("listProduct") == null ? new ArrayList<>() : (List<Product>) request.getAttribute("listProduct");
     int totalPage = request.getAttribute("totalPage") == null ? 0 : (int) request.getAttribute("totalPage");
     int pageCurrent = request.getAttribute("pageCurrent") == null ? 1 : Integer.parseInt(request.getAttribute("pageCurrent").toString());
-    String id_category = request.getAttribute("category") == null ? "" : (String) request.getAttribute("id_category");
+    String id_category = request.getAttribute("category") == null ?  "1": (String) request.getAttribute("category");
+    String filter = request.getAttribute("filter") == null ? "" : "&filter="+(String) request.getAttribute("filter");
+    String sort = request.getAttribute("order") == null ? "" : "&order="+(String) request.getAttribute("order");
 %>
 <div id="content">
     <div class="container">
@@ -47,11 +49,15 @@
                         <span>Bộ lọc <i class="fa-solid fa-filter"></i></span>
                         <ul class="filter-price-menu">
                             <li class="filter-price-title">Chọn theo giá</li>
-                            <li class="price"><a href="#">Nhỏ hơn 50.000</a></li>
-                            <li class="price"><a href="#">Từ 50.000 đến 100.000</a></li>
-                            <li class="price"><a href="#">Từ 100.000 đến 300.000</a></li>
-                            <li class="price"><a href="#">Từ 300.000 đến 500.000</a></li>
-                            <li class="price"><a href="#">Lớn hơn 500.000</a></li>
+                            <li class="price">
+                                <a href="/product?category=<%=id_category%>&page=<%=pageCurrent%>&filter=1">
+                                    Nhỏ hơn 50.000
+                                </a>
+                            </li>
+                            <li class="price"><a href="./product?category=<%=id_category%>&page=<%=pageCurrent%>&filter=2">Từ 50.000 đến 100.000</a></li>
+                            <li class="price"><a href="./product?category=<%=id_category%>&page=<%=pageCurrent%>&filter=3">Từ 100.000 đến 300.000</a></li>
+                            <li class="price"><a href="./product?category=<%=id_category%>&page=<%=pageCurrent%>&filter=4">Từ 300.000 đến 500.000</a></li>
+                            <li class="price"><a href="./product?category=<%=id_category%>&page=<%=pageCurrent%>&filter=5">Lớn hơn 500.000</a></li>
                         </ul>
                     </div>
                     <div class="box-filter">
@@ -60,9 +66,9 @@
                             <span>Giá</span>
                             <i class="fa-solid fa-chevron-down"></i>
                             <ul class="sort-menu">
-                                <li><a href="#">Mặc định</a></li>
-                                <li><a href="#">Giá từ thấp đến cao</a></li>
-                                <li><a href="#">Giá từ cao đến thấp</a></li>
+                                <li><a href="./product?category=<%=id_category%>&page=<%=pageCurrent%>">Mặc định</a></li>
+                                <li><a href="./product?category=<%=id_category%>&page=<%=pageCurrent%>&order=asc">Giá từ thấp đến cao</a></li>
+                                <li><a href="./product?category=<%=id_category%>&page=<%=pageCurrent%>&order=desc">Giá từ cao đến thấp</a></li>
                             </ul>
                         </div>
                     </div>
@@ -84,19 +90,19 @@
                 </div>
                 <div class="pagination">
                     <% if (pageCurrent > 1) {%>
-                    <a href="./product?category=<%=id_category%>&page=<%=pageCurrent-1%>"
+                    <a href="./product?category=<%=id_category%>&page=<%=pageCurrent-1%><%=filter%><%=sort%>"
                        class="other-page previou-page"><span>Previou</span></a>
                     <%}%>
 
                     <% for (int i = 1; i <= totalPage; i++) {%>
                         <% if (i == pageCurrent) {%>
-                            <a href="/product?category=<%=id_category%>&page=<%=i%>" style = "color: red;" class="other-page"><span><%=i%></span></a>
+                            <a href="/product?category=<%=id_category%>&page=<%=i%><%=filter%><%=sort%>" style = "color: red;" class="other-page"><span><%=i%></span></a>
                         <%} else {%>
-                            <a href="/product?category=<%=id_category%>&page=<%=i%>" class="other-page"><span><%=i%></span></a>
+                            <a href="/product?category=<%=id_category%>&page=<%=i%><%=filter%><%=sort%>" class="other-page"><span><%=i%></span></a>
                         <%}%>
                     <%}%>
                     <% if (pageCurrent > 1 && pageCurrent < totalPage) {%>
-                    <a href="./product?category=<%=id_category%>&page=<%=pageCurrent+1%>"
+                    <a href="./product?category=<%=id_category%>&page=<%=pageCurrent+1%><%=filter%><%=sort%>"
                        class="other-page next-page"><span>Next</span></a>
                     <%}%>
                 </div>
