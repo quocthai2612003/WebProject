@@ -32,8 +32,8 @@
 </head>
 <body>
 <div id="header_contain"></div>
-<section class="bg-light py-3 pb-5">
-    <div class="container">
+<section class="bg-light pb-5">
+    <div class="container main-content">
         <div class='breadcrumbs row-item'>
             <ol class="breadcrumb row-item">
                 <li class='breadcrumb-item breadcrumbs-first'>

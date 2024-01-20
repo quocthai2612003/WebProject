@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!-- <%@ page contentType="text/html;charset=UTF-8" language="java" %> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,28 +27,30 @@
             crossorigin="anonymous"></script>
     <!--    jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/productDetail.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/productDetail.js"></script>
 
 </head>
 <body>
 <header id="header" class="border-bottom border-black">
     <div class="container">
-        <div class=" global-nav d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
-            <a href="home.jsp" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label=PQL"><img src="assets/logo.svg" alt="PQL"></svg>
+        <div class=" global-nav d-flex align-items-center justify-content-between ">
+            <a href="home.jsp" class="d-block align-items-center logo-fix">
+                <img src="assets/logoweb.svg" alt="PQL">
             </a>
-            <ul class="nav col-12 col-md-auto justify-content-center mb-md-0">
-                <li class="nav-item"><a href="#" class="nav-link text-dark">Nam</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-dark">Nữ</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-dark">Trẻ em</a></li>
+            <ul id="main-menu" class="nav col-md-auto">
+                <li><a href="#" class="nav-link">Nam</a></li>
+                <li><a href="#" class="nav-link">Nữ</a></li>
+                <li><a href="#" class="nav-link">Trẻ em</a></li>
             </ul>
 
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                <input type="search" class="form-control form-control-light" placeholder="Tìm kiếm..." aria-label="Search">
-            </form>
-            <div class="text-end">
+            <div class="text-end d-flex">
+                <form action="search" method="post" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 d-flex">
+                    <input name="txt" type="search" class="form-control form-control-light" placeholder="Tìm kiếm..." aria-label="Search">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-secondary btn-number"><i class="fa fa-search"></i></button>
+                    </div>
+
+                </form>
                 <button id="accountBtn" type="button" class="btn btn-light rounded-circle"><i class="fa-solid fa-user"></i> </button>
                 <div id="accountMenu" style="display: none;">
                     <!-- Các chức năng của tài khoản -->
@@ -57,28 +59,55 @@
                         <li><a href="#">Quản Lý Đơn Hàng</a></li>
                         <li><a href="#">Đăng Xuất</a></li>
                     </ul>
-                <script>
-                    // Xác định nút Tài Khoản
-                    var accountButton = document.getElementById('accountBtn');
-                    accountButton.addEventListener('click', function() {
-                        // Chuyển hướng người dùng đến trang đăng nhập khi nhấn vào nút Tài Khoản
-                        window.location.href = 'login.html';
-                    });
-                </script>
+                    <script>
+                        // Xác định nút Tài Khoản
+                        var accountButton = document.getElementById('accountBtn');
+                        accountButton.addEventListener('click', function() {
+                            // Chuyển hướng người dùng đến trang đăng nhập khi nhấn vào nút Tài Khoản
+                            window.location.href = 'login.jsp';
+                        });
+                    </script>
                 </div>
-                <button id="cartBtn" type="button" class="btn btn-light rounded-circle position-relative"><i class="fa-solid fa-cart-shopping"></i> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">+99<span class="visually-hidden">unread messages</span></span></button>
+                <button id="cartBtn" type="button" class="btn btn-light rounded-circle position-relative"><i class="fa-solid fa-cart-shopping"></i> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0<span class="visually-hidden">unread messages</span></span></button>
                 <span id="cartItemCount"></span>
                 <script>
                     // Xác định nút Giỏ Hàng
                     var cartButton = document.getElementById('cartBtn');
                     cartButton.addEventListener('click', function() {
                         // Chuyển hướng người dùng đến trang giỏ hàng khi nhấn vào nút Giỏ Hàng
-                        window.location.href = 'cart.html';
+                        window.location.href = 'cart.jsp';
                     });
                 </script>
             </div>
         </div>
     </div>
 </header>
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop()) {
+                $('header').addClass('sticky');
+            }else{
+                $('header').removeClass('sticky');
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            var navLinks = document.querySelectorAll('ul#main-menu a');
+            if ($(this).scrollTop() > 0) {
+                for (var i = 0; i < navLinks.length; i++) {
+                    navLinks[i].style.padding = '20px 16px';
+                }
+            } else {
+                for (var i = 0; i < navLinks.length; i++) {
+                    navLinks[i].style.padding = '24.5px 16px';
+                }
+            }
+        });
+    });
+
+</script>
 </body>
 </html>

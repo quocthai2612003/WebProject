@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta name="author" content="PQL" />
-    <title>MyProject</title>
+    <title>Chi tiết sản phẩm | PQL</title>
     <meta name="keywords" content="PQL"/>
     <!--Web icon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -34,72 +34,71 @@
 </head>
 <body>
 <div id="header_contain"></div>
-<div class="container">
-        <div class='breadcrumbs row-item'>
-            <ol class="breadcrumb row-item">
-                <li class='breadcrumb-item breadcrumbs-first'>
-                    <a title='PQL' href="home.jsp" rel='nofollow'>Trang chủ</a>
-                </li>
-                <li class="breadcrumb-item ">
-                    <a href="#" title="Thắt lưng">Thắt lưng</a>
-                </li>
-                <li class="breadcrumb-item">Tên sản phẩm</li>
-            </ol><!-- END: .breadcrumb-content -->
-        </div><!-- END: .breadcrumb -->
-        <div class="clear"></div>
-        <div class="container-fliud">
-            <div class="wrapper row">
-                    <div class="image w-50">
-                        <div class="preview-pic tab-content">
-                            <div class="tab-pane active" id="pic-1"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox.jpg" /></div>
-                            <div class="tab-pane" id="pic-2"><img src="" /></div>
-                            <div class="tab-pane" id="pic-3"><img src="" /></div>
-                            <div class="tab-pane" id="pic-4"><img src="" /></div>
-                            <div class="tab-pane" id="pic-5"><img src="" /></div>
+<div class="container main-content">
+    <div class='breadcrumbs row-item'>
+        <ol class="breadcrumb row-item">
+            <li class='breadcrumb-item breadcrumbs-first'>
+                <a title='PQL' href="home.jsp" rel='nofollow'>Trang chủ</a>
+            </li>
+            <li class="breadcrumb-item ">
+                <a href="#" title="Thắt lưng">Thắt lưng</a>
+            </li>
+            <li class="breadcrumb-item">Tên sản phẩm</li>
+        </ol><!-- END: .breadcrumb-content -->
+    </div><!-- END: .breadcrumb -->
+    <div class="clear"></div>
+    <div class="container-fliud">
+        <div class="wrapper row py-3">
+            <div class="image w-50">
+                <div class="preview-pic tab-content">
+                    <div class="tab-pane active" id="pic-1"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox.jpg" /></div>
+                    <div class="tab-pane" id="pic-2"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-1.jpg" /></div>
+                    <div class="tab-pane" id="pic-3"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-2.jpg" /></div>
+                    <div class="tab-pane" id="pic-4"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-3.jpg" /></div>
+                    <div class="tab-pane" id="pic-5"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-4.jpg" /></div>
 
-                        </div>
-                        <ul class="preview-thumbnail nav nav-tabs">
-                            <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox.jpg" /></a></li>
-                            <li><a data-target="#pic-2" data-toggle="tab"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-1.jpg" /></a></li>
-                            <li><a data-target="#pic-3" data-toggle="tab"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-2.jpg" /></a></li>
-                            <li><a data-target="#pic-4" data-toggle="tab"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-3.jpg" /></a></li>
-                            <li><a data-target="#pic-5" data-toggle="tab"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-4.jpg" /></a></li>
+                </div>
+                <ul class="preview-thumbnail nav nav-tabs">
+                    <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox.jpg" /></a></li>
+                    <li><a data-target="#pic-2" data-toggle="tab"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-1.jpg" /></a></li>
+                    <li><a data-target="#pic-3" data-toggle="tab"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-2.jpg" /></a></li>
+                    <li><a data-target="#pic-4" data-toggle="tab"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-3.jpg" /></a></li>
+                    <li><a data-target="#pic-5" data-toggle="tab"><img src="assets/images/that-lung-nam-cao-cap-FaiaoePOLO-fullbox-4.jpg" /></a></li>
 
-                        </ul>
+                </ul>
+            </div>
+
+            <div class="details col-md-6 ps-4">
+                <h3 class="product-title pb-3">Thắt lưng nam cao cấp FaiaoePOLO</h3>
+                <p class="product-id pb-2">Mã sản phẩm: <span><strong>TL1205</strong></span></p>
+                <div class="rating d-flex pb-4">
+                    <div class="stars">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
                     </div>
-
-                    <div class="details col-md-6">
-                        <h3 class="product-title">Thắt lưng nam cao cấp FaiaoePOLO</h3>
-
-                        <h4 class="price"><span>120.000₫</span></h4>
-                        <div class="rating">
-                            <div class="stars">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                            </div>
-                            <span class="review-no">.<strong>100</strong> Đánh giá</span>
-                            <span class="vote"><strong>200</strong> Đã bán</span>
-                        </div>
-                        <div class="section" style="padding-bottom:20px;">
-                            <h5 class="title-attr"><small>Số lượng</small></h5>
-                            <div>
-                                <div class="btn-minus"><span class="glyphicon glyphicon-minus"></span></div>
-                                <input value="1" />
-                                <div class="btn-plus"><span class="glyphicon glyphicon-plus"></span></div>
-                            </div>
-                        </div>
-                        <div class="action d-flex">
-                            <button id="addToCartBtn" class="add-to-cart btn btn-default" type="button">Thêm vào giỏ hàng</button>
-                            <button  class="buy-now btn btn-default" type="button">Mua ngay</button>
-
+                    <span class="review-no ps-2">.<strong>100</strong> Đánh giá</span>
+                    <span class="bought px-2">| <strong> 200</strong> Đã bán</span>
+                </div>
+                <h3 class="price pd-5"><span>120.000₫</span></h3>
+                <div class="quantity d-flex pb-4">
+                    <p class="title-attr">Số lượng</p>
+                    <div class="count-number">
+                        <div class="btn-minus"><span class="glyphicon glyphicon-minus">-</span></div>
+                        <input value="1" />
+                        <div class="btn-plus"><span class="glyphicon glyphicon-plus">+</span></div>
                     </div>
+                </div>
+                <div class="buy-action d-flex">
+                    <button id="addToCartBtn" class="add-to-cart btn btn-default" type="button">Thêm vào giỏ hàng</button>
+                    <button id="buyNowBtn" class="buy-now btn btn-default" type="button">Mua ngay</button>
+                </div>
             </div>
             <div class="col-xs-9">
                 <ul class="menu-items">
-                    <li><h5>Chi tiết sản phẩm</h5></li>
+                    <h2 class="product-detail">Chi tiết sản phẩm</h2>
                 </ul>
                 <div style="width:100%;border-top:1px solid silver">
                     <p style="padding:15px;">
@@ -109,29 +108,46 @@
                     </p>
                     <small>
                         <ul>
-                            <li>Chất liệu: Thắt lưng có thể được làm từ nhiều loại chất liệu khác nhau như da, vải, nhựa, kim loại, và các vật liệu tổng hợp. Chất liệu sẽ ảnh hưởng đến vẻ ngoài, độ bền và cảm giác khi sử dụng.</li>
-                            <li>Kích thước và chiều dài: Thắt lưng thường có một dây dài có thể điều chỉnh để phù hợp với nhiều kích cỡ vòng eo khác nhau. Kích thước thông thường được ghi trên thẻ sản phẩm hoặc trên đính kèm.</li>
-                            <li>Màu sắc và hoa văn: Thắt lưng có thể có nhiều màu sắc và hoa văn khác nhau, từ các màu sắc cơ bản như đen, nâu, xanh đến các màu sắc sặc sỡ hoặc có họa tiết độc đáo.</li>
+                            <li>Mã sản phẩm: </li>
+                            <li>Màu sắc: đen</li>
+                            <li>Chất liệu: Da cao cấp</li>
+                            <li>Kích thước(cm):Dài 110 | Rộng 3.5</li>
                         </ul>
                     </small>
                 </div>
             </div>
-                <div class="col-xs-9">
-                    <ul class="menu-items">
-                        <li><h5>Đánh giá sản phẩm</h5></li>
-                    </ul>
-                    <div style="width:100%;border-top:1px solid silver">
-                        <p style="padding:15px;">
-                            <small>
-
-                            </small>
-                        </p>
-                        <small>
-
-                        </small>
+            <div class="col-xs-9">
+                <ul class="menu-items">
+                    <h2 class="product-cmt">Đánh giá sản phẩm</h2>
+                </ul>
+                <div style="width:100%;border-top:1px solid silver">
+                    <div class="reviews-members pt-4 pb-4">
+                        <div class="media">
+                            <a href="#"><img alt="User" src="http://bootdey.com/img/Content/avatar/avatar1.png" class="mr-3 rounded-pill"></a>
+                            <div class="media-body">
+                                <div class="reviews-members-header">
+                                    <h6 class="mb-1"><a class="text-black" href="#">linhtrn1205</a></h6>
+                                    <div class="review-stars">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </div>
+                                    <p class="text-gray">2024-01-07</p>
+                                </div>
+                                <div class="reviews-members-body">
+                                    <p>sản phẩm tuyệt vời!</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <hr>
+                    <a class="text-center w-100 d-block mt-2 pb-5 font-weight-bold" href="#">Xem tất cả đánh giá</a>
                 </div>
+            </div>
         </div>
+    </div>
 </div>
 <div id="footer_contain"></div>
 <script>
