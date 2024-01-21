@@ -20,8 +20,8 @@ public class AccountService {
         return AccountDAO.accountByUsername(username);
     }
 
-    public Account accountByUsernameOrEmail(String username, String email) {
-        return AccountDAO.accountByUsernameOrEmail(username, email);
+    public Account accountByUsernameAndEmail(String username, String email) {
+        return AccountDAO.accountByUsernameAndEmail(username, email);
     }
         // Chức năng đăng nhập
     public Account checkLogin(String username, String password) {
@@ -61,6 +61,20 @@ public class AccountService {
         return false;
     }
 
+    public boolean forgotPassword(Account account) {
+        String code = EmailService.createCode();
+        Calendar date = Calendar.getInstance();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String formatDateCreate = dateFormat.format(date.getTime());
+        date.add(Calendar.DAY_OF_MONTH, 1);
+        String formatDateExpired = dateFormat.format(date.getTime());
+        if (AccountDAO.createVerifyEmail(code, formatDateCreate,
+                formatDateExpired, false, account.getID()) != 0) {
+            return EmailService.send(account.getEmail(), "Xac nhan email", code);
+        }
+        return false;
+    }
+
     public Account isVerifyEmailSuccess(String code) {
         return AccountDAO.isVerifyEmailSuccess(code);
     }
@@ -77,6 +91,9 @@ public class AccountService {
         return AccountDAO.updateStatusAccount(id);
     }
 
+    public int updatePasswordAccount(int id, String password) {
+        return AccountDAO.updatePasswordAccount(id, password);
+    }
     public int createRoleAccount(Account account, int role) {
         return AccountDAO.createRoleAccount(account, role);
     }

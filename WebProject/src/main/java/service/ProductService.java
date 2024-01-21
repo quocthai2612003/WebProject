@@ -23,12 +23,4 @@ public class ProductService {
     }
 
 
-    public int totalProductByCategory(String id_category) {
-        return ProductDAO.countProductByCategory(id_category);
-    }
-
-    public int totalProduct() {
-        return ProductDAO.countProduct();
-    }
-
 }

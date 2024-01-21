@@ -54,3 +54,9 @@ html {
     margin-left: 5px;
     margin-bottom: 5px;
 }
+
+.notification-success {
+    color: green;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}

@@ -85,4 +85,31 @@ public class PaginationDao {
                         .bind(4, page).mapToBean(Product.class).stream().toList());
         return listProducts;
     }
+
+    public static int countProductByCategory(String id_category) {
+        JDBI = ConnectJDBI.connector();
+        Integer count = JDBI.withHandle(handle ->
+                handle.createQuery("Select COUNT(ID) From products Where ID_category = ?")
+                        .bind(0, id_category).mapTo(Integer.class).findOnly());
+
+        return count;
+    }
+
+
+    public static int countProductFilter(String filter, String id_category) {
+        int filter_id = Integer.valueOf(filter);
+        int[] priceFilter = priceFilter(filter_id);
+        int minPrice = priceFilter[0];
+        int maxPrice = priceFilter[1];
+        JDBI = ConnectJDBI.connector();
+        Integer count = JDBI.withHandle(handle ->
+                handle.createQuery("Select COUNT(ID) From products " +
+                                "Where price between ? and ? And ID_category = ?")
+                        .bind(0, minPrice)
+                        .bind(1, maxPrice)
+                        .bind(2, id_category)
+                        .mapTo(Integer.class).findOnly());
+
+        return count;
+    }
 }

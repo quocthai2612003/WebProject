@@ -26,4 +26,11 @@ public class PaginationService {
         return PaginationDao.productByCategoryAndFilterByPrice(limit, page, id_category, filter);
     }
 
+    public int totalProductByCategory(String id_category) {
+        return PaginationDao.countProductByCategory(id_category);
+    }
+
+    public int totalProductByFilter(String filter, String id_category) {
+        return PaginationDao.countProductFilter(filter, id_category);
+    }
 }

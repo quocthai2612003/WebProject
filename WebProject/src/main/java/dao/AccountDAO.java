@@ -18,7 +18,7 @@ public class AccountDAO {
         return account.isEmpty() ? null : account.get();
     }
 
-    public static Account accountByUsernameOrEmail(String username, String email) {
+    public static Account accountByUsernameAndEmail(String username, String email) {
         JDBI = ConnectJDBI.connector();
         Optional<Account> account = JDBI.withHandle(handle ->
                 handle.createQuery("Select id, username, password,email, fullname, number_phone, status From accounts where username = ? And email = ?")
@@ -104,6 +104,15 @@ public class AccountDAO {
                         .bind(0, code).execute());
         return execute;
     }
+    public static int updatePasswordAccount(int id, String password) {
+        JDBI = ConnectJDBI.connector();
+        int execute = JDBI.withHandle(handle ->
+                handle.createUpdate("UPDATE accounts SET password = ? WHERE id = ?")
+                        .bind(0, password)
+                        .bind(1, id).execute()
+        );
+        return execute;
+    }
 
     public static int createRoleAccount(Account account, int role) {
         JDBI = ConnectJDBI.connector();
@@ -137,4 +146,6 @@ public class AccountDAO {
     public static void main(String[] args) {
         System.out.println(test());
     }
+
+
 }

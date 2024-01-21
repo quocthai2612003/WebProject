@@ -3,6 +3,9 @@ package dao;
 import model.Product;
 import org.jdbi.v3.core.Jdbi;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -38,24 +41,40 @@ public class ProductDAO {
         return listImages;
     }
 
-    public static int countProductByCategory(String id_category) {
+
+    public static int addImages() {
         JDBI = ConnectJDBI.connector();
-        Integer count = JDBI.withHandle(handle ->
-                handle.createQuery("Select COUNT(ID) From products Where ID_category = ?")
-                        .bind(0, id_category).mapTo(Integer.class).findOnly());
+        int index = 280;
+        File file = new File("C:\\Users\\Hieu\\Desktop\\New folder (2)");
+        int execute=0;
+        int i = 49;
+            String idw = "%"+i;
+            Product p = JDBI.withHandle(handle ->
+                    handle.createQuery("SELECT * FROM products Where ID like ?")
+                            .bind(0, idw).mapToBean(Product.class).first());
+            String idProduct = p.getId();
+            File[] files = file.listFiles((dir, name) -> name.startsWith(idProduct));
+            for (File f : files) {
+                int ID_image = index++;
+                String url = "./assets/images/product_img/" + f.getName();
+                int check;
+                if (f.getName().indexOf("(1)") != -1) check = 1;
+                else {
+                    check = 0;
+                }
+                execute+= JDBI.withHandle(handle ->
+                        handle.createUpdate("INSERT INTO images(ID, ID_product, source, is_thumbnail_image) " +
+                                "Values(?, ?, ?, ?)")
+                                .bind(0, ID_image)
+                                .bind(1, idProduct)
+                                .bind(2, url)
+                                .bind(3, check).execute());
+            }
 
-        return count;
-    }
-
-    public static int countProduct() {
-        JDBI = ConnectJDBI.connector();
-        Integer count = JDBI.withHandle(handle ->
-                handle.createQuery("Select COUNT(ID) From products").mapTo(Integer.class).findOnly());
-
-        return count;
+        return execute;
     }
 
     public static void main(String[] args) {
-        System.out.println((int)Math.ceil(24/12));
+        System.out.println(addImages());
     }
 }

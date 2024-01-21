@@ -22,7 +22,7 @@
     List<Product> listProduct = request.getAttribute("listProduct") == null ? new ArrayList<>() : (List<Product>) request.getAttribute("listProduct");
     int totalPage = request.getAttribute("totalPage") == null ? 0 : (int) request.getAttribute("totalPage");
     int pageCurrent = request.getAttribute("pageCurrent") == null ? 1 : Integer.parseInt(request.getAttribute("pageCurrent").toString());
-    String id_category = request.getAttribute("category") == null ?  "1": (String) request.getAttribute("category");
+    String id_category = (String) request.getAttribute("category");
     String filter = request.getAttribute("filter") == null ? "" : "&filter="+(String) request.getAttribute("filter");
     String sort = request.getAttribute("order") == null ? "" : "&order="+(String) request.getAttribute("order");
 %>
@@ -50,14 +50,14 @@
                         <ul class="filter-price-menu">
                             <li class="filter-price-title">Chọn theo giá</li>
                             <li class="price">
-                                <a href="/product?category=<%=id_category%>&page=<%=pageCurrent%>&filter=1">
+                                <a href="/product?category=<%=id_category%>&page=1>=&filter=1">
                                     Nhỏ hơn 50.000
                                 </a>
                             </li>
-                            <li class="price"><a href="./product?category=<%=id_category%>&page=<%=pageCurrent%>&filter=2">Từ 50.000 đến 100.000</a></li>
-                            <li class="price"><a href="./product?category=<%=id_category%>&page=<%=pageCurrent%>&filter=3">Từ 100.000 đến 300.000</a></li>
-                            <li class="price"><a href="./product?category=<%=id_category%>&page=<%=pageCurrent%>&filter=4">Từ 300.000 đến 500.000</a></li>
-                            <li class="price"><a href="./product?category=<%=id_category%>&page=<%=pageCurrent%>&filter=5">Lớn hơn 500.000</a></li>
+                            <li class="price"><a href="./product?category=<%=id_category%>&page=1&filter=2">Từ 50.000 đến 100.000</a></li>
+                            <li class="price"><a href="./product?category=<%=id_category%>&page=1&filter=3">Từ 100.000 đến 300.000</a></li>
+                            <li class="price"><a href="./product?category=<%=id_category%>&page=1&filter=4">Từ 300.000 đến 500.000</a></li>
+                            <li class="price"><a href="./product?category=<%=id_category%>&page=1&filter=5">Lớn hơn 500.000</a></li>
                         </ul>
                     </div>
                     <div class="box-filter">
