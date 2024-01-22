@@ -14,6 +14,7 @@
 </head>
 <body>
 <%
+    Account account = session.getAttribute("account") == null ? new Account() : (Account) session.getAttribute("account");
     int totalAccounts = request.getAttribute("totalAccounts") == null ? 0 : (int) request.getAttribute("totalAccounts");
     int totalProducts = request.getAttribute("totalProducts") == null ? 0 : (int) request.getAttribute("totalProducts");
     int totalOrders = request.getAttribute("totalOrders") == null ? 0 : (int) request.getAttribute("totalOrders");
@@ -30,16 +31,10 @@
         <div class="left">
             <div class="menu">
                 <div class="menu-title">
-                    <div class="logo">
-                        <a href="./home.html"><img src="./assets/logo.svg" alt=""></a>
-                    </div>
                     <h2 class="shop-name">PLQ SHOP</h2>
                 </div>
                 <div class="shop-user">
-                    <div class="user">
-                        <img src="./assets/images/logo/icon.jpg" alt="">
-                    </div>
-                    <p>Xin chào, admin</p>
+                    <p>Xin chào, <%=account.getFullname()%></p>
                 </div>
                 <div class="menu-item">
                     <a href="./admin" class="active">

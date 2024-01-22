@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./css/admin.css">
 </head>
 <%
+  Account a = session.getAttribute("account") == null ? new Account() : (Account) session.getAttribute("account");
   int totalPage = request.getAttribute("totalPage") == null ? 0 : (int) request.getAttribute("totalPage");
   int pageCurrent = request.getAttribute("pageCurrent") == null ? 1 : Integer.parseInt(request.getAttribute("pageCurrent").toString());
   String search = request.getAttribute("search") == null ? "" : "&search=" + request.getAttribute("search").toString();
@@ -24,16 +25,10 @@
     <div class="left">
       <div class="menu">
         <div class="menu-title">
-          <div class="logo">
-            <a href="./home.html"><img src="./assets/logo.svg" alt=""></a>
-          </div>
           <h2 class="shop-name">PLQ SHOP</h2>
         </div>
         <div class="shop-user">
-          <div class="user">
-            <img src="./assets/images/logo/icon.jpg" alt="">
-          </div>
-          <p>Xin chào, admin</p>
+          <p>Xin chào, <%=a.getFullname()%></p>
         </div>
         <div class="menu-item">
           <a href="./admin">

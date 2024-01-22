@@ -1,6 +1,7 @@
 package controller;
 
 
+import dao.AccountDAO;
 import model.Account;
 import service.AccountService;
 
@@ -34,16 +35,18 @@ public class ServletLogin extends HttpServlet {
                 if (as.isLoginSuccess(account)) {
                     HttpSession session = req.getSession();
                     session.setAttribute("account", account);
-                    resp.sendRedirect("/product");
+                    if (AccountDAO.roleAccount(account.getID() + "") == 1) {
+                        req.getRequestDispatcher("/product").forward(req, resp);
+                    } else {
+                        req.getRequestDispatcher("/admin").forward(req, resp);
+                    }
                 } else {
                     req.setAttribute("error", "Tài khoản chưa được xác nhận hoặc đã bị khóa");
                     req.getRequestDispatcher("Login.jsp").forward(req, resp);
-                    resp.sendRedirect("Login.jsp");
                 }
             } else {
                 req.setAttribute("error", "Bạn nhập sai email hoặc mật khẩu");
                 req.getRequestDispatcher("Login.jsp").forward(req, resp);
-                resp.sendRedirect("Login.jsp");
             }
         }
     }

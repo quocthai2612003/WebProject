@@ -4,6 +4,7 @@ import dao.AccountDAO;
 import dao.PaginationDao;
 import dao.ProductDAO;
 import model.Account;
+import model.Order;
 import model.Product;
 
 import java.util.List;
@@ -50,5 +51,13 @@ public class PaginationService {
 
     public List<Account> findAccountByUsername(String username, int limit, int page) {
         return PaginationDao.findAccountByUsername(username, limit, page);
+    }
+
+    public List<Order> orderList(int limit, int page) {
+        return PaginationDao.orderList(limit, page);
+    }
+
+    public List<Order> findOrder(String search, int limit, int page) {
+        return PaginationDao.findOrder(search, limit, page);
     }
 }

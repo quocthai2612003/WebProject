@@ -1,3 +1,10 @@
+<%@ page import="model.Order" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="model.Account" %>
+<%@ page import="model.Order_detail" %>
+<%@ page import="service.ProductService" %>
+<%@ page import="java.util.Map" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
@@ -10,21 +17,28 @@
     <link rel="stylesheet" href="./css/admin.css">
 </head>
 <body>
+<%
+    Order order = request.getAttribute("order") == null ? new Order() : (Order) request.getAttribute("order");
+    Account account = session.getAttribute("account") == null ? new Account() : (Account) session.getAttribute("account");
+    String id = request.getAttribute("id") == null ? "" : request.getAttribute("id").toString();
+    List<Order_detail> orderDetailList = request.getAttribute("orderDetailList") == null ? new ArrayList<>() :(List<Order_detail>) request.getAttribute("orderDetailList");
+    int totalPrice = request.getAttribute("totalPrice") == null ? 0 : (int) request.getAttribute("totalPrice");
+    int totalPage = request.getAttribute("totalPage") == null ? 0 : (int) request.getAttribute("totalPage");
+    int pageCurrent = request.getAttribute("pageCurrent") == null ? 1 : Integer.parseInt(request.getAttribute("pageCurrent").toString());
+    String search = request.getAttribute("search") == null ? "" : "&search=" + request.getAttribute("search").toString();
+    List<Order> orderList = request.getAttribute("orderList") == null ? new ArrayList<>() : (List<Order>) request.getAttribute("orderList");
+    ProductService ps = request.getAttribute("ps") == null ? ProductService.getInstance() : (ProductService) request.getAttribute("ps");
+    Map<String, String> listImageThumbnail = ps.selectImageThumbnail();
+%>
 <div id="id">
     <div id="admin">
         <div class="left">
             <div class="menu">
                 <div class="menu-title">
-                    <div class="logo">
-                        <a href="./home.html"><img src="./assets/logo.svg" alt=""></a>
-                    </div>
                     <h2 class="shop-name">PLQ SHOP</h2>
                 </div>
                 <div class="shop-user">
-                    <div class="user">
-                        <img src="./assets/images/logo/icon.jpg" alt="">
-                    </div>
-                    <p>Xin chào, admin</p>
+                    <p>Xin chào, <%=account.getFullname()%>></p>
                 </div>
                 <div class="menu-item">
                     <a href="./admin">
@@ -65,10 +79,12 @@
                 </div>
                 <div class="manager">
                     <div class="manager-search">
-                        <div class="search">
-                            <input type="text" class="search" placeholder="Tìm kiếm">
-                            <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </div>
+                        <form action="./managerOrder" method="post">
+                            <div class="search">
+                                <input type="text" name = "search" class="search" autocomplete ="off" placeholder="Tìm kiếm">
+                                <button type="submit" class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </form>
                     </div>
                     <div class="manager-infor">
                         <table>
@@ -85,122 +101,100 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <th>#39201</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>10/10/2023</th>
-                                <th>17/10/2023</th>
-                                <th>Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh.</th>
-                                <th>0987654321</th>
-                                <th>Đang giao hàng</th>
-                                <th><button class="btn-xemChiTiet">Xem chi tiết</button></th>
-                            </tr>
-                            <tr>
-                                <th>#39201</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>10/10/2023</th>
-                                <th>17/10/2023</th>
-                                <th>Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh.</th>
-                                <th>0987654321</th>
-                                <th>Đang giao hàng</th>
-                                <th><button class="btn-xemChiTiet">Xem chi tiết</button></th>
-                            </tr>
-                            <tr>
-                                <th>#39201</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>10/10/2023</th>
-                                <th>17/10/2023</th>
-                                <th>Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh.</th>
-                                <th>0987654321</th>
-                                <th>Đang giao hàng</th>
-                                <th><button class="btn-xemChiTiet">Xem chi tiết</button></th>
-                            </tr>
-                            <tr>
-                                <th>#39201</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>10/10/2023</th>
-                                <th>17/10/2023</th>
-                                <th>Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh.</th>
-                                <th>0987654321</th>
-                                <th>Đang giao hàng</th>
-                                <th><button class="btn-xemChiTiet">Xem chi tiết</button></th>
-                            </tr>
-                            <tr>
-                                <th>#39201</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>10/10/2023</th>
-                                <th>17/10/2023</th>
-                                <th>Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh.</th>
-                                <th>0987654321</th>
-                                <th>Đang giao hàng</th>
-                                <th><button class="btn-xemChiTiet">Xem chi tiết</button></th>
-                            </tr>
-                            <tr>
-                                <th>#39201</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>10/10/2023</th>
-                                <th>17/10/2023</th>
-                                <th>Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh.</th>
-                                <th>0987654321</th>
-                                <th>Đang giao hàng</th>
-                                <th><button class="btn-xemChiTiet">Xem chi tiết</button></th>
-                            </tr>
-                            <tr>
-                                <th>#39201</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>10/10/2023</th>
-                                <th>17/10/2023</th>
-                                <th>Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh.</th>
-                                <th>0987654321</th>
-                                <th>Đang giao hàng</th>
-                                <th><button class="btn-xemChiTiet">Xem chi tiết</button></th>
-                            </tr>
-                            <tr>
-                                <th>#39201</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>10/10/2023</th>
-                                <th>17/10/2023</th>
-                                <th>Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh.</th>
-                                <th>0987654321</th>
-                                <th>Đang giao hàng</th>
-                                <th><button class="btn-xemChiTiet">Xem chi tiết</button></th>
-                            </tr>
-                            <tr>
-                                <th>#39201</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>10/10/2023</th>
-                                <th>17/10/2023</th>
-                                <th>Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh.</th>
-                                <th>0987654321</th>
-                                <th>Đang giao hàng</th>
-                                <th><button class="btn-xemChiTiet">Xem chi tiết</button></th>
-                            </tr>
-                            <tr>
-                                <th>#39201</th>
-                                <th>Nguyễn Văn A</th>
-                                <th>10/10/2023</th>
-                                <th>17/10/2023</th>
-                                <th>Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh.</th>
-                                <th>0987654321</th>
-                                <th>Đang giao hàng</th>
-                                <th><button class="btn-xemChiTiet">Xem chi tiết</button></th>
-                            </tr>
-
-
+                                <% for (Order o : orderList) {%>
+                                <tr>
+                                <th><%=o.getId()%></th>
+                                <th><%=o.getFullname()%></th>
+                                <th><%=o.getDateBuy()%></th>
+                                <th><%=o.getDateArrival()%></th>
+                                <th><%=o.getAddress()%></th>
+                                <th><%=o.getNumberPhone()%></th>
+                                <th>
+                                    <%if (o.getStatus() == 0) {%>
+                                        Chưa giao hàng
+                                    <%} else if (o.getStatus() == 1) {%>
+                                        Đang giao hàng
+                                    <%} else {%>
+                                        Đã giao hàng
+                                    <%}%>
+                                </th>
+                                <th>
+                                    <form action="./managerOrder" method="post">
+                                        <input type="hidden" value= "<%=o.getId()%>" name = "id">
+                                        <button type="submit" class="btn-xemChiTiet">Xem chi tiết</button>
+                                    </form>
+                                </th>
+                                </tr>
+                                <%}%>
                             </tbody>
                         </table>
                     </div>
                     <div class="pagination">
-                        <a href="#" class="other-page" style="color: red; font-weight: bold;"><span>1</span></a>
-                        <a href="#" class="other-page"><span>2</span></a>
-                        <a href="#" class="other-page"><span>3</span></a>
-                        <a href="#" class="other-page"><span>4</span></a>
-                        <a href="#" class="other-page"><span>5</span></a>
+                        <% if (pageCurrent > 1) {%>
+                        <a href="./managerOrder?page=<%=pageCurrent-1%><%=search%>"
+                           class="other-page previou-page"><span>Previou</span></a>
+                        <%}%>
+
+                        <% for (int i = 1; i <= totalPage; i++) {%>
+                        <% if (i == pageCurrent) {%>
+                        <a href="/managerOrder?page=<%=i%><%=search%>" style = "color: red;" class="other-page"><span><%=i%></span></a>
+                        <%} else {%>
+                        <a href="/managerOrder?page=<%=i%><%=search%>" class="other-page"><span><%=i%></span></a>
+                        <%}%>
+                        <%}%>
+                        <% if (pageCurrent > 1 && pageCurrent < totalPage) {%>
+                        <a href="./managerOrder?page=<%=pageCurrent+1%><%=search%>"
+                           class="other-page next-page"><span>Next</span></a>
+                        <%}%>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<% if (!id.isEmpty()) {%>
+<div id="myModal" style="display: flex" class="modal">
+    <div class="modal-content" style="width: 600px;">
+        <div class="btn-close" onclick="closeModal()"><span class="close">&times;</span></div>
+        <div style="margin-top: 40px">
+            <h4>Tên khách hàng: <%=order.getFullname()%></h4>
+            <h4>Mã đơn hàng: <%=order.getId()%></h4>
+            <table>
+                <thead>
+                <tr>
+                    <th>Mã sản phẩm</th>
+                    <th>Hình ảnh</th>
+                    <th>Số lượng</th>
+                    <th>Giá</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <% for (Order_detail od : orderDetailList) {%>
+                    <tr>
+                        <th><%=od.getIdProduct()%></th>
+                        <th>
+                            <div class="product-img"><img src="<%=listImageThumbnail.get(od.getIdProduct())%>" alt=""></div>
+                        </th>
+                        <th><%=od.getQuanlity()%></th>
+                        <th><%=od.getPrice()%></th>
+                    </tr>
+                <%}%>
+                </tbody>
+            </table>
+            <div><p style="margin-top: 40px; float: right;">Tổng giá đơn hàng: <%=totalPrice%></p></div>
+        </div>
+    </div>
+</div>
+<%}%>
 </body>
+<script>
+    function openModal() {
+        document.getElementById("myModal").style.display = "flex";
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+</script>
 </html>

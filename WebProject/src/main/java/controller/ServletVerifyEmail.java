@@ -21,7 +21,7 @@ public class ServletVerifyEmail extends HttpServlet {
         AccountService as = AccountService.getInstance();
         Account account = as.isVerifyEmailSuccess(code);
         if (account != null) {
-            as.updateStatusAccount(account.getID() + "", 0);
+            as.updateStatusAccount(account.getID() + "", 1);
             as.createRoleAccount(account, 1);
             String notify = "Bạn đã đăng ký thành công";
             req.setAttribute("notify", notify);

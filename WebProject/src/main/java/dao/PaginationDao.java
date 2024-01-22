@@ -1,6 +1,7 @@
 package dao;
 
 import model.Account;
+import model.Order;
 import model.Product;
 import org.jdbi.v3.core.Jdbi;
 
@@ -161,5 +162,36 @@ public class PaginationDao {
                         .mapToBean(Account.class).stream().toList()
         );
         return accountList;
+    }
+
+    public static List<Order> orderList(int limit, int page) {
+        JDBI = ConnectJDBI.connector();
+        List<Order> orderList =JDBI.withHandle(handle ->
+                handle.createQuery("SELECT o.id, a.fullname, o.dateBuy, o.dateArrival, o.address, o.numberPhone, o.status " +
+                                "From accounts a INNER JOIN orders o ON a.id = o.idAccount " +
+                                "Limit ? Offset ?")
+                        .bind(0, limit)
+                        .bind(1, page)
+                        .mapToBean(Order.class).stream().toList()
+        );
+        return orderList;
+    }
+
+    public static List<Order> findOrder(String search, int limit, int page) {
+        JDBI = ConnectJDBI.connector();
+        List<Order> orderList =JDBI.withHandle(handle ->
+                handle.createQuery("SELECT o.id, a.fullname, o.dateBuy, o.dateArrival, o.address, o.numberPhone, o.status " +
+                                "From accounts a INNER JOIN orders o ON a.id = o.idAccount Where a.fullname like ? " +
+                                "Limit ? Offset ?")
+                        .bind(0, "%" + search + "%")
+                        .bind(1, limit)
+                        .bind(2, page)
+                        .mapToBean(Order.class).stream().toList()
+        );
+        return orderList;
+    }
+
+    public static void main(String[] args) {
+
     }
 }

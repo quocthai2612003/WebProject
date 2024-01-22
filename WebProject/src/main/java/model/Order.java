@@ -4,31 +4,45 @@ import java.util.Date;
 import java.util.List;
 
 public class Order {
-    private int id; // Assuming int as the ID type
+    private String id; // Assuming int as the ID type
+    private String fullname;
     private String address;
     private int status;
     private Date dateBuy;
     private Date dateArrival;
+    String numberPhone;
     private int ID_account;
 
     public Order() {
         // Default constructor
     }
 
-    public Order(int id, String address, int status, Date dateBuy, Date dateArrival, int ID_account) {
+    public Order(String id, String fullname, String address, int status, Date dateBuy, Date dateArrival, String numberPhone, int ID_account) {
         this.id = id;
+        this.fullname = fullname;
         this.address = address;
         this.status = status;
         this.dateBuy = dateBuy;
         this.dateArrival = dateArrival;
+        this.numberPhone = numberPhone;
         this.ID_account = ID_account;
     }
 
-    public int getId() {
+    public Order(String id, String fullname, Date dateBuy, Date dateArrival, String address, String numberPhone, int status) {
+        this.id = id;
+        this.fullname = fullname;
+        this.dateBuy = dateBuy;
+        this.dateArrival = dateArrival;
+        this.address = address;
+        this.numberPhone = numberPhone;
+        this.status = status;
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -56,14 +70,6 @@ public class Order {
         this.ID_account = ID_account;
     }
 
-    public Date getDatebuy() {
-        return dateBuy;
-    }
-
-    public void setDatebuy(Date dateBuy) {
-        this.dateBuy = dateBuy;
-    }
-
     public Date getDateArrival() {
         return dateArrival;
     }
@@ -72,4 +78,27 @@ public class Order {
         this.dateArrival = dateArrival;
     }
 
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
+    public Date getDateBuy() {
+        return dateBuy;
+    }
+
+    public void setDateBuy(Date dateBuy) {
+        this.dateBuy = dateBuy;
+    }
+
+    public String getNumberPhone() {
+        return numberPhone;
+    }
+
+    public void setNumberPhone(String numberPhone) {
+        this.numberPhone = numberPhone;
+    }
 }

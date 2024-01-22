@@ -1,6 +1,10 @@
 package dao;
 
+import model.Order;
+import model.Order_detail;
 import org.jdbi.v3.core.Jdbi;
+
+import java.util.List;
 
 public class OrderDAO {
     private static Jdbi JDBI;
@@ -42,7 +46,44 @@ public class OrderDAO {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println(totalProductSoldByCategory("3", "2024/01/12"));
+    public static int totalOrderBySearch(String search) {
+        JDBI = ConnectJDBI.connector();
+        int total = JDBI.withHandle(handle ->
+                handle.createQuery("SELECT COUNT(o.id) " +
+                                "From accounts a INNER JOIN orders o ON a.id = o.idAccount Where a.fullname like ? ")
+                        .bind(0, "%" + search + "%").mapTo(Integer.class).findOnly()
+        );
+
+        return total;
+    }
+
+    public static Order orderById(String idOrder) {
+        JDBI = ConnectJDBI.connector();
+        Order order = JDBI.withHandle(handle ->
+                handle.createQuery("SELECT o.id, a.fullname, o.dateBuy, o.dateArrival, o.address, o.numberPhone, o.status" +
+                        " From accounts a INNER JOIN orders o ON a.id = o.idAccount Where o.id = ?")
+                        .bind(0, idOrder).mapToBean(Order.class).first());
+        return order;
+    }
+
+    public static List<Order_detail> orderDetailList(String idOrder) {
+        JDBI = ConnectJDBI.connector();
+        List<Order_detail> orderDetailList = JDBI.withHandle(handle ->
+                handle.createQuery("Select idOrder, idProduct, quantity, price From order_details " +
+                        "Where idOrder = ?")
+                        .bind(0, idOrder).mapToBean(Order_detail.class).stream().toList());
+        return orderDetailList;
+    }
+
+    public static int totalPriceOrderDetail(String idOrder) {
+        JDBI = ConnectJDBI.connector();
+        try {
+            int total = JDBI.withHandle(handle ->
+                    handle.createQuery("Select SUM(price) from order_details Where idOrder = ?")
+                            .bind(0, idOrder).mapTo(Integer.class).findOnly());
+            return total;
+        } catch (Exception e) {
+            return 0;
+        }
     }
 }

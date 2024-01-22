@@ -66,7 +66,7 @@ public class AccountDAO {
     public static int createVerifyEmail(String code, String dateCreate, String dateExpired,boolean status, int idAccount) {
         JDBI = ConnectJDBI.connector();
         int execute = JDBI.withHandle(handle ->
-                handle.createUpdate("INSERT INTO verify_email(code, dateCreated, dateExpired, status, idAccount) " +
+                handle.createUpdate("INSERT INTO verify_emails(code, dateCreated, dateExpired, status, idAccount) " +
                                 "VALUES (?, ?, ?, ?, ?)")
                         .bind(0, code)
                         .bind(1, dateCreate)
@@ -86,8 +86,8 @@ public class AccountDAO {
                 handle.createQuery("SELECT accounts.id, accounts.username, accounts.password, " +
                                 "accounts.email, accounts.fullname, accounts.numberPhone, accounts.status " +
                                 "FROM accounts " +
-                                "INNER JOIN verify_email ON accounts.id = verify_email.idAccount " +
-                                "WHERE verify_email.code = ? AND verify_email.dateExpired > ? AND verify_email.status = 0")
+                                "INNER JOIN verify_emails ON accounts.id = verify_emails.idAccount " +
+                                "WHERE verify_emails.code = ? AND verify_emails.dateExpired > ? AND verify_emails.status = 0")
                         .bind(0, code)
                         .bind(1, formatDate)
                         .mapToBean(Account.class).stream().findFirst()
@@ -102,7 +102,7 @@ public class AccountDAO {
 
     private static int updateStatusVerifyEmail(String code) {
         int execute = JDBI.withHandle(handle ->
-                handle.createUpdate("UPDATE verify_email SET status = 1 WHERE code = ?")
+                handle.createUpdate("UPDATE verify_emails SET status = 1 WHERE code = ?")
                         .bind(0, code).execute());
         return execute;
     }
@@ -185,4 +185,13 @@ public class AccountDAO {
 
         return total;
     }
+
+    public static int roleAccount(String id) {
+        JDBI = ConnectJDBI.connector();
+        int role = JDBI.withHandle(handle ->
+                handle.createQuery("Select role From access_levels where idAccount = ?")
+                        .bind(0, id).mapTo(Integer.class).findOnly());
+        return role;
+    }
+
 }
