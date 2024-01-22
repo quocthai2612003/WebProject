@@ -70,7 +70,7 @@
 
             <div class="details col-md-6 ps-4">
                 <h3 class="product-title pb-3">Thắt lưng nam cao cấp FaiaoePOLO</h3>
-                <p class="product-id pb-2">Mã sản phẩm: <span><strong>TL1205</strong></span></p>
+                <p class="product-id pb-2" style="color: #757575">Mã sản phẩm: <span><strong>TL1205</strong></span></p>
                 <div class="rating d-flex pb-4">
                     <div class="stars">
                         <span class="fa fa-star checked"></span>
@@ -82,13 +82,13 @@
                     <span class="review-no ps-2">.<strong>100</strong> Đánh giá</span>
                     <span class="bought px-2">| <strong> 200</strong> Đã bán</span>
                 </div>
-                <h3 class="price pd-5"><span>120.000₫</span></h3>
-                <div class="quantity d-flex pb-4">
+                <h3 class="price pd-5 pb-4"><span>120.000₫</span></h3>
+                <div class="quantity d-flex pb-5">
                     <p class="title-attr">Số lượng</p>
                     <div class="count-number">
-                        <div class="btn-minus"><span class="glyphicon glyphicon-minus">-</span></div>
-                        <input value="1" />
-                        <div class="btn-plus"><span class="glyphicon glyphicon-plus">+</span></div>
+                        <button class="decrease">-</button>
+                        <input type="text" class="quantity-input" value="1">
+                        <button class="increase">+</button>
                     </div>
                 </div>
                 <div class="buy-action d-flex">

@@ -161,9 +161,16 @@ h2.product-detail, h2.product-cmt {
     align-items: center;
 }
 .title-attr{
-    margin-top:0;
-    margin-bottom:0;
-    color:black;}
+    align-items: center;
+    color: #757575;
+    flex-shrink: 0;
+    font-size: inherit;
+    font-weight: 400;
+    margin: 0;
+    text-transform: capitalize;
+    width: 110px;
+}
+
 .quantity {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -174,32 +181,27 @@ h2.product-detail, h2.product-cmt {
     align-items: center;
     padding-bottom: 20px;
 }
-.count-number {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+.quantity-input {
+    width: 50px;
+    font-size:20px;
+    text-align: center;
 }
-div.btn-minus{
+.count-number {
+    display: flex;
+    align-items: center;
+}
+
+.decrease{
     cursor:pointer;
-    font-size:7px;
-    display:flex;
-    align-items:center;
-    padding:5px;
-    padding-left:10px;
-    padding-right:10px;
+    font-size:20px;
     border:1px solid gray;
     border-radius:2px;
     border-right:0;
     color: #000000;
 }
-div.btn-plus{
+.increase {
     cursor:pointer;
-    font-size:7px;
-    display:flex;
-    align-items:center;
-    padding:5px;
-    padding-left:10px;
-    padding-right:10px;
+    font-size:20px;
     border:1px solid gray;
     border-radius:2px;
     border-left:0;

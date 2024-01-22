@@ -1,23 +1,27 @@
-$(document).ready(function(){
-    //-- Click on QUANTITY
-    $(".btn-minus").on("click",function(){
-        var now = $(".quantity > div > input").val();
-        if ($.isNumeric(now)){
-            if (parseInt(now) -1 > 0){ now--;}
-            $(".quantity > div > input").val(now);
-        }else{
-            $(".quantity > div > input").val("1");
+document.addEventListener("DOMContentLoaded", function() {
+    const decreaseButton = document.querySelector('.decrease');
+    const increaseButton = document.querySelector('.increase');
+    const quantityInput = document.querySelector('.quantity-input');
+
+    decreaseButton.addEventListener('click', function() {
+        updateQuantity(-1);
+    });
+
+    increaseButton.addEventListener('click', function() {
+        updateQuantity(1);
+    });
+
+    function updateQuantity(amount) {
+        let currentQuantity = parseInt(quantityInput.value);
+        currentQuantity += amount;
+
+        if (currentQuantity < 1) {
+            currentQuantity = 1;
         }
-    })
-    $(".btn-plus").on("click",function(){
-        var now = $(".quantity > div > input").val();
-        if ($.isNumeric(now)){
-            $(".quantity > div > input").val(parseInt(now)+1);
-        }else{
-            $(".quantity > div > input").val("1");
-        }
-    })
-})
+
+        quantityInput.value = currentQuantity;
+    }
+});
 // Slidershow
 document.getElementById('next').onclick = function (){
     let lists  = document.querySelectorAll('.item');
