@@ -71,8 +71,6 @@ ul > li{
     margin-right:25px;
     cursor:pointer
 }
-li.active{
-    border-bottom:3px solid silver;}
 
 #main-menu {
     height: 70px;

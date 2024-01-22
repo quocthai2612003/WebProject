@@ -1,4 +1,8 @@
-<!-- <%@ page contentType="text/html;charset=UTF-8" language="java" %> -->
+<%@ page import="Model.Account" %>
+<%@ page import="Model.Slider" %>
+<%@ page import="java.util.List" %>
+<%@ page import="Model.ShoppingCart" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +35,12 @@
 
 </head>
 <body>
+<%
+    Account account = (Account) session.getAttribute("account");
+    List<Slider> sliders = (List<Slider>) request.getAttribute("slider");
+    ShoppingCart gh = (ShoppingCart) session.getAttribute("cart");
+    if (gh == null) gh = new ShoppingCart();
+%>
 <header id="header" class="border-bottom border-black">
     <div class="container">
         <div class=" global-nav d-flex align-items-center justify-content-between ">
@@ -59,25 +69,37 @@
                         <li><a href="#">Quản Lý Đơn Hàng</a></li>
                         <li><a href="#">Đăng Xuất</a></li>
                     </ul>
-                    <script>
+                    <!-- <script>
                         // Xác định nút Tài Khoản
                         var accountButton = document.getElementById('accountBtn');
                         accountButton.addEventListener('click', function() {
-                            // Chuyển hướng người dùng đến trang đăng nhập khi nhấn vào nút Tài Khoản
-                            window.location.href = 'login.jsp';
+                            <% Account account = (Account) session.getAttribute("account");
+                                if (account == null) { %>
+                                // Chuyển hướng người dùng đến trang đăng nhập khi nhấn vào nút Tài Khoản
+                                window.location.href = 'login.jsp';
+                                <% } else { %>
+                                // Chuyển hướng người dùng đến trang người dùng khi nhấn vào nút Tài Khoản
+                                window.location.href = 'users-page.jsp';
+                                <% } %>
                         });
-                    </script>
+                    </script> -->
                 </div>
-                <button id="cartBtn" type="button" class="btn btn-light rounded-circle position-relative"><i class="fa-solid fa-cart-shopping"></i> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0<span class="visually-hidden">unread messages</span></span></button>
+                <button id="cartBtn" type="button" class="btn btn-light rounded-circle position-relative"><i class="fa-solid fa-cart-shopping"></i> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"><%= gh.getSize() %><span class="visually-hidden">unread messages</span></span></button>
                 <span id="cartItemCount"></span>
-                <script>
+                <!-- <script>
                     // Xác định nút Giỏ Hàng
                     var cartButton = document.getElementById('cartBtn');
                     cartButton.addEventListener('click', function() {
-                        // Chuyển hướng người dùng đến trang giỏ hàng khi nhấn vào nút Giỏ Hàng
-                        window.location.href = 'cart.jsp';
+                        <% Account account = (Account) session.getAttribute("account");
+                               if (account == null) { %>
+                                // Chuyển hướng người dùng đến trang đăng nhập khi nhấn vào nút Giỏ hàng
+                                window.location.href = 'login.jsp';
+                                <% } else { %>
+                                // Chuyển hướng người dùng đến trang giỏ hàng khi nhấn vào nút Giỏ hàng
+                                window.location.href = 'cart.jsp';
+                                <% } %>
                     });
-                </script>
+                </script> -->
             </div>
         </div>
     </div>
