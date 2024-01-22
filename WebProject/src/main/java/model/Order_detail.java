@@ -1,11 +1,12 @@
 package model;
 
 public class Order_detail {
-    private String idOrder;
-    private String idProduct;
-    private int quantity;
-    private int price;
-    private Product product;
+
+    String idOrder;
+    String idProduct;
+    int quantity;
+    int price;
+
     public Order_detail() {
 
     }
@@ -50,7 +51,24 @@ public class Order_detail {
         this.price = price;
     }
 
+
+    @Override
+    public String toString() {
+        return "Order_detail{" +
+                "idOrder=" + idOrder +
+                ", idProduct='" + idProduct + '\'' +
+                ", quantity=" + quantity +
+                ", price=" + price +
+                '}';
+    }
+    public int totalPrice(){
+        return this.quantity * this.price;
+    }
+    Product product;
+
     public Product getProduct() {
+
+
         return product;
     }
 }

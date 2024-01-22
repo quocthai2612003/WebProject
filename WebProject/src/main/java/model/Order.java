@@ -1,41 +1,37 @@
 package model;
 
 import java.util.Date;
-import java.util.List;
+
 
 public class Order {
     private String id; // Assuming int as the ID type
-    private String fullname;
+
     private String address;
     private int status;
     private Date dateBuy;
     private Date dateArrival;
-    String numberPhone;
-    private int ID_account;
+
+    private int idAccount;
+    private String numberPhone;
+    // Constructors, getters, and setters
+
 
     public Order() {
         // Default constructor
     }
 
-    public Order(String id, String fullname, String address, int status, Date dateBuy, Date dateArrival, String numberPhone, int ID_account) {
-        this.id = id;
-        this.fullname = fullname;
-        this.address = address;
-        this.status = status;
-        this.dateBuy = dateBuy;
-        this.dateArrival = dateArrival;
-        this.numberPhone = numberPhone;
-        this.ID_account = ID_account;
-    }
 
-    public Order(String id, String fullname, Date dateBuy, Date dateArrival, String address, String numberPhone, int status) {
+    public Order(String id, String address, int status, Date dateBuy, Date dateArrival, int idAccount, String numberPhone) {
         this.id = id;
-        this.fullname = fullname;
+
+        this.address = address;
+        this.status = status;
         this.dateBuy = dateBuy;
         this.dateArrival = dateArrival;
-        this.address = address;
+
+        this.idAccount = idAccount;
         this.numberPhone = numberPhone;
-        this.status = status;
+
     }
 
     public String getId() {
@@ -61,13 +57,28 @@ public class Order {
     public void setStatus(int status) {
         this.status = status;
     }
-
-    public int getID_account() {
-        return ID_account;
+    public Date getDateBuy() {
+        return dateBuy;
     }
 
-    public void setID_account(int ID_account) {
-        this.ID_account = ID_account;
+    public void setDateBuy(Date dateBuy) {
+        this.dateBuy = dateBuy;
+    }
+
+    public int getIdAccount() {
+        return idAccount;
+    }
+
+    public void setIdAccount(int idAccount) {
+        this.idAccount = idAccount;
+    }
+
+    public String getNumberPhone() {
+        return numberPhone;
+    }
+
+    public void setNumberPhone(String numberPhone) {
+        this.numberPhone = numberPhone;
     }
 
     public Date getDateArrival() {
@@ -78,27 +89,16 @@ public class Order {
         this.dateArrival = dateArrival;
     }
 
-    public String getFullname() {
-        return fullname;
-    }
-
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
-    }
-
-    public Date getDateBuy() {
-        return dateBuy;
-    }
-
-    public void setDateBuy(Date dateBuy) {
-        this.dateBuy = dateBuy;
-    }
-
-    public String getNumberPhone() {
-        return numberPhone;
-    }
-
-    public void setNumberPhone(String numberPhone) {
-        this.numberPhone = numberPhone;
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", address='" + address + '\'' +
+                ", status=" + status +
+                ", dateBuy=" + dateBuy +
+                ", dateArrival=" + dateArrival +
+                ", idAccount=" + idAccount +
+                ", numberPhone='" + numberPhone + '\'' +
+                '}';
     }
 }

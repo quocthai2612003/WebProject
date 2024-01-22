@@ -93,4 +93,7 @@ public class Account {
     public void setRole(int role) {
         this.role = role;
     }
-}
+
+    }
+
+
