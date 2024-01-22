@@ -38,7 +38,7 @@
                     <%if (error != null) {%>
                     <p class="notification-error"><%=error%></p>
                     <%}%>
-                    <input type="text" name ="username" value="<%=username%>" id="username" placeholder="Tên đăng nhập" required = "required">
+                    <input type="text" autocomplete ="off" name ="username" value="<%=username%>" id="username" placeholder="Tên đăng nhập" required = "required">
                     <input type="password" name = "password"  id="password" placeholder="Mật khẩu" required = "required">
                 </div>
                 <div class="forgot-password"><a href="./forgot">Quên mật khẩu?</a></div>

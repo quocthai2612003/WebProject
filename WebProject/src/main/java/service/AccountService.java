@@ -5,6 +5,7 @@ import model.Account;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -87,8 +88,12 @@ public class AccountService {
         return AccountDAO.deleteAccount(username, email);
     }
 
-    public int updateStatusAccount(int id) {
-        return AccountDAO.updateStatusAccount(id);
+    public int updateStatusAccount(String id, int status) {
+        return AccountDAO.updateStatusAccount(id, status);
+    }
+
+    public int updateRoleAccount(String id, int role) {
+        return AccountDAO.updateRoleAccount(id, role);
     }
 
     public int updatePasswordAccount(int id, String password) {
@@ -96,6 +101,14 @@ public class AccountService {
     }
     public int createRoleAccount(Account account, int role) {
         return AccountDAO.createRoleAccount(account, role);
+    }
+
+    public int totalAcount() {
+        return AccountDAO.totalAccount();
+    }
+
+    public int totalAccountBySearch(String search) {
+        return AccountDAO.totalAccountBySearch(search);
     }
 
     public static void main(String[] args) {

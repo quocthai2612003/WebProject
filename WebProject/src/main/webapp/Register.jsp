@@ -40,11 +40,11 @@
                     <% if (!error.isEmpty()) {%>
                         <p class="notification-error"><%=error%></p>
                     <%}%>
-                    <input type="text" name = "fullname" value="<%=fullname%>" id = "fullname" placeholder="Họ và tên*" required = "required">
-                    <input type="email" name = "email" value="<%=email%>" id="email" placeholder="Nhập địa chỉ email*" required = "required">
+                    <input type="text" autocomplete ="off" name = "fullname" value="<%=fullname%>" id = "fullname" placeholder="Họ và tên*" required = "required">
+                    <input type="email" autocomplete ="off" name = "email" value="<%=email%>" id="email" placeholder="Nhập địa chỉ email*" required = "required">
                     <p id="checkPhone"></p>
-                    <input type="text" name = "phone" value="<%=phone%>" id = "phone" placeholder="Số điện thoại*" required = "required" onkeyup="kiemTraSoDienThoai()">
-                    <input type="text" name = "username" value="<%=username%>" id = "username" placeholder="Tên đăng nhập*" required = "required">
+                    <input type="text" autocomplete ="off" name = "phone" value="<%=phone%>" id = "phone" placeholder="Số điện thoại*" required = "required" onkeyup="kiemTraSoDienThoai()">
+                    <input type="text" autocomplete ="off" name = "username" value="<%=username%>" id = "username" placeholder="Tên đăng nhập*" required = "required">
                     <input type="password" name = "password" id="password" placeholder="Mật khẩu*" required = "required" onkeyup="kiemTraMatKhau()">
                     <p id="checkPass"></p>
                     <input type="password" name = "repeatPassword" id="password__repeat" placeholder="Xác nhận mật khẩu*" required = "required" onkeyup="kiemTraMatKhau()">
