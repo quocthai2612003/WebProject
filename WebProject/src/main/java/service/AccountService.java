@@ -1,13 +1,11 @@
-package controller;
+package service;
 
 import dao.AccountDAO;
 import model.Account;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.sql.Date;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -23,8 +21,8 @@ public class AccountService {
         return AccountDAO.accountByUsername(username);
     }
 
-    public Account accountByUsernameOrEmail(String username, String email) {
-        return AccountDAO.accountByUsernameOrEmail(username, email);
+    public Account accountByUsernameAndEmail(String username, String email) {
+        return AccountDAO.accountByUsernameAndEmail(username, email);
     }
         // Chức năng đăng nhập
     public Account checkLogin(String username, String password) {
@@ -43,13 +41,9 @@ public class AccountService {
     }
         // Chức năng đăng ký
     public boolean isPhoneValid(String phone) {
-        String regex = "^0[0-9]{9}$"; // Đây là một biểu thức chính quy cơ bản cho số điện thoại 10 chữ số bắt đầu bằng số 0
-
-        // Tạo một Pattern từ biểu thức chính quy
+        String regex = "^0[0-9]{9}$";
         Pattern pattern = Pattern.compile(regex);
-        // Tạo một Matcher để so khớp chuỗi với biểu thức chính quy
         Matcher matcher = pattern.matcher(phone);
-        // Kiểm tra xem chuỗi có khớp với biểu thức chính quy không
         return matcher.matches();
     }
 
@@ -62,8 +56,22 @@ public class AccountService {
         date.add(Calendar.DAY_OF_MONTH, 1);
         String formatDateExpired = dateFormat.format(date.getTime());
         if (AccountDAO.createVerifyEmail(code, formatDateCreate,
-                formatDateExpired, account.getID()) != 0) {
+                formatDateExpired, false, account.getID()) != 0) {
             return EmailService.send(account.getEmail(), "Xac nhan email", mess);
+        }
+        return false;
+    }
+
+    public boolean forgotPassword(Account account) {
+        String code = EmailService.createCode();
+        Calendar date = Calendar.getInstance();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String formatDateCreate = dateFormat.format(date.getTime());
+        date.add(Calendar.DAY_OF_MONTH, 1);
+        String formatDateExpired = dateFormat.format(date.getTime());
+        if (AccountDAO.createVerifyEmail(code, formatDateCreate,
+                formatDateExpired, false, account.getID()) != 0) {
+            return EmailService.send(account.getEmail(), "Xac nhan email", code);
         }
         return false;
     }
@@ -80,14 +88,28 @@ public class AccountService {
         return AccountDAO.deleteAccount(username, email);
     }
 
-    public int updateStatusAccount(int id) {
-        return AccountDAO.updateStatusAccount(id);
+    public int updateStatusAccount(String id, int status) {
+        return AccountDAO.updateStatusAccount(id, status);
     }
 
+    public int updateRoleAccount(String id, int role) {
+        return AccountDAO.updateRoleAccount(id, role);
+    }
+
+    public int updatePasswordAccount(int id, String password) {
+        return AccountDAO.updatePasswordAccount(id, password);
+    }
     public int createRoleAccount(Account account, int role) {
         return AccountDAO.createRoleAccount(account, role);
     }
 
+    public int totalAcount() {
+        return AccountDAO.totalAccount();
+    }
+
+    public int totalAccountBySearch(String search) {
+        return AccountDAO.totalAccountBySearch(search);
+    }
 
     public static void main(String[] args) {
 

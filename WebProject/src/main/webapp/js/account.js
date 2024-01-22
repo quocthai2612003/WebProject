@@ -9,10 +9,6 @@ function kiemTraMatKhau() {
     }
 }
 
-function kiemTraSuThayDoi(element, row) {
-    row.classList.add("background-yellow");
-}
-
 
 function kiemTraSoDienThoai() {
     var phone = document.getElementById("phone").value;

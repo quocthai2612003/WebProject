@@ -1,5 +1,6 @@
-package controller;
+package service;
 
+import dao.MailProperties;
 import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;

@@ -9,7 +9,9 @@ public class Account {
     private String numberPhone;
     private int status;
 
-    public Account(int ID, String username, String password, String email, String fullname, String numberPhone, int status) {
+    private int role;
+
+    public Account(int ID, String username, String password, String email, String fullname, String numberPhone, int status, int role) {
         this.ID = ID;
         this.username = username;
         this.password = password;
@@ -17,6 +19,7 @@ public class Account {
         this.fullname = fullname;
         this.numberPhone = numberPhone;
         this.status = status;
+        this.role = role;
     }
 
     public Account() {
@@ -82,5 +85,12 @@ public class Account {
 
     public void setStatus(int status) {
         this.status = status;
+    }
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
     }
 }

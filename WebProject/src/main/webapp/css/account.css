@@ -116,3 +116,63 @@
     margin-top: 30px;
     text-align: justify;
 }
+
+.form-forgotpassword {
+    margin:auto;
+    width: 400px;
+    padding: 20px 10px;
+}
+.title-forgotpassword {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.title-forgotpassword h4 {
+    font-size: 30px;
+}
+
+.content-forgotpassword {
+    margin-bottom: 20px;
+}
+
+.content-forgotpassword p {
+    font-size: 20px;
+
+}
+
+.email-forgotpassword {
+    margin-bottom: 20px;
+}
+
+.email-forgotpassword span{
+    font-size: 18px;
+
+}
+
+.email-forgotpassword input {
+    padding: 5px 10px;
+    outline: none;
+    width: 60%;
+}
+.email-forgotpassword div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.form-forgotpassword form button {
+    padding: 7px 10px;
+    background-color: #EC1D25;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-color: #EC1D25;
+    border-radius: 4px;
+    width: 100%;
+
+}
+.form-forgotpassword form button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
