@@ -1,8 +1,10 @@
 package Service;
 
-import Beans.Account;
 import DAO.AccountDAO;
+import Model.Account;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -14,21 +16,18 @@ public class AccountService {
         return userService;
     }
 
-    public boolean isPhoneValid(String phone) {
-        String regex = "^0[0-9]{9}$"; // Đây là một biểu thức chính quy cơ bản cho số điện thoại 10 chữ số bắt đầu bằng số 0
-
-        // Tạo một Pattern từ biểu thức chính quy
-        Pattern pattern = Pattern.compile(regex);
-        // Tạo một Matcher để so khớp chuỗi với biểu thức chính quy
-        Matcher matcher = pattern.matcher(phone);
-        // Kiểm tra xem chuỗi có khớp với biểu thức chính quy không
-        return matcher.matches();
+    public Account accountByUsername(String username) {
+        return AccountDAO.accountByUsername(username);
     }
 
+    public Account accountByUsernameAndEmail(String username, String email) {
+        return AccountDAO.accountByUsernameAndEmail(username, email);
+    }
+        // Chức năng đăng nhập
     public Account checkLogin(String username, String password) {
         Account account = AccountDAO.accountByUsername(username);
         if (account != null) {
-            if (account.getUsername().equals(username) && account.getPassword().equals(password)) {
+            if (account.getUsername().equals(username) && account.getPassword().equals(password)){
                 return account;
             }
         }
@@ -36,31 +35,79 @@ public class AccountService {
         return null;
     }
 
-    public boolean isUsernameAndEmailExisted(String username, String email) {
-        Account account = AccountDAO.accountByUsernameAndEmail(username, email);
-        return account != null;
+    public boolean isLoginSuccess(Account account) {
+        return account.getStatus() == 1;
+    }
+        // Chức năng đăng ký
+    public boolean isPhoneValid(String phone) {
+        String regex = "^0[0-9]{9}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(phone);
+        return matcher.matches();
     }
 
-//    public boolean vertifyEmail(String username, String email) {
-//        if (!isUsernameAndEmailExisted(username, email)) {
-//            String code = EmailService.createCode();
-//            String mess = "http://localhost:8080/vertifyEmail?code=" + code ;
-//            EmailService.send(email, "Xac nhan email", mess);
-//            LocalDate dateCreate = LocalDate.now();
-//            LocalDate dateExpired = dateCreate.plusDays(1);
-//            boolean status = false;
-//            return AccountDAO.createVertifyEmail(username, email, code, java.sql.Date.valueOf(dateCreate),
-//                    java.sql.Date.valueOf(dateExpired), status);
-//        }
-//        return false;
-//    }
-
-    public boolean isCodeVertifyEmail(String code) {
-        return AccountDAO.isCodeVertifyEmail(code);
+    public boolean vertifyEmail(Account account) {
+        String code = EmailService.createCode();
+        String mess = "http://localhost:8080/verifyEmail?code=" + code ;
+        Calendar date = Calendar.getInstance();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String formatDateCreate = dateFormat.format(date.getTime());
+        date.add(Calendar.DAY_OF_MONTH, 1);
+        String formatDateExpired = dateFormat.format(date.getTime());
+        if (AccountDAO.createVerifyEmail(code, formatDateCreate,
+                formatDateExpired, false, account.getID()) != 0) {
+            return EmailService.send(account.getEmail(), "Xac nhan email", mess);
+        }
+        return false;
     }
 
-    public boolean createAccount(String username, String password, String email, String fullname, String number_phone, int status) {
+    public boolean forgotPassword(Account account) {
+        String code = EmailService.createCode();
+        Calendar date = Calendar.getInstance();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String formatDateCreate = dateFormat.format(date.getTime());
+        date.add(Calendar.DAY_OF_MONTH, 1);
+        String formatDateExpired = dateFormat.format(date.getTime());
+        if (AccountDAO.createVerifyEmail(code, formatDateCreate,
+                formatDateExpired, false, account.getID()) != 0) {
+            return EmailService.send(account.getEmail(), "Xac nhan email", code);
+        }
+        return false;
+    }
+
+    public Account isVerifyEmailSuccess(String code) {
+        return AccountDAO.isVerifyEmailSuccess(code);
+    }
+
+    public int createAccount(String username, String password, String email, String fullname, String number_phone, int status) {
         return AccountDAO.createAccount(username, password, email, fullname, number_phone, status);
+    }
+
+    public int deleteAccount(String username, String email) {
+        return AccountDAO.deleteAccount(username, email);
+    }
+
+    public int updateStatusAccount(String id, int status) {
+        return AccountDAO.updateStatusAccount(id, status);
+    }
+
+    public int updateRoleAccount(String id, int role) {
+        return AccountDAO.updateRoleAccount(id, role);
+    }
+
+    public int updatePasswordAccount(int id, String password) {
+        return AccountDAO.updatePasswordAccount(id, password);
+    }
+    public int createRoleAccount(Account account, int role) {
+        return AccountDAO.createRoleAccount(account, role);
+    }
+
+    public int totalAcount() {
+        return AccountDAO.totalAccount();
+    }
+
+    public int totalAccountBySearch(String search) {
+        return AccountDAO.totalAccountBySearch(search);
     }
 
     public boolean changePassword(String username, String currentPassword, String newPassword) {
@@ -72,25 +119,6 @@ public class AccountService {
     }
 
     public boolean updateUserInfo(String username, String newFullname) {
-        // Retrieve the current account information
-        Account currentAccount = AccountDAO.accountByUsername(username);
-
-        // Check if the account exists
-        if (currentAccount != null) {
-            // Update the account information
-            currentAccount.setFullname(newFullname);
-            // Update the account in the database
-            return AccountDAO.updateUserInfo(currentAccount);
-        }
-
-        return false;
+        return AccountDAO.updateUserInfo(username, newFullname);
     }
-
-    public boolean isLoginSuccess(Account account) {
-        return account.getStatus() != 0;
-    }
-
-//    public static void main(String[] args) {
-//        System.out.println(AccountService.getInstance().vertifyEmail("toanphuoc", "toanphuoc2611203@gmail.com"));
-//    }
 }

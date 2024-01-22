@@ -1,3 +1,4 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +12,7 @@
 <%
     String error = (String)request.getAttribute("error") ;
     String username = request.getParameter("username") != null ? (String)request.getParameter("username"): "";
+    String notify = (String) request.getAttribute("notify");
 %>
 <div id="content">
     <div class="form-login">
@@ -25,18 +27,22 @@
         </div>
         <div class="right">
             <div class="function">
-                <a class="function-login" href="./Login.html">Đăng nhập</a>
-                <a class="function-register" href="./Register.html">Đăng ký</a>
+                <a class="function-login" href="./login">Đăng nhập</a>
+                <a class="function-register" href="./register">Đăng ký</a>
             </div>
             <form class="infor" action="./login" method="post">
+
                 <div class="form-group">
+                    <%if (notify != null){%>
+                    <p class="notification-success"><%=notify%></p>
+                    <%}%>
                     <%if (error != null) {%>
                     <p class="notification-error"><%=error%></p>
                     <%}%>
-                    <input type="text" name ="username" value="<%=username%>" id="username" placeholder="Tên đăng nhập" required = "required">
+                    <input type="text" autocomplete ="off" name ="username" value="<%=username%>" id="username" placeholder="Tên đăng nhập" required = "required">
                     <input type="password" name = "password"  id="password" placeholder="Mật khẩu" required = "required">
                 </div>
-                <div class="forgot-password"><a href="#">Quên mật khẩu?</a></div>
+                <div class="forgot-password"><a href="./forgot">Quên mật khẩu?</a></div>
                 <button type="submit" class="btn_login">Đăng nhập</button>
             </form>
             <p class="commit">

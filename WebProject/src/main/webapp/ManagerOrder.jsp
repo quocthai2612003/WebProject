@@ -1,10 +1,11 @@
-<%@ page import="model.Order" %>
+<%@ page import="Model.Order" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="model.Account" %>
-<%@ page import="model.Order_detail" %>
-<%@ page import="service.ProductService" %>
+<%@ page import="Model.Account" %>
+<%@ page import="Model.Order_detail" %>
+<%@ page import="Service.ProductService" %>
 <%@ page import="java.util.Map" %>
+<%@ page import="java.text.NumberFormat" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
@@ -29,6 +30,7 @@
     List<Order> orderList = request.getAttribute("orderList") == null ? new ArrayList<>() : (List<Order>) request.getAttribute("orderList");
     ProductService ps = request.getAttribute("ps") == null ? ProductService.getInstance() : (ProductService) request.getAttribute("ps");
     Map<String, String> listImageThumbnail = ps.selectImageThumbnail();
+    NumberFormat nf = NumberFormat.getInstance();
 %>
 <div id="id">
     <div id="admin">
@@ -38,7 +40,7 @@
                     <h2 class="shop-name">PLQ SHOP</h2>
                 </div>
                 <div class="shop-user">
-                    <p>Xin chào, <%=account.getFullname()%>></p>
+                    <p>Xin chào, <%=account.getFullname()%></p>
                 </div>
                 <div class="menu-item">
                     <a href="./admin">
@@ -176,13 +178,13 @@
                         <th>
                             <div class="product-img"><img src="<%=listImageThumbnail.get(od.getIdProduct())%>" alt=""></div>
                         </th>
-                        <th><%=od.getQuanlity()%></th>
-                        <th><%=od.getPrice()%></th>
+                        <th><%=od.getQuantity()%></th>
+                        <th><%=nf.format(od.getPrice())%></th>
                     </tr>
                 <%}%>
                 </tbody>
             </table>
-            <div><p style="margin-top: 40px; float: right;">Tổng giá đơn hàng: <%=totalPrice%></p></div>
+            <div><p style="margin-top: 40px; float: right;">Tổng giá đơn hàng: <%=nf.format(totalPrice)%></p></div>
         </div>
     </div>
 </div>

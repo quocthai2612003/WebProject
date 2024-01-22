@@ -1,8 +1,11 @@
-<%@ page import="model.Product" %>
 <%@ page import="java.util.List" %>
+<%@ page import="Model.Product" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="Service.ProductService" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="java.text.NumberFormat" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -13,89 +16,97 @@
     <link rel="stylesheet" href="./css/base.css">
 </head>
 <body>
-<%--Header--%>
-<%--<jsp:include page="header.html"></jsp:include>--%>
+<%
+    ProductService ps = request.getAttribute("ps") == null ? ProductService.getInstance() : (ProductService) request.getAttribute("ps");
+    Map<String, String> listCategory = ps.selectCategory();
+    Map<String, String> listImageThumbnail = ps.selectImageThumbnail();
+    List<Product> listProduct = request.getAttribute("listProduct") == null ? new ArrayList<>() : (List<Product>) request.getAttribute("listProduct");
+    int totalPage = request.getAttribute("totalPage") == null ? 0 : (int) request.getAttribute("totalPage");
+    int pageCurrent = request.getAttribute("pageCurrent") == null ? 1 : Integer.parseInt(request.getAttribute("pageCurrent").toString());
+    String id_category = (String) request.getAttribute("category");
+    String filter = request.getAttribute("filter") == null ? "" : "&filter="+(String) request.getAttribute("filter");
+    String sort = request.getAttribute("order") == null ? "" : "&order="+(String) request.getAttribute("order");
+    NumberFormat nf = NumberFormat.getInstance();
+%>
+<jsp:include page="header.jsp"></jsp:include>
 <div id="content">
     <div class="container">
         <div class="gird">
             <div class="menu__category">
-                <h3 class="menu__category--title">Dây nịt</h3>
-                <%
-                    String category = request.getParameter("category") != null ? request.getParameter("category")
-                            : "day-nit-da";
-                    String img;
-                    if (category.equals("day-nit-da")) {
-                        img = "./assets/images/product_img/day-nit-da.jpg";
-                    } else if (category.equals("day-nit-vai")) {
-                        img = "./assets/images/product_img/day-nit-vai.jpg";
-                    } else if (category.equals("day-nit-nam")) {
-                        img = "./assets/images/product_img/day-nit-nam.jpg";
-                    } else if (category.equals("day-nit-nu")){
-                        img = "./assets/images/product_img/day-nit-nu.jpg";
-                    } else {
-                        img = "./assets/images/product_img/day-nit-tre-em.jpg";
-                    }
-                %>
+                <h3 class="menu__category--title">Thắt lưng nam</h3>
                 <ul class="list__category">
-                    <li class="list__category--item"><a href="./Product.jsp?category=day-nit-da&page=1">Dây nịt da</a></li>
-                    <li class="list__category--item"><a href="./Product.jsp?category=day-nit-vai&page=1">Dây nịt vải</a></li>
-                    <li class="list__category--item"><a href="./Product.jsp?category=day-nit-nam&page=1">Dây nịt dành cho nam</a></li>
-                    <li class="list__category--item"><a href="./Product.jsp?category=day-nit-nu&page=1">Dây nịt dành cho nữ</a></li>
-                    <li class="list__category--item"><a href="./Product.jsp?category=day-nit-tre-em&page=1">Dây nịt dành cho trẻ em</a></li>
+                    <% for(Map.Entry<String, String> entry : listCategory.entrySet()) {
+                        String id = entry.getKey();
+                        String name = entry.getValue();
+                    %>
+                        <li class="list__category--item">
+                            <a href="./product?category=<%=id%>&page=1"><%=name%></a>
+                        </li>
+                    <%}%>
                 </ul>
             </div>
 
             <div class="menu__product">
                 <div class="filter-horizon">
+                    <div class="filter-price">
+                        <span>Bộ lọc <i class="fa-solid fa-filter"></i></span>
+                        <ul class="filter-price-menu">
+                            <li class="filter-price-title">Chọn theo giá</li>
+                            <li class="price">
+                                <a href="./product?category=<%=id_category%>&page=1>=&filter=1">
+                                    Nhỏ hơn 50.000
+                                </a>
+                            </li>
+                            <li class="price"><a href="./product?category=<%=id_category%>&page=1&filter=2">Từ 50.000 đến 100.000</a></li>
+                            <li class="price"><a href="./product?category=<%=id_category%>&page=1&filter=3">Từ 100.000 đến 300.000</a></li>
+                            <li class="price"><a href="./product?category=<%=id_category%>&page=1&filter=4">Từ 300.000 đến 500.000</a></li>
+                            <li class="price"><a href="./product?category=<%=id_category%>&page=1&filter=5">Lớn hơn 500.000</a></li>
+                        </ul>
+                    </div>
                     <div class="box-filter">
                         <span>Sắp xếp theo</span>
                         <div class="sort-follow">
                             <span>Giá</span>
                             <i class="fa-solid fa-chevron-down"></i>
                             <ul class="sort-menu">
-                                <li><a href="#">Mặc định</a></li>
-                                <li><a href="#">Giá từ thấp đến cao</a></li>
-                                <li><a href="#">Giá từ cao đến thấp</a></li>
+                                <li><a href="./product?category=<%=id_category%>&page=<%=pageCurrent%>">Mặc định</a></li>
+                                <li><a href="./product?category=<%=id_category%>&page=<%=pageCurrent%>&order=asc">Giá từ thấp đến cao</a></li>
+                                <li><a href="./product?category=<%=id_category%>&page=<%=pageCurrent%>&order=desc">Giá từ cao đến thấp</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="list__product">
-                    <%
-                        List<Product> listProduct = Product.getList();
-                        int limitProductInPage = 12;
-                        int pageEnd = (int) Math.ceil(listProduct.size() / limitProductInPage);
-                        if (listProduct.size() % limitProductInPage != 0) pageEnd++;
-                        int pageNumber = request.getParameter("page") == null ? 1 : Integer.parseInt(request.getParameter("page"));
-                        int displayProduct = limitProductInPage * pageNumber > listProduct.size() ? listProduct.size() : limitProductInPage * pageNumber;
-                    %>
-                    <% for (int i = (pageNumber - 1) * limitProductInPage; i < displayProduct; i++) {%>
+                    <% for (Product p : listProduct) { %>
                     <div class="product-item">
                         <div class="product">
-                            <a href="#"><img class="product-img" src="<%=img%>" alt=""></a>
-                            <p class="product-title"><%=listProduct.get(i).getTitle()%> <%=i+1%>
+                            <a href="./productDetail.html"><img class="product-img"
+                                                                src="<%=listImageThumbnail.get(p.getId())%>" alt=""></a>
+                            <div class="product-container__tittle"><p class="product-title"><%=p.getName()%></div>
                             </p>
-                            <p class="product-price">Giá: <%=listProduct.get(i).getPrice()%>
+                            <p class="product-price">Giá: <%=nf.format(p.getPrice())%>đ
                             </p>
-                            <a href="#" class="product-order">Xem chi tiết</a>
+                            <a href="./productDetail.html" class="product-order">Xem chi tiết</a>
                         </div>
                     </div>
                     <%}%>
                 </div>
                 <div class="pagination">
-                    <% if (pageNumber > 1) {%>
-                    <a href="./Product.jsp?category=<%=category%>&page=<%=pageNumber-1%>" class="other-page previou-page"><span>Previou</span></a>
+                    <% if (pageCurrent > 1) {%>
+                    <a href="./product?category=<%=id_category%>&page=<%=pageCurrent-1%><%=filter%><%=sort%>"
+                       class="other-page previou-page"><span>Previou</span></a>
                     <%}%>
-                    <%for (int i = 1; i <= pageEnd; i++) {%>
-                    <% if (i == pageNumber) {%>
-                    <a href="./Product.jsp?category=<%=category%>&page=<%=i%>" class="other-page"><span
-                            style="color: #ee4d2d;font-weight: 600;"><%=i%></span></a>
-                    <%} else {%>
-                    <a href="./Product.jsp?category=<%=category%>&page=<%=i%>" class="other-page"><span><%=i%></span></a>
+
+                    <% for (int i = 1; i <= totalPage; i++) {%>
+                        <% if (i == pageCurrent) {%>
+                            <a href="./product?category=<%=id_category%>&page=<%=i%><%=filter%><%=sort%>" style = "color: red;" class="other-page"><span><%=i%></span></a>
+                        <%} else {%>
+                            <a href="./product?category=<%=id_category%>&page=<%=i%><%=filter%><%=sort%>" class="other-page"><span><%=i%></span></a>
+                        <%}%>
                     <%}%>
-                    <%}%>
-                    <% if (pageNumber > 1 && pageNumber < pageEnd) {%>
-                    <a href="./Product.jsp?category=<%=category%>&page=<%=pageNumber+1%>" class="other-page next-page"><span>Next</span></a>
+                    <% if (pageCurrent > 1 && pageCurrent < totalPage) {%>
+                    <a href="./product?category=<%=id_category%>&page=<%=pageCurrent+1%><%=filter%><%=sort%>"
+                       class="other-page next-page"><span>Next</span></a>
                     <%}%>
                 </div>
             </div>
@@ -104,4 +115,3 @@
 </div>
 </body>
 </html>
-

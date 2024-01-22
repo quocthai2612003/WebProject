@@ -1,8 +1,9 @@
 <%@ page import="java.util.List" %>
-<%@ page import="model.Product" %>
+<%@ page import="Model.Product" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="service.ProductService" %>
+<%@ page import="Service.ProductService" %>
 <%@ page import="java.util.Map" %>
+<%@ page import="java.text.NumberFormat" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -25,7 +26,9 @@
     String id_category = (String) request.getAttribute("category");
     String filter = request.getAttribute("filter") == null ? "" : "&filter="+(String) request.getAttribute("filter");
     String sort = request.getAttribute("order") == null ? "" : "&order="+(String) request.getAttribute("order");
+    NumberFormat nf = NumberFormat.getInstance();
 %>
+<jsp:include page="header.jsp"></jsp:include>
 <div id="content">
     <div class="container">
         <div class="gird">
@@ -50,7 +53,7 @@
                         <ul class="filter-price-menu">
                             <li class="filter-price-title">Chọn theo giá</li>
                             <li class="price">
-                                <a href="/product?category=<%=id_category%>&page=1>=&filter=1">
+                                <a href="./product?category=<%=id_category%>&page=1>=&filter=1">
                                     Nhỏ hơn 50.000
                                 </a>
                             </li>
@@ -81,7 +84,7 @@
                                                                 src="<%=listImageThumbnail.get(p.getId())%>" alt=""></a>
                             <div class="product-container__tittle"><p class="product-title"><%=p.getName()%></div>
                             </p>
-                            <p class="product-price">Giá: <%=p.getPrice()%>
+                            <p class="product-price">Giá: <%=nf.format(p.getPrice())%>đ
                             </p>
                             <a href="./productDetail.html" class="product-order">Xem chi tiết</a>
                         </div>
@@ -96,9 +99,9 @@
 
                     <% for (int i = 1; i <= totalPage; i++) {%>
                         <% if (i == pageCurrent) {%>
-                            <a href="/product?category=<%=id_category%>&page=<%=i%><%=filter%><%=sort%>" style = "color: red;" class="other-page"><span><%=i%></span></a>
+                            <a href="./product?category=<%=id_category%>&page=<%=i%><%=filter%><%=sort%>" style = "color: red;" class="other-page"><span><%=i%></span></a>
                         <%} else {%>
-                            <a href="/product?category=<%=id_category%>&page=<%=i%><%=filter%><%=sort%>" class="other-page"><span><%=i%></span></a>
+                            <a href="./product?category=<%=id_category%>&page=<%=i%><%=filter%><%=sort%>" class="other-page"><span><%=i%></span></a>
                         <%}%>
                     <%}%>
                     <% if (pageCurrent > 1 && pageCurrent < totalPage) {%>

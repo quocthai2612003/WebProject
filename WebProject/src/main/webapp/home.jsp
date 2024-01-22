@@ -1,22 +1,25 @@
-<%@ page import="Beans.Slider" %>
+<%@ page import="Model.Slider" %>
 <%@ page import="java.util.List" %>
-<%@ page import="Beans.Products" %>
-<%@ page import="Service.ProductService" %>
+<%@ page import="Model.Product" %>
+
 <%@ page import="java.text.NumberFormat" %>
-<%@ page import="Beans.ShoppingCart" %>
+<%@ page import="Model.ShoppingCart" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="Beans.Account" %>
+<%@ page import="Model.Account" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="Model.Product" %>
 
 <%
     Account account = (Account) session.getAttribute("account");
-    List<Slider> sliders = (List<Slider>) request.getAttribute("products");
+    List<Slider> sliders = (List<Slider>) request.getAttribute("slider");
     ShoppingCart gh = (ShoppingCart) session.getAttribute("cart");
     if (gh == null) gh = new ShoppingCart();
 %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html lang="en" xmlns:D="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -44,74 +47,14 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light shadow">
-    <div class="container d-flex justify-content-between align-items-center">
-
-        <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
-            Zay
-        </a>
-
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
-            <div class="flex-fill">
-                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="navbar align-self-center d-flex">
-                <div class="container-fluid">
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"> <i class="fa fa-fw fa-search text-dark mr-2"></i></button>
-                    </form>
-                </div>
-            </div>
-            <a class="nav-icon position-relative text-decoration-none" href="CartServlet">
-                <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
-            <%= gh.getSize() %>
-        </span>
-            </a>
-            <%-- Check if the user is authenticated --%>
-            <% if (account == null) { %>
-            <a class="nav-icon position-relative text-decoration-none" href="Login.jsp">
-                <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                <!-- Add the label or badge if needed -->
-            </a>
-            <% } else { %>
-            <a class="nav-icon position-relative text-decoration-none" href="users-page.jsp">
-                <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                <!-- Add the label or badge if needed -->
-            </a>
-            <% } %>
-        </div>
-    </div>
-
-    </div>
-</nav>
-<%--<jsp:include page="header.jsp" />--%>
-<%-- Check if products is not null and not empty --%>
+<jsp:include page="header.jsp"></jsp:include>
 <% if (sliders != null && !sliders.isEmpty()) { %>
 <div id="carouselExampleIndicators" class="carousel slide" style="padding-bottom: 15px" data-bs-ride="carousel">
     <div class="carousel-inner">
         <% for (int i = 0; i < sliders.size(); i++) {
             Slider slider = sliders.get(i);%>
         <div class="carousel-item <%= i == 0 ? " active" : "" %>">
-            <img src="<%= slider.getImg_link() %>" class="d-block w-100" alt="...">
+            <img src="<%= slider.getSource() %>" class="d-block w-100" alt="...">
         </div>
         <% } %>
     </div>
@@ -129,38 +72,44 @@
 <% } %>
 </section>
 <%
-    List<Products> productsList = request.getAttribute("listProduct") == null ? new ArrayList<>() : (List<Products>) request.getAttribute("listProduct");
+    List<Product> productListNam = request.getAttribute("listProduct") == null ? new ArrayList<>() : (List<Product>) request.getAttribute("listProduct");
     NumberFormat nf = NumberFormat.getInstance();
+    Map<String, String> listImagesThumbnail = request.getAttribute("listImagesThumbnail") == null ? new HashMap<>() : (Map<String, String>) request.getAttribute("listImagesThumbnail");
 %>
 
 <div class="container" id="Nam-Container">
     <div class="container" id="Nam-Container">
         <div class="top-prodcut">
-            <div class="title">Nam</div>
+            <div class="title">Thắt Lưng Da</div>
             <div class="menu-item">
                 <div class="menu-item"><a href="">Xem tất cả</a></div>
             </div>
         </div>
         <div class="bottom-product">
             <div class="left-menu-item">
-                <img src="assets/images/nam1.jpg" alt="">
+                <img src="assets/images/thatlungDa.jpg" alt="">
             </div>
             <div class="right-menu-list">
                 <div class="slider-product">
-                    <% for (Products products : productsList) { %>
+
+                    <% for (Product product : productListNam) {
+                    %>
                     <div class="product-item">
                         <div class="product">
-                            <a href="#"><img class="product-img" src="assets/images/product_img/TL001(1).png" alt=""></a>
+
+                            <a href="#"><img class="product-img" style="width: 270px;height: 300px"
+                                             src="<%=listImagesThumbnail.get(product.getId())%>" alt=""></a>
                             <p class="product-title">
-                                <%= products.getName().length() > 20 ? products.getName().substring(0, 20) + "..." : products.getName() %>
+                                <%= product.getName().length() > 20 ? product.getName().substring(0, 20) + "..." : product.getName() %>
                             </p>
                             <div class="product-detail">
-                                <p class="product-price"><%= nf.format(products.getPrice()) %>đ</p>
+                                <p class="product-price"><%= nf.format(product.getPrice()) %>đ</p>
                                 <div class="order">
-                                    <a href="AddToCartServlet?masanpham=<%=products.getId()%>" class="btn-add-to-cart" style="text-decoration: none">Thêm vào giỏ hàng</a>
+                                    <a href="AddToCartServlet?masanpham=<%=product.getId()%>" class="btn-add-to-cart"
+                                       style="text-decoration: none">Thêm vào giỏ hàng</a>
                                 </div>
                                 <span class="rating">
-                                    <span class="rating-value"><%= products.getRating() %></span>
+                                    <span class="rating-value"></span>
                                     <i class="fa-solid fa-star"></i>
                                 </span>
                             </div>
@@ -173,80 +122,170 @@
             </div>
         </div>
     </div>
-<%
-    List<Products> productsNu = new ProductService().findByCategory(2);
+        <%
+   List<Product> productVai = request.getAttribute("listProductVai") == null ? new ArrayList<>() : (List<Product>) request.getAttribute("listProductVai");
 %>
 
-<div class="container" id="Nam-Container">
-    <div class="top-prodcut">
-        <div class="title">Nữ</div>
-        <div class="menu-item">
-            <div class="menu-item"><a href="">Xem tất cả</a></div>
+    <div class="container" id="Nam-Container">
+        <div class="top-prodcut">
+            <div class="title">Thắt lưng vải</div>
+            <div class="menu-item">
+                <div class="menu-item"><a href="">Xem tất cả</a></div>
+            </div>
         </div>
-    </div>
-    <div class="bottom-product">
-        <div class="left-menu-item">
-            <img src="assets/images/thatlungnu.jpg" alt="">
-        </div>
-        <div class="right-menu-list">
-            <div class="slider-product">
-                <% for (Products products : productsNu) { %>
-                <div class="product-item">
-                    <div class="product">
-                        <a href="#"><img class="product-img" src="assets/images/product_img/TL302(1).png" alt=""></a>
-                        <p class="product-title"><%= products.getName() %></p>
-                        <div class="product-detail">
-                            <p class="product-price"><%= products.getPrice() %></p>
-                            <button type="button" class="btn btn-light rounded-circle">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-                            <span class="rating">
-<%--                                    <span class="rating-value"><%= products.getRating() %></span>--%>
+        <div class="bottom-product">
+            <div class="left-menu-item">
+                <img src="assets/images/thatlungVai.jpg" alt="">
+            </div>
+            <div class="right-menu-list">
+                <div class="slider-product">
+                    <% for (Product product : productVai) { %>
+                    <div class="product-item">
+                        <div class="product">
+                            <a href="#"><img class="product-img" style="width: 270px;height: 300px"
+                                             src="<%=listImagesThumbnail.get(product.getId())%>" alt=""></a>
+                            <p class="product-title">
+                                <%= product.getName().length() > 20 ? product.getName().substring(0, 20) + "..." : product.getName() %>
+                            </p>
+                            <div class="product-detail">
+                                <p class="product-price"><%= nf.format(product.getPrice()) %>đ</p>
+                                <div class="order">
+                                    <a href="AddToCartServlet?masanpham=<%=product.getId()%>" class="btn-add-to-cart"
+                                       style="text-decoration: none">Thêm vào giỏ hàng</a>
+                                </div>
+                                <span class="rating">
+<%--                                    <span class="rating-value"><%= product.getRating() %></span>--%>
                                     <i class="fa-solid fa-star"></i>
                                 </span>
+                            </div>
+                            <a href="productDetail.html" class="product-order">Xem chi tiết</a>
                         </div>
-                        <a href="productDetail.html" class="product-order">Xem chi tiết</a>
                     </div>
+                    <% } %>
                 </div>
-                <% } %>
             </div>
         </div>
     </div>
-</div>
-<script>
-    $('.slider-product').slick({
-        dots: true,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
+        <%
+   List<Product> Nu = request.getAttribute("productNu") == null ? new ArrayList<>() : (List<Product>) request.getAttribute("productNu");
+%>
+    <div class="container" id="Nam-Container">
+        <div class="top-prodcut">
+            <div class="title">Nữ</div>
+            <div class="menu-item">
+                <div class="menu-item"><a href="">Xem tất cả</a></div>
+            </div>
+        </div>
+        <div class="bottom-product">
+            <div class="left-menu-item">
+                <img src="assets/images/thatlungnu.jpg" alt="">
+            </div>
+            <div class="right-menu-list">
+                <div class="slider-product">
+                    <% for (Product product : Nu) { %>
+                    <div class="product-item">
+                        <div class="product">
+                            <a href="#"><img class="product-img" style="width: 270px;height: 300px"
+                                             src="<%=listImagesThumbnail.get(product.getId())%>" alt=""></a>
+                            <p class="product-title">
+                                <%= product.getName().length() > 20 ? product.getName().substring(0, 20) + "..." : product.getName() %>
+                            </p>
+                            <div class="product-detail">
+                                <p class="product-price"><%= nf.format(product.getPrice()) %>đ</p>
+                                <div class="order">
+                                    <a href="AddToCartServlet?masanpham=<%=product.getId()%>" class="btn-add-to-cart"
+                                       style="text-decoration: none">Thêm vào giỏ hàng</a>
+                                </div>
+                                <span class="rating">
+<%--                                    <span class="rating-value"><%= product.getRating() %></span>--%>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </div>
+                            <a href="productDetail.html" class="product-order">Xem chi tiết</a>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+        <%
+   List<Product> Nam = request.getAttribute("productNu") == null ? new ArrayList<>() : (List<Product>) request.getAttribute("productNam");
+%>
+    <div class="container" id="Nam-Container">
+        <div class="top-prodcut">
+            <div class="title">Thắt lưng Nam</div>
+            <div class="menu-item">
+                <div class="menu-item"><a href="">Xem tất cả</a></div>
+            </div>
+        </div>
+        <div class="bottom-product">
+            <div class="left-menu-item">
+                <img src="assets/images/nam1.jpg" alt="">
+            </div>
+            <div class="right-menu-list">
+                <div class="slider-product">
+                    <% for (Product product : Nam) { %>
+                    <div class="product-item">
+                        <div class="product">
+                            <a href="#"><img class="product-img" style="width: 270px;height: 300px"
+                                             src="<%=listImagesThumbnail.get(product.getId())%>" alt=""></a>
+                            <p class="product-title">
+                                <%= product.getName().length() > 20 ? product.getName().substring(0, 20) + "..." : product.getName() %>
+                            </p>
+                            <div class="product-detail">
+                                <p class="product-price"><%= nf.format(product.getPrice()) %>đ</p>
+                                <div class="order">
+                                    <a href="AddToCartServlet?masanpham=<%=product.getId()%>" class="btn-add-to-cart"
+                                       style="text-decoration: none">Thêm vào giỏ hàng</a>
+                                </div>
+                                <span class="rating">
+<%--                                    <span class="rating-value"><%= product.getRating() %></span>--%>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </div>
+                            <a href="productDetail.html" class="product-order">Xem chi tiết</a>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.slider-product').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
                 }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
+            ]
+        });
 
-</script>
+    </script>
 </body>
 </html>

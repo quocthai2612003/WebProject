@@ -1,7 +1,6 @@
 package Controller;
 
-import Beans.Products;
-import Beans.ShoppingCart;
+import Model.ShoppingCart;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

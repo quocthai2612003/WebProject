@@ -1,6 +1,7 @@
-<%@ page import="model.Account" %>
-<%@ page import="service.AccountService" %>
-<%@ page import="service.ProductService" %>
+<%@ page import="Model.Account" %>
+<%@ page import="Service.AccountService" %>
+<%@ page import="Service.ProductService" %>
+<%@ page import="java.text.NumberFormat" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -25,6 +26,7 @@
     int[] quantityProductByCategorys = request.getAttribute("quantityProductByCategorys") == null ? new int[0] : (int[]) request.getAttribute("quantityProductByCategorys");
     int[] quantityProductSoldByCategorys = request.getAttribute("quantityProductSoldByCategorys") == null ? new int[0] : (int[]) request.getAttribute("quantityProductSoldByCategorys");
     int[] revenueOfCategorys = request.getAttribute("revenueOfCategorys") == null ? new int[0] : (int[]) request.getAttribute("revenueOfCategorys");
+    NumberFormat nf = NumberFormat.getInstance();
 %>
 <div id="main">
     <div id="admin">
@@ -76,7 +78,7 @@
                 </div>
                 <div class="statistical-item">
                     <p>Tổng số lượng sản phẩm</p>
-                    <span><%=totalProducts%></span>
+                    <span><%=nf.format(totalProducts)%></span>
                 </div>
                 <div class="statistical-item">
                     <p>Tổng số đơn đặt hàng</p>

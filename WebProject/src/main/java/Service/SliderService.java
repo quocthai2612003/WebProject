@@ -1,5 +1,5 @@
 package Service;
-import Beans.Slider;
+import Model.Slider;
 import DAO.SliderDAO;
 
 import java.util.List;

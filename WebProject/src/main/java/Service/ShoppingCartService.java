@@ -1,7 +1,7 @@
 package Service;
 
-import Beans.CartItems;
-import Beans.Products;
+import Model.CartItems;
+import Model.Product;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ public class ShoppingCartService {
         return cartItems;
     }
 
-    public void addToCart(Products products, int quantity) {
+    public void addToCart(Product products, int quantity) {
         // Check if the product is already in the cart
         for (CartItems item : cartItems) {
             if (item.getProduct().getId() == products.getId()) {

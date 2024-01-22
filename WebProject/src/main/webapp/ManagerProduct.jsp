@@ -1,8 +1,10 @@
-<%@ page import="service.ProductService" %>
+<%@ page import="Service.ProductService" %>
 <%@ page import="java.util.Map" %>
-<%@ page import="model.Product" %>
+<%@ page import="Model.Product" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="Model.Account" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +18,7 @@
     <link rel="stylesheet" href="./css/admin.css">
 </head>
 <%
+    Account account = session.getAttribute("account") == null ? new Account() : (Account) session.getAttribute("account");
     String notify = request.getAttribute("notify") == null ? "" : request.getAttribute("notify").toString();
     ProductService ps = request.getAttribute("ps") == null ? ProductService.getInstance() : (ProductService) request.getAttribute("ps");
     Map<String, String> listImageThumbnail = ps.selectImageThumbnail();
@@ -24,6 +27,7 @@
     int totalPage = request.getAttribute("totalPage") == null ? 0 : (int) request.getAttribute("totalPage");
     String search = request.getAttribute("search") == null ? "" : "&search=" + request.getAttribute("search").toString();
     int pageCurrent = request.getAttribute("pageCurrent") == null ? 1 : Integer.parseInt(request.getAttribute("pageCurrent").toString());
+    NumberFormat nf = NumberFormat.getInstance();
 %>
 <body>
 <div id="id">
@@ -40,7 +44,7 @@
                     <div class="user">
                         <img src="./assets/images/logo/icon.jpg" alt="">
                     </div>
-                    <p>Xin chào, admin</p>
+                    <p>Xin chào, <%=account.getFullname()%>></p>
                 </div>
                 <div class="menu-item">
                     <a href="./admin">
@@ -109,7 +113,7 @@
                                 <th><%=p.getId()%></th>
                                 <th style="width: 600px"><%=p.getName()%></th>
                                 <th><div class="product-img"><img src="<%=listImageThumbnail.get(p.getId())%>" alt=""></div></th>
-                                <th><%=p.getPrice()%></th>
+                                <th><%=nf.format(p.getPrice())%></th>
                                 <th><%=p.getQuantity()%></th>
                                 <form action="./managerProduct" method="post">
                                 <th>

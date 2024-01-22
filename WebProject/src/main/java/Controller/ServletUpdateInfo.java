@@ -1,6 +1,6 @@
 package Controller;
 
-import Beans.Account;
+import Model.Account;
 import Service.AccountService;
 
 import javax.servlet.*;

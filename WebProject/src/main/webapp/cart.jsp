@@ -1,9 +1,11 @@
-<%@ page import="Beans.Products" %>
+<%@ page import="Model.Product" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Iterator" %>
-<%@ page import="Beans.ShoppingCart" %>
-<%@ page import="Beans.CartItems" %>
+<%@ page import="Model.ShoppingCart" %>
+<%@ page import="Model.CartItems" %>
 <%@ page import="java.text.NumberFormat" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="java.util.HashMap" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+<jsp:include page="header.jsp" />
 
 <div class="container">
     <div class="small-container cart-page">
@@ -32,46 +35,66 @@
             </tr>
             <%
                 NumberFormat nf = NumberFormat.getInstance();
-                List<CartItems> sanPhams = (List<CartItems>) request.getAttribute("list-sp");
+                List<CartItems> sanPhams = (List<CartItems>) session.getAttribute("list-sp");
                 double tongGiaTri = 0;
-
-                for (int i = 0; i < sanPhams.size(); i++) {
-                    CartItems sp = sanPhams.get(i);
+                Map<String, String> listImagesThumbnail = session.getAttribute("listImagesThumbnail") == null ? new HashMap<>() : (Map<String, String>) session.getAttribute("listImagesThumbnail");
+                int stt=1;
+                for (CartItems sp :sanPhams) {
                     tongGiaTri += sp.getTotalPrice();
             %>
-            <td><%= i + 1 %></td>
-                <td>
-                    <div>
-                        <p><%= sp.getProduct().getName() %></p>
-                    </div>
-                </td>
-                <td>
-                    <div class="cart-info">
-                        <img src="assets/images/thatlungtreem.jpg" alt="">
-                    </div>
-                </td>
-                <td>
-                    <div>
-                        <p><%= sp.getProduct().getId() %></p>
-                    </div>
-                </td>
-                <td>
-                    <div>
-                        <p><%= sp.getProduct().getPrice() %></p>
-                    </div>
-                </td>
-                <td>
-                    <div class="change-quantity">
-                        <a href="QuantityServlet?thuchien=tang&masanpham=<%= sp.getProduct().getId()%>" class="cart-btn-plus" style="font-size: 2.4rem; padding: 8px; border: 4px; cursor: pointer;">+</a>
-                        <input type="number" value="<%= sp.getQuantity()%>" name="quantity" disabled>
-                        <a href="QuantityServlet?thuchien=giam&masanpham=<%= sp.getProduct().getId()%>" class="cart-btn-minus" style="font-size: 2.4rem; padding: 8px;border: 4px; cursor: pointer; font-weight: 800;">-</a>
-                    </div>
-                </td>
-                <td class="totalPricePerItem"><%= nf.format(sp.getTotalPrice()) %>đ</td>
+            <td><%= stt++ %></td>
+            <td>
+                <div>
+                    <p>
+                        <%
+                            String productName = sp.getProduct().getName();
+                            if (productName.length() > 30) {
+                                String firstLine = productName.substring(0, 30);
+                                String remainingText = productName.substring(30);
+                        %>
+                        <%= firstLine %><br>
+                        <%= remainingText %>
+                        <%
+                        } else {
+                        %>
+                        <%= productName %>
+                        <%
+                            }
+                        %>
+                    </p>
+                </div>
+            </td>
+            <td>
+                <div class="cart-info">
+                    <%
+                        String productId =sp.getProduct().getId();
+                        String imageSource = listImagesThumbnail.get(productId);
+                    %>
+                    <img src="<%=imageSource %>" alt="">
+                </div>
+            </td>
+            <td>
+                <div>
+                    <p><%= sp.getProduct().getId() %></p>
+                </div>
+            </td>
+            <td>
+                <div class="cart-price">
+                    <p><%= nf.format(sp.getProduct().getPrice()) %>đ</p>
+                </div>
+            </td>
+            <td>
+                <div class="change-quantity">
+                    <a href="QuantityServlet?thuchien=tang&masanpham=<%= sp.getProduct().getId()%>" class="cart-btn-plus" style="font-size: 2.4rem; padding: 8px; border: 4px; cursor: pointer;">+</a>
+                    <input type="number" value="<%= sp.getQuantity()%>" name="quantity" disabled>
+                    <a href="QuantityServlet?thuchien=giam&masanpham=<%= sp.getProduct().getId()%>" class="cart-btn-minus" style="font-size: 2.4rem; padding: 8px;border: 4px; cursor: pointer; font-weight: 800;">-</a>
+                </div>
+            </td>
+            <td class="totalPricePerItem"><%= nf.format(sp.getTotalPrice()) %>đ</td>
             <td>
                 <a href="DeleteServlet?masanpham=<%=sp.getProduct().getId()%>">Xóa</a>
-<%--                <i class="fas fa-trash-alt"></i> <!-- Font Awesome trash icon -->--%>
-            </a>
+                <%--                <i class="fas fa-trash-alt"></i> <!-- Font Awesome trash icon -->--%>
+                </a>
             </td>
             </tr>
             <% } // End of for loop %>
@@ -88,11 +111,12 @@
             </tr>
         </table>
     </div>
+    <div class="buy-button-wraper">
+        <a href="order.jsp" class="button-link">Mua</a>
+    </div>
 </div>
+<div id="footerContainer">
 
-<div class="buy-button-wraper">
-    <a href="another-page.html" class="button-link">Mua</a>
 </div>
-    <div id="footerContainer"></div>
 </body>
 </html>
