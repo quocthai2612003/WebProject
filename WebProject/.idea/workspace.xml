@@ -36,6 +36,7 @@
       <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL333(2).png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL333(3).png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/main/java/Beans/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Beans/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Beans/ShoppingCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/AddToCartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/AddToCartServlet.java" afterDir="false" />
@@ -81,6 +82,7 @@
       <change beforePath="$PROJECT_DIR$/target/untitled/assets/images/product_img/nu.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/untitled/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/untitled/users-page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/untitled/users-page.jsp" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +94,8 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
+
+
         <option value="Jsp File" />
         <option value="Class" />
       </list>
@@ -156,6 +160,7 @@
       <recent name="D:\WebProject\WebProject\src\main\webapp\assets\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+
       <recent name="D:\WebProject-main\WebProject\src\main\webapp\assets\images\product_img" />
       <recent name="D:\WebProject-main\WebProject\src\main\resources" />
       <recent name="D:\WebProject-main\WebProject\src\main\java" />
@@ -168,6 +173,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.81">
+
     <configuration name="AccountDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DAO.AccountDAO" />
       <module name="WebProject" />
@@ -181,8 +187,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="AccountService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Service.AccountService" />
+
       <module name="WebProject" />
       <extension name="coverage">
         <pattern>
@@ -194,8 +202,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="ProductDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DAO.ProductDAO" />
+
       <module name="WebProject" />
       <extension name="coverage">
         <pattern>
@@ -207,12 +217,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="ShoppingCart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Beans.ShoppingCart" />
       <module name="WebProject" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Beans.*" />
+
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -220,12 +232,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="SliderDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DAO.SliderDAO" />
       <module name="WebProject" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="DAO.*" />
+
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -252,6 +266,7 @@
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="50594" />
+
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -330,11 +345,13 @@
     </list>
     <recent_temporary>
       <list>
+
         <item itemvalue="Application.AccountService" />
         <item itemvalue="Application.AccountDAO" />
         <item itemvalue="Application.ShoppingCart" />
         <item itemvalue="Application.ProductDAO" />
         <item itemvalue="Application.SliderDAO" />
+
       </list>
     </recent_temporary>
   </component>
@@ -345,6 +362,7 @@
       <created>1699021783061</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+
       <updated>1699021783061</updated>
       <workItem from="1699021784379" duration="2909000" />
       <workItem from="1699153748804" duration="609000" />
@@ -432,6 +450,7 @@
       <workItem from="1705580812826" duration="2822000" />
       <workItem from="1705629168590" duration="4596000" />
       <workItem from="1705633977466" duration="950000" />
+
     </task>
     <servers />
   </component>

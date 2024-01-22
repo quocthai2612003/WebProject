@@ -2,28 +2,36 @@ package model;
 
 import java.util.Date;
 
+
 public class Order {
     private String id; // Assuming int as the ID type
+
     private String address;
     private int status;
     private Date dateBuy;
     private Date dateArrival;
+
     private int idAccount;
     private String numberPhone;
     // Constructors, getters, and setters
+
 
     public Order() {
         // Default constructor
     }
 
+
     public Order(String id, String address, int status, Date dateBuy, Date dateArrival, int idAccount, String numberPhone) {
         this.id = id;
+
         this.address = address;
         this.status = status;
         this.dateBuy = dateBuy;
         this.dateArrival = dateArrival;
+
         this.idAccount = idAccount;
         this.numberPhone = numberPhone;
+
     }
 
     public String getId() {
@@ -49,7 +57,6 @@ public class Order {
     public void setStatus(int status) {
         this.status = status;
     }
-
     public Date getDateBuy() {
         return dateBuy;
     }
@@ -95,4 +102,3 @@ public class Order {
                 '}';
     }
 }
-

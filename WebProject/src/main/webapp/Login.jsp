@@ -1,3 +1,5 @@
+
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +13,8 @@
 <%
     String error = (String)request.getAttribute("error") ;
     String username = request.getParameter("username") != null ? (String)request.getParameter("username"): "";
+
+
 %>
 <div id="content">
     <div class="form-login">
@@ -25,6 +29,7 @@
         </div>
         <div class="right">
             <div class="function">
+
                 <a class="function-login" href="./Login.html">Đăng nhập</a>
                 <a class="function-register" href="./Register.html">Đăng ký</a>
             </div>
@@ -37,6 +42,7 @@
                     <input type="password" name = "password"  id="password" placeholder="Mật khẩu" required = "required">
                 </div>
                 <div class="forgot-password"><a href="#">Quên mật khẩu?</a></div>
+
                 <button type="submit" class="btn_login">Đăng nhập</button>
             </form>
             <p class="commit">

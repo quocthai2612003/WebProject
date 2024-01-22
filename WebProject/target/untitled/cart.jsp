@@ -1,3 +1,4 @@
+
 <%@ page import="model.Product" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Iterator" %>
@@ -6,6 +7,8 @@
 <%@ page import="java.text.NumberFormat" %>
 <%@ page import="java.util.Map" %>
 <%@ page import="java.util.HashMap" %>
+
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +21,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+
 <jsp:include page="head.jsp" />
+
 
 <div class="container">
     <div class="small-container cart-page">
@@ -35,6 +40,7 @@
             </tr>
             <%
                 NumberFormat nf = NumberFormat.getInstance();
+
                 List<CartItems> sanPhams = (List<CartItems>) session.getAttribute("list-sp");
                 double tongGiaTri = 0;
                 Map<String, String> listImagesThumbnail = session.getAttribute("listImagesThumbnail") == null ? new HashMap<>() : (Map<String, String>) session.getAttribute("listImagesThumbnail");
@@ -62,15 +68,18 @@
                                 }
                             %>
                         </p>
+
                     </div>
                 </td>
                 <td>
                     <div class="cart-info">
+
                         <%
                             String productId =sp.getProduct().getId();
                             String imageSource = listImagesThumbnail.get(productId);
                         %>
                         <img src="<%=imageSource %>" alt="">
+
                     </div>
                 </td>
                 <td>
@@ -79,8 +88,10 @@
                     </div>
                 </td>
                 <td>
+
                     <div class="cart-price">
                         <p><%= nf.format(sp.getProduct().getPrice()) %>đ</p>
+
                     </div>
                 </td>
                 <td>
@@ -111,6 +122,7 @@
             </tr>
         </table>
     </div>
+
     <div class="buy-button-wraper">
         <a href="order.jsp" class="button-link">Mua</a>
     </div>
@@ -118,5 +130,6 @@
     <div id="footerContainer">
 
     </div>
+
 </body>
 </html>

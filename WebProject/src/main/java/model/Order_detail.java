@@ -1,10 +1,12 @@
 package model;
 
 public class Order_detail {
+
     String idOrder;
     String idProduct;
     int quantity;
     int price;
+
     public Order_detail() {
 
     }
@@ -49,6 +51,7 @@ public class Order_detail {
         this.price = price;
     }
 
+
     @Override
     public String toString() {
         return "Order_detail{" +
@@ -64,6 +67,7 @@ public class Order_detail {
     Product product;
 
     public Product getProduct() {
+
 
         return product;
     }

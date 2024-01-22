@@ -10,13 +10,17 @@ public class Product {
     private String color;
     private String gender;
 
+
+
     private String id_category;
 
 
     public Product() {
     }
 
+
     public Product(String id, String name, int price, int quantity, String material, String size, String color, String gender, String id_category) {
+
         this.id = id;
         this.name = name;
         this.price = price;
@@ -25,6 +29,7 @@ public class Product {
         this.size = size;
         this.color = color;
         this.gender = gender;
+
         this.id_category = id_category;
     }
 
@@ -101,6 +106,7 @@ public class Product {
         this.id_category = id_category;
     }
 
+
     @Override
     public String toString() {
         return "Product{" +
@@ -116,4 +122,5 @@ public class Product {
                 '}';
     }
 }
+
 
