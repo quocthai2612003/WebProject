@@ -1,4 +1,4 @@
-package dao;
+package DAO;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
 import org.jdbi.v3.core.Jdbi;

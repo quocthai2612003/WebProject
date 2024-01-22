@@ -1,4 +1,4 @@
-package model;
+package Model;
 
 public class Product {
     private String id;
@@ -9,6 +9,7 @@ public class Product {
     private String size;
     private String color;
     private String gender;
+    private boolean status;
 
     private String id_category;
 
@@ -16,7 +17,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(String id, String name, int price, int quantity, String material, String size, String color, String gender, String id_category) {
+    public Product(String id, String name, int price, int quantity, String material, String size, String color, String gender, boolean status, String id_category) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -25,6 +26,7 @@ public class Product {
         this.size = size;
         this.color = color;
         this.gender = gender;
+        this.status = status;
         this.id_category = id_category;
     }
 
@@ -99,5 +101,13 @@ public class Product {
 
     public void setId_category(String id_category) {
         this.id_category = id_category;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 }
