@@ -9,7 +9,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02d188f2-732c-462c-9376-c5f7b5b81b52" name="Changes" comment="">
+    <list default="true" id="b1ce7088-8c03-4e34-b5ea-2eebe276bce6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL322(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL322(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL322(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL324(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL325(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL325(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL325(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL326(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL326(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL326(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL328(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL328(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL328(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL329(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL329(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL329(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL330(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL330(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL330(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL331(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL331(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL331(3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL333(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL333(2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/product_img/TL333(3).png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ServletAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ServletAdmin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ServletLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ServletLogin.java" afterDir="false" />
@@ -35,6 +60,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+
         <option value="Jsp File" />
         <option value="Class" />
       </list>
@@ -50,41 +78,53 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
-}</component>
-  <component name="ProjectId" id="2Z43GITr4hSFvoma3YXOqfURayq" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2XfYp4VB9vcdts0RdzihHXE3AcA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Phước&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hieu/Desktop/New folder/New folder/WebProject/WebProject&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/WebProject-main/WebProject&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Beans" />
+      <recent name="JDBIConnector" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Hieu\Desktop\New folder\New folder\WebProject\WebProject\src\main\webapp\js" />
-      <recent name="C:\Users\Hieu\Desktop\New folder\New folder\WebProject\WebProject\src\main\webapp\assets" />
-      <recent name="C:\Users\Hieu\Desktop\New folder\New folder\WebProject\WebProject\src\main\webapp\css" />
+      <recent name="D:\WebProject-main\WebProject\src\main\webapp\assets\images\product_img" />
+      <recent name="D:\WebProject-main\WebProject\src\main\webapp\css" />
+      <recent name="D:\WebProject-main\WebProject\src\main\webapp\js" />
+      <recent name="D:\WebProject-main\WebProject\src\main\webapp" />
+      <recent name="D:\WebProject\WebProject\src\main\webapp\assets\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Hieu\Desktop\New folder\New folder\WebProject\WebProject\target\WebProject\assets\images\product_img" />
@@ -94,11 +134,11 @@
   </component>
   <component name="RunManager" selected="Application.PaginationDao">
     <configuration name="AccountDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dao.AccountDAO" />
+      <option name="MAIN_CLASS_NAME" value="DAO.AccountDAO" />
       <module name="WebProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dao.*" />
+          <option name="PATTERN" value="DAO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,7 +151,7 @@
       <module name="WebProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dao.*" />
+          <option name="PATTERN" value="Service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,7 +164,7 @@
       <module name="WebProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dao.*" />
+          <option name="PATTERN" value="DAO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,12 +203,12 @@
       <deployment>
         <artifact name="WebProject:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/WebProject_war_exploded" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="31bc414a-f506-4ecb-aa15-67a3859c3278" />
+        <option name="BASE_DIRECTORY_NAME" value="a648f926-67a0-4a4c-8861-4fc35e4ae883" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -176,7 +216,8 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="63331" />
+        <option name="DEBUG_PORT" value="50594" />
+
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -245,6 +286,14 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.AccountDAO" />
+      <item itemvalue="Application.AccountService" />
+      <item itemvalue="Application.ShoppingCart" />
+      <item itemvalue="Application.ProductDAO" />
+      <item itemvalue="Application.SliderDAO" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.81" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.PaginationDao" />
@@ -258,8 +307,8 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="02d188f2-732c-462c-9376-c5f7b5b81b52" name="Changes" comment="" />
-      <created>1701667427711</created>
+      <changelist id="b1ce7088-8c03-4e34-b5ea-2eebe276bce6" name="Changes" comment="" />
+      <created>1699021783061</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701667427711</updated>

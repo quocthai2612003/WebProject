@@ -9,13 +9,13 @@
 }
 
 .container {
-    width: 1260px !important;
-    margin: 0 auto !important;
-    display: block !important;
+    width: 1260px;
+    margin: 0 auto;
+    display: block;
 }
 
 html {
-    font-size: 62.5% !important;
+    font-size: 62.5%;
 }
 
 #content {
@@ -132,5 +132,4 @@ html {
     display: inline-block;
     width: 100px;
 }
-
 

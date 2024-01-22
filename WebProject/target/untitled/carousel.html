@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <style>
+    .product-order {
+      display: block;
+      padding: 10px 0;
+      text-align: center;
+      background-color: #000;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 1.5rem;
+      text-decoration: none ;
+    }
+    @media (max-width: 767px) {
+      .carousel-inner .carousel-item > div {
+        display: none;
+      }
+      .carousel-inner .carousel-item > div:first-child {
+        display: block;
+      }
+    }
+
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+      display: flex;
+    }
+
+    /* medium and up screens */
+    @media (min-width: 768px) {
+
+      .carousel-inner .carousel-item-end.active,
+      .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+      }
+
+      .carousel-inner .carousel-item-start.active,
+      .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+      }
+    }
+
+    .carousel-inner .carousel-item-end,
+    .carousel-inner .carousel-item-start {
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body>
+<div class="container text-center my-3">
+  <div class="row mx-auto my-auto justify-content-center">
+    <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/that-lung-nam-zuciani-IT02-nau-2.jpg" class="img-fluid">
+              </div>
+              <div class="card-img-overlay d-flex align-items-end justify-content-center">
+                <a href="productDetail.html" class="product-order">Them vao gio hang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/that-lung-nam-zuciani-IT02-nau-1.jpg" class="img-fluid">
+              </div>
+              <div class="card-img-overlay">Slide 2</div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/that-lung-nam-zuciani-IT02-nau-3.jpg" class="img-fluid">
+              </div>
+              <div class="card-img-overlay">Slide 3</div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/thatlungtreem.jpg" class="img-fluid">
+              </div>
+              <div class="card-img-overlay">Slide 4</div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://via.placeholder.com/700x500.png/A5A58D/333333?text=5" class="img-fluid">
+              </div>
+              <div class="card-img-overlay">Slide 5</div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-img">
+                <img src="https://via.placeholder.com/700x500.png/6B705C/eeeeee?text=6" class="img-fluid">
+              </div>
+              <div class="card-img-overlay">Slide 6</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+</div>
+<script>
+  let items = document.querySelectorAll('.carousel .carousel-item')
+
+  items.forEach((el) => {
+    const minPerSlide = 4
+    let next = el.nextElementSibling
+    for (var i=1; i<minPerSlide; i++) {
+      if (!next) {
+        // wrap carousel by using first child
+        next = items[0]
+      }
+      let cloneChild = next.cloneNode(true)
+      el.appendChild(cloneChild.children[0])
+      next = next.nextElementSibling
+    }
+  })
+</script>
+</body>
+</html>

@@ -30,7 +30,8 @@
                 <a class="function-login" href="./login">Đăng nhập</a>
                 <a class="function-register" href="./register">Đăng ký</a>
             </div>
-            <form class="infor" action="/login" method="post">
+            <form class="infor" action="./login" method="post">
+
                 <div class="form-group">
                     <%if (notify != null){%>
                     <p class="notification-success"><%=notify%></p>
